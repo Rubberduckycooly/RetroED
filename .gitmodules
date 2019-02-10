@@ -1,0 +1,3 @@
+[submodule "RSDK-Reverse"]
+	path = RSDK-Reverse
+	url = https://github.com/rubberduckycooly/RSDK-Reverse
