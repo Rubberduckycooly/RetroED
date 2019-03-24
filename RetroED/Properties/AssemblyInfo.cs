@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("RetroED")]
 [assembly: AssemblyDescription("RetroED - A General Purpose Editor for RSDK versions below RSDKv5")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Rubberduckycooly")]
+[assembly: AssemblyCompany("Rubberduckycooly & Beta Angel")]
 [assembly: AssemblyProduct("RetroED")]
-[assembly: AssemblyCopyright("Copyright © Rubberduckycooly 2018")]
+[assembly: AssemblyCopyright("Copyright © Rubberduckycooly & Beta Angel 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

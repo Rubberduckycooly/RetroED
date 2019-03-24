@@ -153,6 +153,7 @@ namespace RetroED.Tools.RSDKUnpacker
 
             SelectRSDKForm selectRSDKForm = new SelectRSDKForm();
 
+            selectRSDKForm.usingRSDKv5 = true;
             selectRSDKForm.RSDKVerBox.Items.Clear();
             selectRSDKForm.RSDKVerBox.Items.Add("RSDKvRS");
             selectRSDKForm.RSDKVerBox.Items.Add("RSDKv1");
@@ -378,7 +379,7 @@ namespace RetroED.Tools.RSDKUnpacker
 
             foreach (DirectoryInfo subdir in directoryInfo.GetDirectories())
             {
-                BuildDataFromFoldersV2(subdir);
+                BuildDataFromFoldersV1(subdir);
             }
         }
 
@@ -494,7 +495,7 @@ namespace RetroED.Tools.RSDKUnpacker
 
             foreach (DirectoryInfo subdir in directoryInfo.GetDirectories())
             {
-                BuildDataFromFoldersVB(subdir);
+                BuildDataFromFoldersV5(subdir);
             }
         }
 

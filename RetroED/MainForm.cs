@@ -492,17 +492,24 @@ namespace RetroED
 
         private void dpMain_ActiveContentChanged(object sender, EventArgs e)
         {
-            if (CurrentTabText != null)
+            try
             {
-                Text = $"RetroED - {CurrentTabText}";
-                MenuItem_CloseTab.Enabled = true;
-                LinkMenubar();
+                if (CurrentTabText != null && CurrentTabText != "")
+                {
+                    Text = $"RetroED - {CurrentTabText}";
+                    MenuItem_CloseTab.Enabled = true;
+                    LinkMenubar();
+                }
+                else
+                {
+                    Text = $"RetroED";
+                    MenuItem_CloseTab.Enabled = false;
+                    UnlinkMenubar();
+                }
             }
-            else
+            catch(Exception ex)
             {
-                Text = $"RetroED";
-                MenuItem_CloseTab.Enabled = false;
-                UnlinkMenubar();
+                Console.WriteLine("Error: " + ex.Message);
             }
             UpdateDiscord();
         }

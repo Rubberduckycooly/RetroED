@@ -810,23 +810,23 @@
     <Folder Include="Tools\AnimationEditor\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RSDKv1\RSDKv1.csproj">
+    <ProjectReference Include="..\RSDK-Reverse\RSDKv1\RSDKv1.csproj">
       <Project>{e089db56-f8d4-434e-a9a8-c7efcc3278d8}</Project>
       <Name>RSDKv1</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RSDKv2\RSDKv2.csproj">
+    <ProjectReference Include="..\RSDK-Reverse\RSDKv2\RSDKv2.csproj">
       <Project>{b41a3858-7e66-4755-9f50-94ea021155b6}</Project>
       <Name>RSDKv2</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RSDKv5\RSDKv5.csproj">
+    <ProjectReference Include="..\RSDK-Reverse\RSDKv5\RSDKv5.csproj">
       <Project>{cf5496f8-002b-408f-9b3d-67c88f610283}</Project>
       <Name>RSDKv5</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RSDKvB\RSDKvB.csproj">
+    <ProjectReference Include="..\RSDK-Reverse\RSDKvB\RSDKvB.csproj">
       <Project>{1a58ba31-c9e1-4d18-876e-ec73799e7a9f}</Project>
       <Name>RSDKvB</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RSDKvRS\RSDKvRS.csproj">
+    <ProjectReference Include="..\RSDK-Reverse\RSDKvRS\RSDKvRS.csproj">
       <Project>{aae1bacd-fe6b-4cc6-ad2d-073315f45eaf}</Project>
       <Name>RSDKvRS</Name>
     </ProjectReference>

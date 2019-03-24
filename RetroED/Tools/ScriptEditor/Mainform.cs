@@ -306,16 +306,26 @@ namespace RetroED.Tools.ScriptEditor
 
         private void TextArea_CharAdded(object sender, ScintillaNET.CharAddedEventArgs e)
         {
-            switch(AutoCompleteVer)
+            char cc = (char)TextArea.GetCharAt(TextArea.CurrentPosition - 1);
+            switch (AutoCompleteVer)
             {
                 case 1:
-                    TextArea.AutoCShow(0, AutoCompletev1);
+                    if (cc != '\r' && cc != '\n' && cc != '\t')
+                    {
+                        TextArea.AutoCShow(0, AutoCompletev1);
+                    }
                     break;
                 case 2:
-                    TextArea.AutoCShow(0, AutoCompletev2);
+                    if (cc != '\r' && cc != '\n' && cc != '\t')
+                    {
+                        TextArea.AutoCShow(0, AutoCompletev2);
+                    }
                     break;
                 case 3:
-                    TextArea.AutoCShow(0, AutoCompletevB);
+                    if (cc != '\r' && cc != '\n' && cc != '\t')
+                    {
+                        TextArea.AutoCShow(0, AutoCompletevB);
+                    }
                     break;
             }
         }

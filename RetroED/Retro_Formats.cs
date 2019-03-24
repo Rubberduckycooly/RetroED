@@ -120,6 +120,8 @@ namespace Retro_Formats
                     for (int i = 0; i < ScenevB.objects.Count; i++)
                     {
                         objects.Add(new Object());
+                        objects[i].engineType = engineType;
+                        objects[i].id = i;
                         objects[i].type = ScenevB.objects[i].type;
                         objects[i].subtype = ScenevB.objects[i].subtype;
                         objects[i].xPos = ScenevB.objects[i].xPos;
@@ -142,6 +144,8 @@ namespace Retro_Formats
                     for (int i = 0; i < Scenev2.objects.Count; i++)
                     {
                         objects.Add(new Object());
+                        objects[i].engineType = engineType;
+                        objects[i].id = i;
                         objects[i].type = Scenev2.objects[i].type;
                         objects[i].subtype = Scenev2.objects[i].subtype;
                         objects[i].xPos = Scenev2.objects[i].xPos;
@@ -162,8 +166,10 @@ namespace Retro_Formats
                     for (int i = 0; i < Scenev1.objects.Count; i++)
                     {
                         objects.Add(new Object());
+                        objects[i].engineType = engineType;
+                        objects[i].id = i;
                         objects[i].type = Scenev1.objects[i].type;
-                        objects[i].type = Scenev1.objects[i].subtype;
+                        objects[i].subtype = Scenev1.objects[i].subtype;
                         objects[i].xPos = Scenev1.objects[i].xPos;
                         objects[i].yPos = Scenev1.objects[i].yPos;
                     }
@@ -182,7 +188,7 @@ namespace Retro_Formats
                     {
                         objects.Add(new Object());
                         objects[i].type = ScenevRS.objects[i].type;
-                        objects[i].type = ScenevRS.objects[i].subtype;
+                        objects[i].subtype = ScenevRS.objects[i].subtype;
                         objects[i].xPos = ScenevRS.objects[i].xPos;
                         objects[i].yPos = ScenevRS.objects[i].yPos;
                     }
