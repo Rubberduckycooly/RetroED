@@ -194,7 +194,6 @@ C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\RSDKvRS.dll
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\zlib.net.dll
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\SharpDX.Direct3D9.dll
-C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\INIFileParser.dll
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\SharpDX.dll
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\RSDKv1.pdb
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\RSDKv2.pdb
@@ -204,6 +203,5 @@ C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\RSDKvB.pdb
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\RSDKvRS.pdb
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\SharpDX.Direct3D9.pdb
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\SharpDX.Direct3D9.xml
-C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\INIFileParser.xml
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\SharpDX.pdb
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.csproj.CopyComplete
