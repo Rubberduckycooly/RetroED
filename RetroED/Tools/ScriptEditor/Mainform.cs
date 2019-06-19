@@ -67,9 +67,18 @@ namespace RetroED.Tools.ScriptEditor
             // CREATE CONTROL
             TextArea = new ScintillaNET.Scintilla();
             TextPanel.Controls.Add(TextArea);
-            AutoCompletev1 = File.ReadAllText("AutoCompletev1.txt");
-            AutoCompletev2 = File.ReadAllText("AutoCompletev2.txt");
-            AutoCompletevB = File.ReadAllText("AutoCompletevB.txt");
+            if (File.Exists("Data/ScriptEditor/AutoCompletev1.txt"))
+            {
+                AutoCompletev1 = File.ReadAllText("Data/ScriptEditor/AutoCompletev1.txt");
+            }
+            if (File.Exists("Data/ScriptEditor/AutoCompletev2.txt"))
+            {
+                AutoCompletev2 = File.ReadAllText("Data/ScriptEditor/AutoCompletev2.txt");
+            }
+            if (File.Exists("Data/ScriptEditor/AutoCompletevB.txt"))
+            {
+                AutoCompletevB = File.ReadAllText("Data/ScriptEditor/AutoCompletevB.txt");
+            }
 
             //TextArea.AutoCStops(";.");
             TextArea.AutoCSeparator = (char)13;//'~';

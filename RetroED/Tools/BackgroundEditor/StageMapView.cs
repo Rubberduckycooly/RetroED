@@ -79,6 +79,16 @@ namespace RetroED.Tools.BackgroundEditor
                             }
                         }
                     }
+
+                    Parent.LoadScrollIndexes(l);
+
+                    if (DrawLines)
+                    {
+                        for (int i = 0; i < Parent.ScrollIndices.Count; i++)
+                        {
+                            e.Graphics.DrawLine(p, 0, Parent.ScrollIndices[i].StartIndex, Parent.background.Layers[curlayer].width * 128, Parent.ScrollIndices[i].StartIndex);
+                        }
+                    }
                 }
             }
             else if (!DrawAllLayers)
@@ -100,14 +110,17 @@ namespace RetroED.Tools.BackgroundEditor
                         }
                     }
                 }
-            }
 
-            if (DrawLines)
-            {
-                for (int i = 0; i < Parent.background.Layers[curlayer].LineIndexes.Count; i++)
+                Parent.LoadScrollIndexes(curlayer);
+
+                if (DrawLines)
                 {
-                    e.Graphics.DrawLine(p, 0, Parent.background.Layers[curlayer].LineIndexes[i] * 4, Parent.background.Layers[curlayer].width * 128, Parent.background.Layers[curlayer].LineIndexes[i] * 4);
+                    for (int i = 0; i < Parent.ScrollIndices.Count; i++)
+                    {
+                        e.Graphics.DrawLine(p, 0, Parent.ScrollIndices[i].StartIndex, Parent.background.Layers[curlayer].width * 128, Parent.ScrollIndices[i].StartIndex);
+                    }
                 }
+
             }
 
             if (ShowGrid)

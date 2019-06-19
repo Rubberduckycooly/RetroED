@@ -399,6 +399,12 @@ namespace RetroED.Tools.MapEditor
 
         public void Open(string folderpath)
         {
+            ObjectNames = new List<string>();
+            ObjectTypes = new List<Retro_Formats.Object>();
+            _blocksViewer.tabControl.TabPages[1].Controls.Clear();
+            EntityToolbar = new RetroED.Extensions.EntityToolbar.EntityToolbar();
+            EntityToolbar.Dock = DockStyle.Fill;
+            _blocksViewer.tabControl.TabPages[1].Controls.Add(EntityToolbar);
             if (engineType == Retro_Formats.EngineType.RSDKvRS) //Are We displaying a Retro-Sonic Map?
             {
                 //Load the files needed to show the map

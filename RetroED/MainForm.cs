@@ -321,6 +321,13 @@ namespace RetroED
             return frm;
         } //Opens the RSDKvB Stageconfig Editor (and returns a referece to it)
 
+        Tools.RSVExtractor.MainForm OpenRSVExtractor()
+        {
+            var frm = new Tools.RSVExtractor.MainForm();
+            frm.Show(dpMain, WeifenLuo.WinFormsUI.Docking.DockState.Document);
+            return frm;
+        } //Opens the RSDKvB Stageconfig Editor (and returns a referece to it)
+
         private void MenuItem_RSDKUnpacker_Click(object sender, EventArgs e)
         {
             OpenRSDKUnpacker();
@@ -359,6 +366,11 @@ namespace RetroED
         private void backgroundEditorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenBackgroundEditor();
+        }
+
+        private void MenuItem8_Click(object sender, EventArgs e)
+        {
+            OpenRSVExtractor();
         }
 
         private void MenuItem_CloseTab_Click(object sender, EventArgs e)

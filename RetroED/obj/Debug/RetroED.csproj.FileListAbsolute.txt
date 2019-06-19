@@ -205,3 +205,12 @@ C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\SharpDX.Direct3D9.pdb
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\SharpDX.Direct3D9.xml
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\bin\Debug\SharpDX.pdb
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.csproj.CopyComplete
+C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.RSVExtractor.MainForm.resources
+C:\Users\owner\Documents\GitHub\RetroED\build\RetroED.exe.config
+C:\Users\owner\Documents\GitHub\RetroED\build\RetroED.exe
+C:\Users\owner\Documents\GitHub\RetroED\build\RetroED.pdb
+C:\Users\owner\Documents\GitHub\RetroED\build\WeifenLuo.WinFormsUI.Docking.dll
+C:\Users\owner\Documents\GitHub\RetroED\build\discord-rpc.dll
+C:\Users\owner\Documents\GitHub\RetroED\build\SciLexer.dll
+C:\Users\owner\Documents\GitHub\RetroED\build\ScintillaNET.dll
+C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.BackgroundEditor.ParallaxPropertiesForm.resources

@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 using System.IO;
 using WeifenLuo.WinFormsUI.Docking;
@@ -77,9 +77,9 @@ namespace RetroED.Tools.RSDKUnpacker
                     case Retro_Formats.EngineType.RSDKvB:
                         if (FileList == null || FileList.Count <= 0)
                         {
-                            if (File.Exists("RSDKvBFileList.txt"))
+                            if (File.Exists("Data/DataFileUnpacker/RSDKvBFileList.txt"))
                             {
-                                StreamReader reader = new StreamReader(File.OpenRead("RSDKvBFileList.txt"));
+                                StreamReader reader = new StreamReader(File.OpenRead("Data/DataFileUnpacker/RSDKvBFileList.txt"));
                                 while (!reader.EndOfStream)
                                 {
                                     FileList.Add(reader.ReadLine());
@@ -96,12 +96,32 @@ namespace RetroED.Tools.RSDKUnpacker
                     case Retro_Formats.EngineType.RSDKv5:
                         if (FileList == null || FileList.Count <= 0)
                         {
-                            if (File.Exists("ManiaFileList.txt"))
+                            if (File.Exists("Data/DataFileUnpacker/RSDKv5FileList.txt"))
                             {
-                                StreamReader reader = new StreamReader(File.OpenRead("ManiaFileList.txt"));
+                                StreamReader reader = new StreamReader(File.OpenRead("Data/DataFileUnpacker/RSDKv5FileList.txt"));
                                 while (!reader.EndOfStream)
                                 {
                                     FileList.Add(reader.ReadLine());
+                                }
+                                reader.Close();
+                            }
+                            if (File.Exists("Data/DataFileUnpacker/RSDKv5Objects.txt"))
+                            {
+                                StreamReader reader = new StreamReader(File.OpenRead("Data/DataFileUnpacker/RSDKv5Objects.txt"));
+                                while (!reader.EndOfStream)
+                                {
+                                    string hash;
+                                    string name = reader.ReadLine();
+                                    hash = GetMd5HashString(name);
+
+                                    string path = "Data/Objects/Static/" + hash + ".bin";
+
+                                    if (name == "Player")
+                                    {
+                                        Console.WriteLine("Player");
+                                    }
+
+                                    FileList.Add(path);
                                 }
                                 reader.Close();
                             }
@@ -116,6 +136,27 @@ namespace RetroED.Tools.RSDKUnpacker
                         break;
                 }
             }
+        }
+
+        public static string GetMd5HashString(string input)
+        {
+            MD5 md5Hash = MD5.Create();
+            // Convert the input string to a byte array and compute the hash.
+            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            // Create a new Stringbuilder to collect the bytes
+            // and create a string.
+            StringBuilder sBuilder = new StringBuilder();
+
+            // Loop through each byte of the hashed data 
+            // and format each one as a hexadecimal string.
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            // Return the hexadecimal string.
+            return sBuilder.ToString();
         }
 
         private void Extract_Click(object sender, EventArgs e)

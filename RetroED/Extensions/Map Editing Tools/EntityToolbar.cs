@@ -216,14 +216,25 @@ namespace RetroED.Extensions.EntityToolbar
             if (engineType == Retro_Formats.EngineType.RSDKvB)
             {
                 addProperty(objProperties, category_index, "attribute", "attributeType", "ushort", entity.AttributeType);
-                addProperty(objProperties, category_index, "attribute", "attributeValue", "int", entity.attribute);
+                addProperty(objProperties, category_index, "attribute", "attributeValue 1", "uint", entity.attributes[0]);
+                addProperty(objProperties, category_index, "attribute", "attributeValue 2", "uint", entity.attributes[1]);
+                addProperty(objProperties, category_index, "attribute", "attributeValue 3", "uint", entity.attributes[2]);
+                addProperty(objProperties, category_index, "attribute", "attributeValue 4", "byte", entity.attributes[3]);
+                addProperty(objProperties, category_index, "attribute", "attributeValue 5", "byte", entity.attributes[4]);
+                addProperty(objProperties, category_index, "attribute", "attributeValue 6", "byte", entity.attributes[5]);
+                addProperty(objProperties, category_index, "attribute", "attributeValue 7", "uint", entity.attributes[6]);
+                addProperty(objProperties, category_index, "attribute", "attributeValue 8", "uint", entity.attributes[7]);
+                addProperty(objProperties, category_index, "attribute", "attributeValue 9", "byte", entity.attributes[8]);
+                addProperty(objProperties, category_index, "attribute", "attributeValue 10", "uint", entity.attributes[9]);
+                addProperty(objProperties, category_index, "attribute", "attributeValue 11", "uint", entity.attributes[10]);
+                addProperty(objProperties, category_index, "attribute", "attributeValue 12", "uint", entity.attributes[11]);
+                addProperty(objProperties, category_index, "attribute", "attributeValue 13", "uint", entity.attributes[12]);
+                addProperty(objProperties, category_index, "attribute", "attributeValue 14", "uint", entity.attributes[13]);
                 --category_index;
             }
 
             entityProperties.SelectedObject
                 = new LocalPropertyGridObject(objProperties);
-
-
         }
 
         public void UpdateCurrentEntityProperites()
@@ -239,7 +250,20 @@ namespace RetroED.Extensions.EntityToolbar
                 if (engineType == Retro_Formats.EngineType.RSDKvB)
                 {
                     obj.setValue("attribute.attributeType", currentEntity.AttributeType);
-                    obj.setValue("attribute.attributeValue", currentEntity.attribute);
+                    obj.setValue("attribute.attributeValue 1", currentEntity.attributes[0]);
+                    obj.setValue("attribute.attributeValue 2", currentEntity.attributes[1]);
+                    obj.setValue("attribute.attributeValue 3", currentEntity.attributes[2]);
+                    obj.setValue("attribute.attributeValue 4", currentEntity.attributes[3]);
+                    obj.setValue("attribute.attributeValue 5", currentEntity.attributes[4]);
+                    obj.setValue("attribute.attributeValue 6", currentEntity.attributes[5]);
+                    obj.setValue("attribute.attributeValue 7", currentEntity.attributes[6]);
+                    obj.setValue("attribute.attributeValue 8", currentEntity.attributes[7]);
+                    obj.setValue("attribute.attributeValue 9", currentEntity.attributes[8]);
+                    obj.setValue("attribute.attributeValue 10", currentEntity.attributes[9]);
+                    obj.setValue("attribute.attributeValue 11", currentEntity.attributes[10]);
+                    obj.setValue("attribute.attributeValue 12", currentEntity.attributes[11]);
+                    obj.setValue("attribute.attributeValue 13", currentEntity.attributes[12]);
+                    obj.setValue("attribute.attributeValue 14", currentEntity.attributes[13]);
                 }
                 NeedRefresh = true;
                 parent._mapViewer.DrawScene();
@@ -259,7 +283,7 @@ namespace RetroED.Extensions.EntityToolbar
             string name = parts[1];
             if (category == "position")
             {
-                float fvalue = (Int32)value;
+                float fvalue = Convert.ToInt32(value);
                 if (fvalue < Int16.MinValue || fvalue > Int16.MaxValue)
                 {
                     // Invalid
@@ -267,27 +291,37 @@ namespace RetroED.Extensions.EntityToolbar
                     obj.setValue(tag, oldValue);
                     return;
                 }
-                var Xpos = entity.xPos;
-                var Ypos = entity.yPos;
-                if (name == "x")
+                if (engineType != Retro_Formats.EngineType.RSDKvB)
                 {
-                    Xpos = (short)fvalue;
+                    if (name == "x")
+                    {
+                        entity.xPos = (short)fvalue;
+                    }
+                    else if (name == "y")
+                    {
+                        entity.yPos = (short)fvalue;
+                    }
                 }
-                else if (name == "y")
+                else
                 {
-                    Ypos = (short)fvalue;
+                    if (name == "x")
+                    {
+                        entity.position.X.High = (short)fvalue;
+                        entity.position.X.Low = (ushort)(fvalue * 0x10000);
+                    }
+                    else if (name == "y")
+                    {
+                        entity.position.X.High = (short)fvalue;
+                        entity.position.X.Low = (ushort)(fvalue * 0x10000);
+                    }
                 }
-                entity.xPos = Xpos;
-                entity.yPos = Ypos;
-                Console.WriteLine(Xpos + " " + Ypos);
                 if (entity == currentEntity)
                     UpdateCurrentEntityProperites();
             }
             else if (category == "type")
             {
-                int tmp = (Int32)value;
-                int fvalue = (byte)tmp;
-                if (fvalue < Int16.MinValue || fvalue > Int16.MaxValue)
+                byte fvalue = Convert.ToByte(value);
+                if (fvalue < byte.MinValue || fvalue > byte.MaxValue)
                 {
                     // Invalid
                     var obj = (entityProperties.SelectedObject as LocalPropertyGridObject);
@@ -299,11 +333,11 @@ namespace RetroED.Extensions.EntityToolbar
                 var subtype = entity.subtype;
                 if (name == "Type")
                 {
-                    type = (byte)fvalue;
+                    type = fvalue;
                 }
                 else if (name == "PropertyValue")
                 {
-                    subtype = (byte)fvalue;
+                    subtype = fvalue;
                 }
                 entity.type = type;
                 entity.subtype = subtype;
@@ -338,6 +372,81 @@ namespace RetroED.Extensions.EntityToolbar
                 // Update Properties
                 currentEntity = null;
                 UpdateEntitiesProperties(new List<Retro_Formats.Object>() { entity });
+            }
+            else if (category == "attribute")
+            {
+                uint fvalue = Convert.ToUInt32(value);
+                if (fvalue < uint.MinValue || fvalue > uint.MaxValue)
+                {
+                    // Invalid
+                    var obj = (entityProperties.SelectedObject as LocalPropertyGridObject);
+                    obj.setValue(tag, oldValue);
+                    return;
+                }
+
+                if (name == "attributeType")
+                {
+                    entity.AttributeType = (ushort)fvalue;
+                }
+                else if (name == "attributeValue 1")
+                {
+                    entity.attributes[0] = fvalue;
+                }
+                else if (name == "attributeValue 2")
+                {
+                    entity.attributes[1] = fvalue;
+                }
+                else if (name == "attributeValue 3")
+                {
+                    entity.attributes[2] = fvalue;
+                }
+                else if (name == "attributeValue 4")
+                {
+                    entity.attributes[3] = fvalue;
+                }
+                else if (name == "attributeValue 5")
+                {
+                    entity.attributes[4] = fvalue;
+                }
+                else if (name == "attributeValue 6")
+                {
+                    entity.attributes[5] = fvalue;
+                }
+                else if (name == "attributeValue 7")
+                {
+                    entity.attributes[6] = fvalue;
+                }
+                else if (name == "attributeValue 8")
+                {
+                    entity.attributes[7] = fvalue;
+                }
+                else if (name == "attributeValue 9")
+                {
+                    entity.attributes[8] = fvalue;
+                }
+                else if (name == "attributeValue 10")
+                {
+                    entity.attributes[9] = fvalue;
+                }
+                else if (name == "attributeValue 11")
+                {
+                    entity.attributes[10] = fvalue;
+                }
+                else if (name == "attributeValue 12")
+                {
+                    entity.attributes[11] = fvalue;
+                }
+                else if (name == "attributeValue 13")
+                {
+                    entity.attributes[12] = fvalue;
+                }
+                else if (name == "attributeValue 14")
+                {
+                    entity.attributes[13] = fvalue;
+                }
+
+                if (entity == currentEntity)
+                    UpdateCurrentEntityProperites();
             }
         }
 

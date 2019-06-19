@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\build\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -28,7 +28,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\build\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -143,6 +143,12 @@
     </Compile>
     <Compile Include="Tools\BackgroundEditor\CD12_LayerPropertiesForm.Designer.cs">
       <DependentUpon>CD12_LayerPropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\BackgroundEditor\ParallaxPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\BackgroundEditor\ParallaxPropertiesForm.Designer.cs">
+      <DependentUpon>ParallaxPropertiesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\BackgroundEditor\RSN_LineScrollForm.cs">
       <SubType>Form</SubType>
@@ -464,6 +470,12 @@
     <Compile Include="Tools\RSDKUnpacker\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Tools\RSVExtractor\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\RSVExtractor\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\ScriptEditor\Mainform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -609,6 +621,9 @@
     <EmbeddedResource Include="Tools\BackgroundEditor\CD12_LayerPropertiesForm.resx">
       <DependentUpon>CD12_LayerPropertiesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tools\BackgroundEditor\ParallaxPropertiesForm.resx">
+      <DependentUpon>ParallaxPropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tools\BackgroundEditor\RSN_LineScrollForm.resx">
       <DependentUpon>RSN_LineScrollForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -711,6 +726,9 @@
     <EmbeddedResource Include="Tools\RSDKUnpacker\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tools\RSVExtractor\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tools\ScriptEditor\MainForm.resx">
       <DependentUpon>Mainform.cs</DependentUpon>
     </EmbeddedResource>
@@ -742,9 +760,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="WeifenLuo.WinFormsUI.Docking.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\file.ico" />
     <None Include="Resources\folder.ico" />
+    <Content Include="discord-rpc.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Retro_Engine_logo.ico" />
+    <Content Include="SciLexer.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ScintillaNET.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Tools\BackgroundEditor\Resources.ico" />
     <None Include="Tools\MapEditor\OBJ.png" />
     <None Include="Tools\RSDKCollisionEditor\Resources\Maniac.bmp" />

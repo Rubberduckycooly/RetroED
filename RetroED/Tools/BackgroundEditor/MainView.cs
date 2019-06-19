@@ -19,6 +19,25 @@ namespace RetroED.Tools.BackgroundEditor
             PlaceTiles,
         }
 
+        public class ScrollIndex
+        {
+            public byte ScrollInfo = 0;
+            public ushort StartIndex = 0;
+            public ushort LineCount = 1;
+
+            public ScrollIndex()
+            {
+
+            }
+
+            public ScrollIndex(ushort startindex = 0, ushort linecount = 0, byte scrollinfo = 0)
+            {
+                StartIndex = startindex;
+                LineCount = linecount;
+                ScrollInfo = scrollinfo;
+            }
+        }
+
         public Retro_Formats.EngineType engineType;
 
         private Image _loadedTiles;
@@ -39,13 +58,16 @@ namespace RetroED.Tools.BackgroundEditor
         public Retro_Formats.Background background = new Retro_Formats.Background();
         public Retro_Formats.MetaTiles Chunks = new Retro_Formats.MetaTiles();
 
+        public List<ScrollIndex> ScrollIndices = new List<ScrollIndex>();
+
         public MainView()
         {
             InitializeComponent();
             _mapViewer = new StageMapView(this);
-            _mapViewer.Show(dpMain, WeifenLuo.WinFormsUI.Docking.DockState.Document);
+            _mapViewer.Show(dpMain, DockState.Document);
             _blocksViewer = new StageChunksView(this);
-            _blocksViewer.Show(dpMain, WeifenLuo.WinFormsUI.Docking.DockState.DockLeft);
+            _blocksViewer.Show(dpMain, DockState.DockLeft);
+            LoadScrollIndexes();
         }
 
         private void tsmiFileOpen_Click(object sender, EventArgs e)
@@ -146,18 +168,59 @@ namespace RetroED.Tools.BackgroundEditor
         {
             background.ImportFrom(engineType, level);
             Chunks.ImportFrom(engineType, mappings);
-            using (var fs = new FileStream(tiles, FileMode.Open))
+            if (engineType != Retro_Formats.EngineType.RSDKvRS)
             {
-                var bmp = new Bitmap(fs);
-                _loadedTiles = (Bitmap)bmp.Clone();
+                using (var fs = new FileStream(tiles, FileMode.Open))
+                {
+                    var bmp = new Bitmap(fs);
+                    _loadedTiles = (Bitmap)bmp.Clone();
+                }
+            }
+            else
+            {
+                RSDKvRS.gfx gfx = new RSDKvRS.gfx(tiles);
+                _loadedTiles = gfx.gfxImage;
             }
             _blocksViewer._tiles = _loadedTiles;
             _blocksViewer.SetChunks();
-            _blocksViewer.RefreshParallaxList();
 
             _mapViewer._tiles = _loadedTiles;
             _mapViewer.SetLevel();
             _mapViewer.DrawLevel();
+        }
+
+        public void LoadScrollIndexes(int LayerID = -1)
+        {
+            if (LayerID < 0 || LayerID >= background.Layers.Count)
+            {
+                LayerID = curlayer;
+            }
+
+            ScrollIndices.Clear();
+            int curIndex = 0, lastIndex = 0;
+            int count = 0;
+            for (int i = 0; i < background.Layers[LayerID].LineIndexes.Length; i++)
+            {
+                lastIndex = curIndex;
+                curIndex = background.Layers[LayerID].LineIndexes[i];
+                if (i == 0)
+                {
+                    lastIndex = curIndex;
+                }
+                if (lastIndex != curIndex)
+                {
+                    ScrollIndex scrollIndex = new ScrollIndex();
+                    scrollIndex.StartIndex = (ushort)(i - count);
+                    scrollIndex.LineCount = (ushort)count;
+                    scrollIndex.ScrollInfo = (byte)lastIndex;
+                    count = 0;
+                    ScrollIndices.Add(scrollIndex);
+                }
+                else
+                {
+                    count++;
+                }
+            }
         }
 
         private void exportImageToolStripMenuItem_Click(object sender, EventArgs e)
@@ -467,25 +530,6 @@ namespace RetroED.Tools.BackgroundEditor
             }
         }
 
-        private void MenuItem_SelectLayer_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-            //curlayer = MenuItem_SelectLayer.MenuItems.IndexOf(e.ClickedItem);
-            //_mapViewer.curlayer = MenuItem_SelectLayer.MenuItems.IndexOf(e.ClickedItem);
-            //_mapViewer.DrawLevel();
-        }
-
-        private void clearScrollInfoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            background.HLines.Clear();
-            _blocksViewer.RefreshParallaxList();
-        }
-
-        private void addParallaxValueToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            background.HLines.Add(new Retro_Formats.Background.ScrollInfo());
-            _blocksViewer.RefreshParallaxList();
-        }
-
         private void addLayerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             background.Layers.Add(new Retro_Formats.Background.BackgroundLayer());
@@ -521,29 +565,9 @@ namespace RetroED.Tools.BackgroundEditor
             {
                 _mapViewer.curlayer = curlayer = SLF.SelLayer;
                 Console.WriteLine(SLF.SelLayer + " " + _mapViewer.curlayer + " " + curlayer);
-                _blocksViewer.RefreshLinePosList();
                 _mapViewer.DrawLevel();
             }
 
-        }
-
-        private void MenuItem_AddVPValues_Click(object sender, EventArgs e)
-        {
-            background.VLines.Add(new Retro_Formats.Background.ScrollInfo());
-            _blocksViewer.RefreshParallaxList();
-        }
-
-        private void MenuItem_ClearVPvalues_Click(object sender, EventArgs e)
-        {
-            background.VLines.Clear();
-            _blocksViewer.RefreshParallaxList();
-        }
-
-        private void MenuItem_ClearHPValues_Click(object sender, EventArgs e)
-        {
-            background.HLines.Clear();
-            background.VLines.Clear();
-            _blocksViewer.RefreshParallaxList();
         }
 
         private void menuItem4_Click(object sender, EventArgs e)
@@ -568,6 +592,17 @@ namespace RetroED.Tools.BackgroundEditor
         private void menuItem_RedrawLayer_Click(object sender, EventArgs e)
         {
             _mapViewer.DrawLevel();
+        }
+
+        private void MenuItem5_Click(object sender, EventArgs e)
+        {
+            ParallaxPropertiesForm form = new ParallaxPropertiesForm();
+
+            form.SceneData = background;
+            form.LoadScrollIndexes();
+            form.RefreshUI();
+            form.Show();
+            background = form.SceneData;
         }
     }
 

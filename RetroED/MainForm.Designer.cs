@@ -51,7 +51,6 @@
             this.menuItem3 = new System.Windows.Forms.MenuItem();
             this.MenuItem_RSDKUnpacker = new System.Windows.Forms.MenuItem();
             this.menuItem14 = new System.Windows.Forms.MenuItem();
-            this.MenuItem_AnimationEditor = new System.Windows.Forms.MenuItem();
             this.MenuItem_MapEditor = new System.Windows.Forms.MenuItem();
             this.menuItem6 = new System.Windows.Forms.MenuItem();
             this.MenuItem_ChunkEditor = new System.Windows.Forms.MenuItem();
@@ -73,6 +72,7 @@
             this.menuItem19 = new System.Windows.Forms.MenuItem();
             this.MenuItem_GFXTool = new System.Windows.Forms.MenuItem();
             this.MenuItem_NexusDecrypter = new System.Windows.Forms.MenuItem();
+            this.menuItem8 = new System.Windows.Forms.MenuItem();
             this.menuItem12 = new System.Windows.Forms.MenuItem();
             this.MenuItem_CloseTab = new System.Windows.Forms.MenuItem();
             this.GameStarterButton = new System.Windows.Forms.MenuItem();
@@ -113,7 +113,6 @@
             this.menuItem3.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.MenuItem_RSDKUnpacker,
             this.menuItem14,
-            this.MenuItem_AnimationEditor,
             this.MenuItem_MapEditor,
             this.menuItem6,
             this.MenuItem_ChunkEditor,
@@ -124,6 +123,7 @@
             this.menuItem11,
             this.MenuItem_GFXTool,
             this.MenuItem_NexusDecrypter,
+            this.menuItem8,
             this.menuItem12,
             this.MenuItem_CloseTab});
             this.menuItem3.Text = "Engine";
@@ -140,38 +140,30 @@
             this.menuItem14.Index = 1;
             this.menuItem14.Text = "-";
             // 
-            // MenuItem_AnimationEditor
-            // 
-            this.MenuItem_AnimationEditor.Enabled = false;
-            this.MenuItem_AnimationEditor.Index = 2;
-            this.MenuItem_AnimationEditor.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftA;
-            this.MenuItem_AnimationEditor.Text = "Animation Editor";
-            this.MenuItem_AnimationEditor.Click += new System.EventHandler(this.MenuItem_AnimationEditor_Click);
-            // 
             // MenuItem_MapEditor
             // 
-            this.MenuItem_MapEditor.Index = 3;
+            this.MenuItem_MapEditor.Index = 2;
             this.MenuItem_MapEditor.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftM;
-            this.MenuItem_MapEditor.Text = "Map Editor";
+            this.MenuItem_MapEditor.Text = "Scene Editor";
             this.MenuItem_MapEditor.Click += new System.EventHandler(this.MenuItem_MapEditor_Click);
             // 
             // menuItem6
             // 
-            this.menuItem6.Index = 4;
+            this.menuItem6.Index = 3;
             this.menuItem6.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftB;
             this.menuItem6.Text = "Background Editor";
             this.menuItem6.Click += new System.EventHandler(this.backgroundEditorToolStripMenuItem_Click);
             // 
             // MenuItem_ChunkEditor
             // 
-            this.MenuItem_ChunkEditor.Index = 5;
+            this.MenuItem_ChunkEditor.Index = 4;
             this.MenuItem_ChunkEditor.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftC;
             this.MenuItem_ChunkEditor.Text = "Chunk Editor";
             this.MenuItem_ChunkEditor.Click += new System.EventHandler(this.MenuItem_ChunkEditor_Click);
             // 
             // MenuItem_CollisionEditor
             // 
-            this.MenuItem_CollisionEditor.Index = 6;
+            this.MenuItem_CollisionEditor.Index = 5;
             this.MenuItem_CollisionEditor.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.MenuItem_RSDKCollisionEditor,
             this.MenuItem_RSonicCollisionEditor});
@@ -192,20 +184,20 @@
             // 
             // MenuItem_PaletteEditor
             // 
-            this.MenuItem_PaletteEditor.Index = 7;
+            this.MenuItem_PaletteEditor.Index = 6;
             this.MenuItem_PaletteEditor.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftP;
             this.MenuItem_PaletteEditor.Text = "Palette Editor";
             this.MenuItem_PaletteEditor.Click += new System.EventHandler(this.MenuItem_PaletteEditor_Click);
             // 
             // MenuItem_ScriptEditor
             // 
-            this.MenuItem_ScriptEditor.Index = 8;
+            this.MenuItem_ScriptEditor.Index = 7;
             this.MenuItem_ScriptEditor.Text = "Script Editor";
             this.MenuItem_ScriptEditor.Click += new System.EventHandler(this.MenuItem_ScriptEditor_Click);
             // 
             // menuItem10
             // 
-            this.menuItem10.Index = 9;
+            this.menuItem10.Index = 8;
             this.menuItem10.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.MenuItem_RSonicMdfEditor,
             this.menuItem9,
@@ -246,7 +238,7 @@
             // 
             // menuItem11
             // 
-            this.menuItem11.Index = 10;
+            this.menuItem11.Index = 9;
             this.menuItem11.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuItem20,
             this.menuItem17,
@@ -280,17 +272,23 @@
             // 
             // MenuItem_GFXTool
             // 
-            this.MenuItem_GFXTool.Index = 11;
+            this.MenuItem_GFXTool.Index = 10;
             this.MenuItem_GFXTool.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftG;
             this.MenuItem_GFXTool.Text = "GFX Tool";
             this.MenuItem_GFXTool.Click += new System.EventHandler(this.MenuItem_GFXTool_Click);
             // 
             // MenuItem_NexusDecrypter
             // 
-            this.MenuItem_NexusDecrypter.Index = 12;
+            this.MenuItem_NexusDecrypter.Index = 11;
             this.MenuItem_NexusDecrypter.Shortcut = System.Windows.Forms.Shortcut.CtrlShiftN;
             this.MenuItem_NexusDecrypter.Text = "Nexus Decrypter";
             this.MenuItem_NexusDecrypter.Click += new System.EventHandler(this.MenuItem_NexusDecrypter_Click);
+            // 
+            // menuItem8
+            // 
+            this.menuItem8.Index = 12;
+            this.menuItem8.Text = "RSV Extractor";
+            this.menuItem8.Click += new System.EventHandler(this.MenuItem8_Click);
             // 
             // menuItem12
             // 
@@ -346,9 +344,9 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 648);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 647);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1261, 25);
+            this.statusStrip1.Size = new System.Drawing.Size(1261, 26);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -367,7 +365,7 @@
             this.dpMain.Location = new System.Drawing.Point(0, 0);
             this.dpMain.Margin = new System.Windows.Forms.Padding(4);
             this.dpMain.Name = "dpMain";
-            this.dpMain.Size = new System.Drawing.Size(1261, 648);
+            this.dpMain.Size = new System.Drawing.Size(1261, 647);
             dockPanelGradient1.EndColor = System.Drawing.SystemColors.ControlLight;
             dockPanelGradient1.StartColor = System.Drawing.SystemColors.ControlLight;
             autoHideStripSkin1.DockStripGradient = dockPanelGradient1;
@@ -449,7 +447,6 @@
         private System.Windows.Forms.MenuItem menuItem3;
         private System.Windows.Forms.MenuItem menuItem4;
         private System.Windows.Forms.MenuItem MenuItem_RSDKUnpacker;
-        private System.Windows.Forms.MenuItem MenuItem_AnimationEditor;
         private System.Windows.Forms.MenuItem MenuItem_MapEditor;
         private System.Windows.Forms.MenuItem MenuItem_PaletteEditor;
         private System.Windows.Forms.MenuItem MenuItem_ChunkEditor;
@@ -481,6 +478,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private WeifenLuo.WinFormsUI.Docking.DockPanel dpMain;
+        private System.Windows.Forms.MenuItem menuItem8;
     }
 }
 
