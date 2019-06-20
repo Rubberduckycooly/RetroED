@@ -140,8 +140,6 @@ C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.MainForm.resou
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Properties.Resources.resources
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.SelectRSDKForm.resources
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.BackgroundEditor.CD12_LayerPropertiesForm.resources
-C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.BackgroundEditor.RSN_LineScrollForm.resources
-C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.BackgroundEditor.CD12_LineScrollForm.resources
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.BackgroundEditor.SelectLayerForm.resources
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.ChunkEditor.AutoSetCollisionA.resources
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.ChunkEditor.AutoSetCollisionB.resources

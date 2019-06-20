@@ -150,18 +150,6 @@
     <Compile Include="Tools\BackgroundEditor\ParallaxPropertiesForm.Designer.cs">
       <DependentUpon>ParallaxPropertiesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\BackgroundEditor\RSN_LineScrollForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tools\BackgroundEditor\RSN_LineScrollForm.Designer.cs">
-      <DependentUpon>RSN_LineScrollForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Tools\BackgroundEditor\CD12_LineScrollForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tools\BackgroundEditor\CD12_LineScrollForm.Designer.cs">
-      <DependentUpon>CD12_LineScrollForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tools\BackgroundEditor\SelectLayerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -623,12 +611,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\BackgroundEditor\ParallaxPropertiesForm.resx">
       <DependentUpon>ParallaxPropertiesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tools\BackgroundEditor\RSN_LineScrollForm.resx">
-      <DependentUpon>RSN_LineScrollForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tools\BackgroundEditor\CD12_LineScrollForm.resx">
-      <DependentUpon>CD12_LineScrollForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\BackgroundEditor\SelectLayerForm.resx">
       <DependentUpon>SelectLayerForm.cs</DependentUpon>

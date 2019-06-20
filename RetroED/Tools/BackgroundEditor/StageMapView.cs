@@ -80,10 +80,10 @@ namespace RetroED.Tools.BackgroundEditor
                         }
                     }
 
-                    Parent.LoadScrollIndexes(l);
-
                     if (DrawLines)
                     {
+                        Parent.LoadScrollIndexes(l);
+
                         for (int i = 0; i < Parent.ScrollIndices.Count; i++)
                         {
                             e.Graphics.DrawLine(p, 0, Parent.ScrollIndices[i].StartIndex, Parent.background.Layers[curlayer].width * 128, Parent.ScrollIndices[i].StartIndex);
