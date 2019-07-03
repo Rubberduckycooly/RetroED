@@ -60,6 +60,9 @@ namespace RetroED.Tools.RSDKUnpacker
                 filename = dlg.FileName;
                 DataFileLocation.Text = filename;
 
+                this.Text = "Data File Manager - Loading Datafile";
+                RetroED.MainForm.Instance.CurrentTabText = "Data File Manager - Loading Datafile";           
+
                 switch (engineType)
                 {
                     case Retro_Formats.EngineType.RSDKvRS:
@@ -135,6 +138,9 @@ namespace RetroED.Tools.RSDKUnpacker
                     default:
                         break;
                 }
+
+                this.Text = "Data File Manager";
+                RetroED.MainForm.Instance.CurrentTabText = "Data File Manager";
             }
         }
 
@@ -165,6 +171,8 @@ namespace RetroED.Tools.RSDKUnpacker
 
             if (dlg.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
             {
+                this.Text = "Data File Manager - Extracting Datafile";
+                RetroED.MainForm.Instance.CurrentTabText = "Data File Manager - Extracting Datafile";
                 switch (engineType)
                 {
                     case Retro_Formats.EngineType.RSDKvRS:
@@ -185,6 +193,8 @@ namespace RetroED.Tools.RSDKUnpacker
                     default:
                         break;
                 }
+                this.Text = "Data File Manager";
+                RetroED.MainForm.Instance.CurrentTabText = "Data File Manager";
             }
         }
 
@@ -242,6 +252,8 @@ namespace RetroED.Tools.RSDKUnpacker
 
             if (dlg.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
             {
+                this.Text = "Data File Manager - Building Datafile";
+                RetroED.MainForm.Instance.CurrentTabText = "Data File Manager - Building Datafile";
                 switch (dlg.FilterIndex-1)
                 {
                     case 0:
@@ -262,6 +274,8 @@ namespace RetroED.Tools.RSDKUnpacker
                     default:
                         break;
                 }
+                this.Text = "Data File Manager";
+                RetroED.MainForm.Instance.CurrentTabText = "Data File Manager";
             }
         }
 
@@ -706,21 +720,11 @@ namespace RetroED.Tools.RSDKUnpacker
         {
             switch (engineType)
             {
-                case Retro_Formats.EngineType.RSDKvRS:
-                    EncryptedCB.Checked = false;
-                    break;
-                case Retro_Formats.EngineType.RSDKv1:
-                    EncryptedCB.Checked = Datav1.Files[FileListBox.SelectedIndex].encrypted;
-                    break;
-                case Retro_Formats.EngineType.RSDKv2:
-                    //EncryptedCB.Checked = Datav2.Files[FileListBox.SelectedIndex].encrypted;
-                    EncryptedCB.Checked = true;
-                    break;
                 case Retro_Formats.EngineType.RSDKvB:
-                    EncryptedCB.Checked = DatavB.Files[FileListBox.SelectedIndex].Encrypted;
+                    DatavB.Files[FileListBox.SelectedIndex].Encrypted = EncryptedCB.Checked;
                     break;
                 case Retro_Formats.EngineType.RSDKv5:
-                    EncryptedCB.Checked = Datav5.Files[FileListBox.SelectedIndex].Encrypted;
+                    Datav5.Files[FileListBox.SelectedIndex].Encrypted = EncryptedCB.Checked;
                     break;
             }
         }
@@ -757,7 +761,6 @@ namespace RetroED.Tools.RSDKUnpacker
                         FileNameLabel.Text = "File Name = " + Datav2.Files[FileListBox.SelectedIndex].FileName;
                         FullFileNameLabel.Text = "Full File Name = " + Datav2.Files[FileListBox.SelectedIndex].FullFileName;
                         FileOffsetLabel.Text = "RSDKv2 doesn't use file offsets!";
-                        //EncryptedCB.Checked = Datav2.Files[FileListBox.SelectedIndex].encrypted;
                         EncryptedCB.Checked = true;
                     }
                     break;

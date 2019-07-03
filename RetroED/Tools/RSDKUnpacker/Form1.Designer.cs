@@ -163,6 +163,7 @@
             this.FileInfoBox.Controls.Add(this.FileSizeLabel);
             this.FileInfoBox.Controls.Add(this.FileNameLabel);
             this.FileInfoBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FileInfoBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.FileInfoBox.Location = new System.Drawing.Point(0, 131);
             this.FileInfoBox.Name = "FileInfoBox";
             this.FileInfoBox.Size = new System.Drawing.Size(507, 237);
@@ -249,6 +250,7 @@
             this.groupBox2.Controls.Add(this.DataFileLocation);
             this.groupBox2.Controls.Add(this.SelDataFileButton);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(507, 131);
@@ -258,6 +260,7 @@
             // 
             // SelectListButton
             // 
+            this.SelectListButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.SelectListButton.Location = new System.Drawing.Point(161, 72);
             this.SelectListButton.Name = "SelectListButton";
             this.SelectListButton.Size = new System.Drawing.Size(152, 33);
@@ -268,6 +271,7 @@
             // 
             // ExtractDataButton
             // 
+            this.ExtractDataButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ExtractDataButton.Location = new System.Drawing.Point(6, 72);
             this.ExtractDataButton.Name = "ExtractDataButton";
             this.ExtractDataButton.Size = new System.Drawing.Size(152, 33);
@@ -278,6 +282,7 @@
             // 
             // DataFileLocation
             // 
+            this.DataFileLocation.ForeColor = System.Drawing.SystemColors.ControlText;
             this.DataFileLocation.Location = new System.Drawing.Point(164, 38);
             this.DataFileLocation.Name = "DataFileLocation";
             this.DataFileLocation.ReadOnly = true;
@@ -286,6 +291,7 @@
             // 
             // SelDataFileButton
             // 
+            this.SelDataFileButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.SelDataFileButton.Location = new System.Drawing.Point(6, 33);
             this.SelDataFileButton.Name = "SelDataFileButton";
             this.SelDataFileButton.Size = new System.Drawing.Size(152, 33);
@@ -300,6 +306,7 @@
             this.groupBox1.Controls.Add(this.DataFolderLocation);
             this.groupBox1.Controls.Add(this.SelectFolderButton);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox1.Location = new System.Drawing.Point(0, 368);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(507, 140);
@@ -309,6 +316,7 @@
             // 
             // BuildDataButton
             // 
+            this.BuildDataButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.BuildDataButton.Location = new System.Drawing.Point(6, 81);
             this.BuildDataButton.Name = "BuildDataButton";
             this.BuildDataButton.Size = new System.Drawing.Size(152, 33);
@@ -327,6 +335,7 @@
             // 
             // SelectFolderButton
             // 
+            this.SelectFolderButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.SelectFolderButton.Location = new System.Drawing.Point(6, 42);
             this.SelectFolderButton.Name = "SelectFolderButton";
             this.SelectFolderButton.Size = new System.Drawing.Size(152, 33);
@@ -342,6 +351,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(695, 508);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "MainForm";
             this.Text = "Data File Manager";
             this.panel1.ResumeLayout(false);
