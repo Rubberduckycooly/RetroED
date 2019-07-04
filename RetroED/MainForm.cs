@@ -20,17 +20,46 @@ namespace RetroED
 
         public static MainForm Instance;
 
+        public string WindowName
+        {
+            get
+            {
+                return DefaultWindowName + " - " + CurrentTabText;
+            }
+        }
+
+        public string DefaultWindowName
+        {
+            get
+            {
+                return $"RetroED v{System.Reflection.Assembly.GetExecutingAssembly().GetName().Version}";
+            }
+        }
+
+
         public string CurrentTabText
         {
             get
             {
-                if (dpMain.ActiveContent != null)
+                try
+                {
                     return dpMain.ActiveContent.DockHandler.TabText;
-                return "";
+                }
+                catch
+                {
+                    return DefaultWindowName;
+                }
             }
             set
             {
-                dpMain.ActiveContent.DockHandler.TabText = value;
+                try
+                {
+                    dpMain.ActiveContent.DockHandler.TabText = value;
+                }
+                catch
+                {
+
+                }
             }
         }
 
@@ -38,6 +67,7 @@ namespace RetroED
         {
             InitializeComponent();
             InitDiscord();
+            Text = DefaultWindowName;
             Instance = this;
         }
 
@@ -508,7 +538,7 @@ namespace RetroED
             {
                 if (CurrentTabText != null && CurrentTabText != "")
                 {
-                    Text = $"RetroED - {CurrentTabText}";
+                    Text = WindowName;
                     MenuItem_CloseTab.Enabled = true;
                     LinkMenubar();
                 }

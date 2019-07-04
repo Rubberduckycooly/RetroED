@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.ExportAllCB = new System.Windows.Forms.CheckBox();
             this.ExtractRSVButton = new System.Windows.Forms.Button();
             this.SelRSVButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.ExportAllCB = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -60,13 +60,26 @@
             this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.button2);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 290);
-            this.splitContainer1.SplitterDistance = 379;
+            this.splitContainer1.Size = new System.Drawing.Size(429, 290);
+            this.splitContainer1.SplitterDistance = 220;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // ExportAllCB
+            // 
+            this.ExportAllCB.AutoSize = true;
+            this.ExportAllCB.Checked = true;
+            this.ExportAllCB.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ExportAllCB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ExportAllCB.Location = new System.Drawing.Point(39, 159);
+            this.ExportAllCB.Name = "ExportAllCB";
+            this.ExportAllCB.Size = new System.Drawing.Size(140, 21);
+            this.ExportAllCB.TabIndex = 3;
+            this.ExportAllCB.Text = "Export All Frames";
+            this.ExportAllCB.UseVisualStyleBackColor = true;
             // 
             // ExtractRSVButton
             // 
-            this.ExtractRSVButton.Location = new System.Drawing.Point(92, 186);
+            this.ExtractRSVButton.Location = new System.Drawing.Point(39, 186);
             this.ExtractRSVButton.Name = "ExtractRSVButton";
             this.ExtractRSVButton.Size = new System.Drawing.Size(144, 51);
             this.ExtractRSVButton.TabIndex = 2;
@@ -76,7 +89,7 @@
             // 
             // SelRSVButton
             // 
-            this.SelRSVButton.Location = new System.Drawing.Point(92, 77);
+            this.SelRSVButton.Location = new System.Drawing.Point(39, 77);
             this.SelRSVButton.Name = "SelRSVButton";
             this.SelRSVButton.Size = new System.Drawing.Size(144, 51);
             this.SelRSVButton.TabIndex = 1;
@@ -89,7 +102,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Location = new System.Drawing.Point(116, 9);
+            this.label1.Location = new System.Drawing.Point(63, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 29);
             this.label1.TabIndex = 0;
@@ -98,7 +111,7 @@
             // button1
             // 
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(124, 186);
+            this.button1.Location = new System.Drawing.Point(32, 186);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 51);
             this.button1.TabIndex = 4;
@@ -108,7 +121,7 @@
             // button2
             // 
             this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(124, 77);
+            this.button2.Location = new System.Drawing.Point(32, 77);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(144, 51);
             this.button2.TabIndex = 3;
@@ -120,31 +133,18 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label2.Location = new System.Drawing.Point(162, 9);
+            this.label2.Location = new System.Drawing.Point(70, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 29);
             this.label2.TabIndex = 1;
             this.label2.Text = "Pack";
-            // 
-            // ExportAllCB
-            // 
-            this.ExportAllCB.AutoSize = true;
-            this.ExportAllCB.Checked = true;
-            this.ExportAllCB.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ExportAllCB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ExportAllCB.Location = new System.Drawing.Point(92, 159);
-            this.ExportAllCB.Name = "ExportAllCB";
-            this.ExportAllCB.Size = new System.Drawing.Size(140, 21);
-            this.ExportAllCB.TabIndex = 3;
-            this.ExportAllCB.Text = "Export All Frames";
-            this.ExportAllCB.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.ClientSize = new System.Drawing.Size(800, 290);
+            this.ClientSize = new System.Drawing.Size(429, 290);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "MainForm";

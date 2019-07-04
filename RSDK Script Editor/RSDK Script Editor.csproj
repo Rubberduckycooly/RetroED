@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA35C416-F6F4-4364-8B4F-6F3F40221FC7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RSDK_Script_Editor</RootNamespace>
+    <AssemblyName>RSDK Script Editor</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ScintillaNET, Version=3.6.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ScintillaNET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.9.0.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mainform.Designer.cs">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScintillaNET\Annotation.cs" />
+    <Compile Include="ScintillaNET\AutoCSelectionEventArgs.cs" />
+    <Compile Include="ScintillaNET\AutomaticFold.cs" />
+    <Compile Include="ScintillaNET\BeforeModificationEventArgs.cs" />
+    <Compile Include="ScintillaNET\CaretStyle.cs" />
+    <Compile Include="ScintillaNET\ChangeAnnotationEventArgs.cs" />
+    <Compile Include="ScintillaNET\CharAddedEventArgs.cs" />
+    <Compile Include="ScintillaNET\Command.cs" />
+    <Compile Include="ScintillaNET\CopyFormat.cs" />
+    <Compile Include="ScintillaNET\Document.cs" />
+    <Compile Include="ScintillaNET\DoubleClickEventArgs.cs" />
+    <Compile Include="ScintillaNET\DwellEventArgs.cs" />
+    <Compile Include="ScintillaNET\EdgeMode.cs" />
+    <Compile Include="ScintillaNET\Eol.cs" />
+    <Compile Include="ScintillaNET\FlagsEnumConverter.cs" />
+    <Compile Include="ScintillaNET\FoldAction.cs" />
+    <Compile Include="ScintillaNET\FoldDisplayText.cs" />
+    <Compile Include="ScintillaNET\FoldFlags.cs" />
+    <Compile Include="ScintillaNET\FoldLevelFlags.cs" />
+    <Compile Include="ScintillaNET\FontQuality.cs" />
+    <Compile Include="ScintillaNET\GapBuffer.cs" />
+    <Compile Include="ScintillaNET\Helpers.cs" />
+    <Compile Include="ScintillaNET\HotspotClickEventArgs.cs" />
+    <Compile Include="ScintillaNET\IdleStyling.cs" />
+    <Compile Include="ScintillaNET\ILoader.cs" />
+    <Compile Include="ScintillaNET\IndentView.cs" />
+    <Compile Include="ScintillaNET\Indicator.cs" />
+    <Compile Include="ScintillaNET\IndicatorClickEventArgs.cs" />
+    <Compile Include="ScintillaNET\IndicatorCollection.cs" />
+    <Compile Include="ScintillaNET\IndicatorFlags.cs" />
+    <Compile Include="ScintillaNET\IndicatorReleaseEventArgs.cs" />
+    <Compile Include="ScintillaNET\IndicatorStyle.cs" />
+    <Compile Include="ScintillaNET\InsertCheckEventArgs.cs" />
+    <Compile Include="ScintillaNET\Lexer.cs" />
+    <Compile Include="ScintillaNET\Line.cs" />
+    <Compile Include="ScintillaNET\LineCollection.cs" />
+    <Compile Include="ScintillaNET\LineEndType.cs" />
+    <Compile Include="ScintillaNET\ListCompletionMethod.cs" />
+    <Compile Include="ScintillaNET\Loader.cs" />
+    <Compile Include="ScintillaNET\Margin.cs" />
+    <Compile Include="ScintillaNET\MarginClickEventArgs.cs" />
+    <Compile Include="ScintillaNET\MarginCollection.cs" />
+    <Compile Include="ScintillaNET\MarginCursor.cs" />
+    <Compile Include="ScintillaNET\MarginOptions.cs" />
+    <Compile Include="ScintillaNET\MarginType.cs" />
+    <Compile Include="ScintillaNET\Marker.cs" />
+    <Compile Include="ScintillaNET\MarkerCollection.cs" />
+    <Compile Include="ScintillaNET\MarkerHandle.cs" />
+    <Compile Include="ScintillaNET\MarkerSymbol.cs" />
+    <Compile Include="ScintillaNET\ModificationEventArgs.cs" />
+    <Compile Include="ScintillaNET\ModificationSource.cs" />
+    <Compile Include="ScintillaNET\MultiPaste.cs" />
+    <Compile Include="ScintillaNET\NativeMemoryStream.cs" />
+    <Compile Include="ScintillaNET\NativeMethods.cs" />
+    <Compile Include="ScintillaNET\NeedShownEventArgs.cs" />
+    <Compile Include="ScintillaNET\Order.cs" />
+    <Compile Include="ScintillaNET\Phases.cs" />
+    <Compile Include="ScintillaNET\PopupMode.cs" />
+    <Compile Include="ScintillaNET\ProjectionEqualityComparer.cs" />
+    <Compile Include="ScintillaNET\PropertyType.cs" />
+    <Compile Include="ScintillaNET\Scintilla.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScintillaNET\ScintillaReader.cs" />
+    <Compile Include="ScintillaNET\SCNotificationEventArgs.cs" />
+    <Compile Include="ScintillaNET\SearchFlags.cs" />
+    <Compile Include="ScintillaNET\Selection.cs" />
+    <Compile Include="ScintillaNET\SelectionCollection.cs" />
+    <Compile Include="ScintillaNET\Status.cs" />
+    <Compile Include="ScintillaNET\Style.cs" />
+    <Compile Include="ScintillaNET\StyleCase.cs" />
+    <Compile Include="ScintillaNET\StyleCollection.cs" />
+    <Compile Include="ScintillaNET\StyleNeededEventArgs.cs" />
+    <Compile Include="ScintillaNET\TabDrawMode.cs" />
+    <Compile Include="ScintillaNET\Technology.cs" />
+    <Compile Include="ScintillaNET\Tuple.cs" />
+    <Compile Include="ScintillaNET\UpdateChange.cs" />
+    <Compile Include="ScintillaNET\UpdateUIEventArgs.cs" />
+    <Compile Include="ScintillaNET\VirtualSpace.cs" />
+    <Compile Include="ScintillaNET\WhitespaceMode.cs" />
+    <Compile Include="ScintillaNET\WrapIndentMode.cs" />
+    <Compile Include="ScintillaNET\WrapMode.cs" />
+    <Compile Include="ScintillaNET\WrapVisualFlagLocation.cs" />
+    <Compile Include="ScintillaNET\WrapVisualFlags.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>Mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RSDK-Reverse\RSDKv1\RSDKv1.csproj">
+      <Project>{e089db56-f8d4-434e-a9a8-c7efcc3278d8}</Project>
+      <Name>RSDKv1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RSDK-Reverse\RSDKvRS\RSDKvRS.csproj">
+      <Project>{aae1bacd-fe6b-4cc6-ad2d-073315f45eaf}</Project>
+      <Name>RSDKvRS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

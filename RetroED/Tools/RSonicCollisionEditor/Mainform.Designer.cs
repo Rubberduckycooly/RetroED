@@ -96,6 +96,7 @@
             this.CurMaskLabel = new System.Windows.Forms.Label();
             this.OverlayLabel = new System.Windows.Forms.Label();
             this.OverlayPicBox = new System.Windows.Forms.PictureBox();
+            this.CollisionList = new RetroED.Tools.CollisionEditor.TileList();
             this.CollisionVIEW = new System.Windows.Forms.GroupBox();
             this.RGBoxF = new System.Windows.Forms.PictureBox();
             this.Viewer16 = new System.Windows.Forms.PictureBox();
@@ -134,7 +135,6 @@
             this.CTileLabel = new System.Windows.Forms.Label();
             this.TilePicBox = new System.Windows.Forms.PictureBox();
             this.CollisionPicBox = new System.Windows.Forms.PictureBox();
-            this.CollisionList = new RetroED.Tools.CollisionEditor.TileList();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -201,7 +201,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -216,6 +216,7 @@
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem,
@@ -226,130 +227,152 @@
             this.toolStripSeparator3,
             this.importRSDKTileconfigToolStripMenuItem,
             this.exportToRSDKTileconfigToolStripMenuItem});
+            this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // openToolStripMenuItem
             // 
-            this.openToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.openToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.openToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(281, 26);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
-            this.saveToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.saveToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(281, 26);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
             // 
-            this.saveAsToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.saveAsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.saveAsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(281, 26);
             this.saveAsToolStripMenuItem.Text = "Save As...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
+            this.toolStripSeparator2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.toolStripSeparator2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(270, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(278, 6);
             // 
             // openSingleCollisionMaskToolStripMenuItem
             // 
-            this.openSingleCollisionMaskToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.openSingleCollisionMaskToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.openSingleCollisionMaskToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.openSingleCollisionMaskToolStripMenuItem.Name = "openSingleCollisionMaskToolStripMenuItem";
-            this.openSingleCollisionMaskToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.openSingleCollisionMaskToolStripMenuItem.Size = new System.Drawing.Size(281, 26);
             this.openSingleCollisionMaskToolStripMenuItem.Text = "Open Singular CollisionMask";
             this.openSingleCollisionMaskToolStripMenuItem.Click += new System.EventHandler(this.openSingleCollisionMaskToolStripMenuItem_Click);
             // 
             // exportCollisionMaskAsToolStripMenuItem
             // 
-            this.exportCollisionMaskAsToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.exportCollisionMaskAsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.exportCollisionMaskAsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.exportCollisionMaskAsToolStripMenuItem.Name = "exportCollisionMaskAsToolStripMenuItem";
-            this.exportCollisionMaskAsToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.exportCollisionMaskAsToolStripMenuItem.Size = new System.Drawing.Size(281, 26);
             this.exportCollisionMaskAsToolStripMenuItem.Text = "Export CollisionMask As...";
             this.exportCollisionMaskAsToolStripMenuItem.Click += new System.EventHandler(this.exportCollisionMaskAsToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
+            this.toolStripSeparator3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.toolStripSeparator3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(270, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(278, 6);
             // 
             // importRSDKTileconfigToolStripMenuItem
             // 
-            this.importRSDKTileconfigToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.importRSDKTileconfigToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.importRSDKTileconfigToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.importRSDKTileconfigToolStripMenuItem.Name = "importRSDKTileconfigToolStripMenuItem";
-            this.importRSDKTileconfigToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.importRSDKTileconfigToolStripMenuItem.Size = new System.Drawing.Size(281, 26);
             this.importRSDKTileconfigToolStripMenuItem.Text = "Import RSDK Tileconfig";
             // 
             // exportToRSDKTileconfigToolStripMenuItem
             // 
-            this.exportToRSDKTileconfigToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.exportToRSDKTileconfigToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.exportToRSDKTileconfigToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.exportToRSDKTileconfigToolStripMenuItem.Name = "exportToRSDKTileconfigToolStripMenuItem";
-            this.exportToRSDKTileconfigToolStripMenuItem.Size = new System.Drawing.Size(273, 26);
+            this.exportToRSDKTileconfigToolStripMenuItem.Size = new System.Drawing.Size(281, 26);
             this.exportToRSDKTileconfigToolStripMenuItem.Text = "Export to RSDK Tileconfig";
             // 
             // viewToolStripMenuItem
             // 
+            this.viewToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showPathBToolStripMenuItem});
+            this.viewToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // showPathBToolStripMenuItem
             // 
-            this.showPathBToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.showPathBToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.showPathBToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.showPathBToolStripMenuItem.Name = "showPathBToolStripMenuItem";
             this.showPathBToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.showPathBToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.showPathBToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.showPathBToolStripMenuItem.Text = "Show Path B";
             this.showPathBToolStripMenuItem.Click += new System.EventHandler(this.showPathBToolStripMenuItem_Click);
             // 
             // toolsToolStripMenuItem
             // 
+            this.toolsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copyToOtherPathToolStripMenuItem,
             this.mirrorPathsToolStripMenuItem,
             this.toolStripSeparator1,
             this.splitFileToolStripMenuItem});
+            this.toolsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(56, 24);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             this.toolsToolStripMenuItem.Text = "Tools";
             // 
             // copyToOtherPathToolStripMenuItem
             // 
-            this.copyToOtherPathToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.copyToOtherPathToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.copyToOtherPathToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.copyToOtherPathToolStripMenuItem.Name = "copyToOtherPathToolStripMenuItem";
-            this.copyToOtherPathToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.copyToOtherPathToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.copyToOtherPathToolStripMenuItem.Text = "Copy to Other Path";
             this.copyToOtherPathToolStripMenuItem.Click += new System.EventHandler(this.copyToOtherPathToolStripMenuItem_Click);
             // 
             // mirrorPathsToolStripMenuItem
             // 
-            this.mirrorPathsToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.mirrorPathsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.mirrorPathsToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.mirrorPathsToolStripMenuItem.Name = "mirrorPathsToolStripMenuItem";
-            this.mirrorPathsToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.mirrorPathsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.mirrorPathsToolStripMenuItem.Text = "Mirror Paths";
             this.mirrorPathsToolStripMenuItem.Click += new System.EventHandler(this.mirrorPathsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
+            this.toolStripSeparator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.toolStripSeparator1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(213, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // splitFileToolStripMenuItem
             // 
-            this.splitFileToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.splitFileToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.splitFileToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.splitFileToolStripMenuItem.Name = "splitFileToolStripMenuItem";
-            this.splitFileToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.splitFileToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.splitFileToolStripMenuItem.Text = "Split File";
             this.splitFileToolStripMenuItem.Click += new System.EventHandler(this.splitFileToolStripMenuItem_Click);
             // 
@@ -416,6 +439,7 @@
             this.groupBox1.Controls.Add(this.SlopeLabel);
             this.groupBox1.Controls.Add(this.lb02);
             this.groupBox1.Controls.Add(this.lb01);
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox1.Location = new System.Drawing.Point(7, 4);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -428,7 +452,8 @@
             // GlobalActiveNUD
             // 
             this.GlobalActiveNUD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GlobalActiveNUD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.GlobalActiveNUD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.GlobalActiveNUD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.GlobalActiveNUD.Hexadecimal = true;
             this.GlobalActiveNUD.Location = new System.Drawing.Point(551, 347);
             this.GlobalActiveNUD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -444,7 +469,8 @@
             // 
             // cb13
             // 
-            this.cb13.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cb13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.cb13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb13.Location = new System.Drawing.Point(490, 292);
             this.cb13.Maximum = new decimal(new int[] {
             2,
@@ -458,7 +484,8 @@
             // 
             // cb12
             // 
-            this.cb12.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cb12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.cb12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb12.Location = new System.Drawing.Point(450, 292);
             this.cb12.Maximum = new decimal(new int[] {
             2,
@@ -472,7 +499,8 @@
             // 
             // cb14
             // 
-            this.cb14.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cb14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.cb14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb14.Location = new System.Drawing.Point(528, 292);
             this.cb14.Maximum = new decimal(new int[] {
             2,
@@ -486,7 +514,8 @@
             // 
             // cb11
             // 
-            this.cb11.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cb11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.cb11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb11.Location = new System.Drawing.Point(412, 292);
             this.cb11.Maximum = new decimal(new int[] {
             2,
@@ -500,7 +529,8 @@
             // 
             // cb10
             // 
-            this.cb10.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cb10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.cb10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb10.Location = new System.Drawing.Point(374, 292);
             this.cb10.Maximum = new decimal(new int[] {
             2,
@@ -514,7 +544,8 @@
             // 
             // cb09
             // 
-            this.cb09.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cb09.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.cb09.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb09.Location = new System.Drawing.Point(336, 292);
             this.cb09.Maximum = new decimal(new int[] {
             2,
@@ -528,7 +559,8 @@
             // 
             // cb08
             // 
-            this.cb08.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cb08.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.cb08.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb08.Location = new System.Drawing.Point(298, 292);
             this.cb08.Maximum = new decimal(new int[] {
             2,
@@ -542,7 +574,8 @@
             // 
             // cb07
             // 
-            this.cb07.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cb07.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.cb07.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb07.Location = new System.Drawing.Point(260, 292);
             this.cb07.Maximum = new decimal(new int[] {
             2,
@@ -556,7 +589,8 @@
             // 
             // cb06
             // 
-            this.cb06.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cb06.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.cb06.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb06.Location = new System.Drawing.Point(222, 292);
             this.cb06.Maximum = new decimal(new int[] {
             2,
@@ -570,7 +604,8 @@
             // 
             // cb05
             // 
-            this.cb05.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cb05.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.cb05.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb05.Location = new System.Drawing.Point(184, 292);
             this.cb05.Maximum = new decimal(new int[] {
             2,
@@ -584,7 +619,8 @@
             // 
             // cb04
             // 
-            this.cb04.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cb04.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.cb04.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb04.Location = new System.Drawing.Point(146, 292);
             this.cb04.Maximum = new decimal(new int[] {
             2,
@@ -598,7 +634,8 @@
             // 
             // cb03
             // 
-            this.cb03.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cb03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.cb03.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb03.Location = new System.Drawing.Point(110, 292);
             this.cb03.Maximum = new decimal(new int[] {
             2,
@@ -612,7 +649,8 @@
             // 
             // cb02
             // 
-            this.cb02.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cb02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.cb02.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb02.Location = new System.Drawing.Point(74, 292);
             this.cb02.Maximum = new decimal(new int[] {
             2,
@@ -626,7 +664,8 @@
             // 
             // cb01
             // 
-            this.cb01.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cb01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.cb01.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb01.Location = new System.Drawing.Point(38, 292);
             this.cb01.Maximum = new decimal(new int[] {
             2,
@@ -640,7 +679,8 @@
             // 
             // cb00
             // 
-            this.cb00.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cb00.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.cb00.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb00.Location = new System.Drawing.Point(0, 292);
             this.cb00.Maximum = new decimal(new int[] {
             2,
@@ -654,7 +694,8 @@
             // 
             // cb15
             // 
-            this.cb15.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cb15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.cb15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb15.Location = new System.Drawing.Point(566, 292);
             this.cb15.Maximum = new decimal(new int[] {
             2,
@@ -668,7 +709,8 @@
             // 
             // lb00
             // 
-            this.lb00.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lb00.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.lb00.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lb00.FormattingEnabled = true;
             this.lb00.ItemHeight = 16;
             this.lb00.Items.AddRange(new object[] {
@@ -697,7 +739,8 @@
             // 
             // lb15
             // 
-            this.lb15.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lb15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.lb15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lb15.FormattingEnabled = true;
             this.lb15.ItemHeight = 16;
             this.lb15.Items.AddRange(new object[] {
@@ -726,7 +769,8 @@
             // 
             // lb14
             // 
-            this.lb14.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lb14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.lb14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lb14.FormattingEnabled = true;
             this.lb14.ItemHeight = 16;
             this.lb14.Items.AddRange(new object[] {
@@ -755,7 +799,8 @@
             // 
             // lb13
             // 
-            this.lb13.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lb13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.lb13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lb13.FormattingEnabled = true;
             this.lb13.ItemHeight = 16;
             this.lb13.Items.AddRange(new object[] {
@@ -784,7 +829,8 @@
             // 
             // lb12
             // 
-            this.lb12.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lb12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.lb12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lb12.FormattingEnabled = true;
             this.lb12.ItemHeight = 16;
             this.lb12.Items.AddRange(new object[] {
@@ -813,7 +859,8 @@
             // 
             // lb11
             // 
-            this.lb11.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lb11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.lb11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lb11.FormattingEnabled = true;
             this.lb11.ItemHeight = 16;
             this.lb11.Items.AddRange(new object[] {
@@ -842,7 +889,8 @@
             // 
             // lb10
             // 
-            this.lb10.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lb10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.lb10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lb10.FormattingEnabled = true;
             this.lb10.ItemHeight = 16;
             this.lb10.Items.AddRange(new object[] {
@@ -871,7 +919,8 @@
             // 
             // lb09
             // 
-            this.lb09.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lb09.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.lb09.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lb09.FormattingEnabled = true;
             this.lb09.ItemHeight = 16;
             this.lb09.Items.AddRange(new object[] {
@@ -900,7 +949,8 @@
             // 
             // lb08
             // 
-            this.lb08.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lb08.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.lb08.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lb08.FormattingEnabled = true;
             this.lb08.ItemHeight = 16;
             this.lb08.Items.AddRange(new object[] {
@@ -929,7 +979,8 @@
             // 
             // lb07
             // 
-            this.lb07.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lb07.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.lb07.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lb07.FormattingEnabled = true;
             this.lb07.ItemHeight = 16;
             this.lb07.Items.AddRange(new object[] {
@@ -958,7 +1009,8 @@
             // 
             // lb06
             // 
-            this.lb06.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lb06.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.lb06.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lb06.FormattingEnabled = true;
             this.lb06.ItemHeight = 16;
             this.lb06.Items.AddRange(new object[] {
@@ -987,7 +1039,8 @@
             // 
             // lb05
             // 
-            this.lb05.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lb05.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.lb05.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lb05.FormattingEnabled = true;
             this.lb05.ItemHeight = 16;
             this.lb05.Items.AddRange(new object[] {
@@ -1016,7 +1069,8 @@
             // 
             // lb04
             // 
-            this.lb04.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lb04.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.lb04.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lb04.FormattingEnabled = true;
             this.lb04.ItemHeight = 16;
             this.lb04.Items.AddRange(new object[] {
@@ -1046,7 +1100,8 @@
             // UnknownNUD
             // 
             this.UnknownNUD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.UnknownNUD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.UnknownNUD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.UnknownNUD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.UnknownNUD.Hexadecimal = true;
             this.UnknownNUD.Location = new System.Drawing.Point(9, 347);
             this.UnknownNUD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1062,7 +1117,8 @@
             // 
             // lb03
             // 
-            this.lb03.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lb03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.lb03.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lb03.FormattingEnabled = true;
             this.lb03.ItemHeight = 16;
             this.lb03.Items.AddRange(new object[] {
@@ -1093,6 +1149,8 @@
             // 
             this.SlopeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.SlopeLabel.AutoSize = true;
+            this.SlopeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.SlopeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.SlopeLabel.Location = new System.Drawing.Point(8, 326);
             this.SlopeLabel.Name = "SlopeLabel";
             this.SlopeLabel.Size = new System.Drawing.Size(66, 17);
@@ -1101,7 +1159,8 @@
             // 
             // lb02
             // 
-            this.lb02.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lb02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.lb02.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lb02.FormattingEnabled = true;
             this.lb02.ItemHeight = 16;
             this.lb02.Items.AddRange(new object[] {
@@ -1130,7 +1189,8 @@
             // 
             // lb01
             // 
-            this.lb01.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.lb01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.lb01.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lb01.FormattingEnabled = true;
             this.lb01.ItemHeight = 16;
             this.lb01.Items.AddRange(new object[] {
@@ -1178,6 +1238,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Location = new System.Drawing.Point(417, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 17);
@@ -1202,6 +1263,7 @@
             // VPLabel
             // 
             this.VPLabel.AutoSize = true;
+            this.VPLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.VPLabel.Location = new System.Drawing.Point(249, 5);
             this.VPLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.VPLabel.Name = "VPLabel";
@@ -1223,6 +1285,7 @@
             // GotoLabel
             // 
             this.GotoLabel.AutoSize = true;
+            this.GotoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.GotoLabel.Location = new System.Drawing.Point(167, 36);
             this.GotoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.GotoLabel.Name = "GotoLabel";
@@ -1232,7 +1295,8 @@
             // 
             // GotoNUD
             // 
-            this.GotoNUD.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.GotoNUD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.GotoNUD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.GotoNUD.Location = new System.Drawing.Point(253, 33);
             this.GotoNUD.Margin = new System.Windows.Forms.Padding(4);
             this.GotoNUD.Maximum = new decimal(new int[] {
@@ -1280,6 +1344,7 @@
             // CurMaskLabel
             // 
             this.CurMaskLabel.AutoSize = true;
+            this.CurMaskLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.CurMaskLabel.Location = new System.Drawing.Point(11, 5);
             this.CurMaskLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CurMaskLabel.Name = "CurMaskLabel";
@@ -1291,6 +1356,7 @@
             // 
             this.OverlayLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.OverlayLabel.AutoSize = true;
+            this.OverlayLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.OverlayLabel.Location = new System.Drawing.Point(308, 272);
             this.OverlayLabel.Name = "OverlayLabel";
             this.OverlayLabel.Size = new System.Drawing.Size(90, 17);
@@ -1307,6 +1373,19 @@
             this.OverlayPicBox.Size = new System.Drawing.Size(128, 128);
             this.OverlayPicBox.TabIndex = 37;
             this.OverlayPicBox.TabStop = false;
+            // 
+            // CollisionList
+            // 
+            this.CollisionList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.CollisionList.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CollisionList.Location = new System.Drawing.Point(438, 0);
+            this.CollisionList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CollisionList.Name = "CollisionList";
+            this.CollisionList.ScrollValue = 0;
+            this.CollisionList.SelectedIndex = -1;
+            this.CollisionList.Size = new System.Drawing.Size(196, 466);
+            this.CollisionList.TabIndex = 36;
+            this.CollisionList.SelectedIndexChanged += new System.EventHandler(this.CollisionList_SelectedIndexChanged);
             // 
             // CollisionVIEW
             // 
@@ -1343,6 +1422,7 @@
             this.CollisionVIEW.Controls.Add(this.RGBox5);
             this.CollisionVIEW.Controls.Add(this.RGBox3);
             this.CollisionVIEW.Controls.Add(this.RGBox4);
+            this.CollisionVIEW.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.CollisionVIEW.Location = new System.Drawing.Point(4, 4);
             this.CollisionVIEW.Margin = new System.Windows.Forms.Padding(4);
             this.CollisionVIEW.Name = "CollisionVIEW";
@@ -1685,6 +1765,7 @@
             // 
             this.CMaskLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.CMaskLabel.AutoSize = true;
+            this.CMaskLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.CMaskLabel.Location = new System.Drawing.Point(5, 274);
             this.CMaskLabel.Name = "CMaskLabel";
             this.CMaskLabel.Size = new System.Drawing.Size(148, 17);
@@ -1695,6 +1776,7 @@
             // 
             this.CTileLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.CTileLabel.AutoSize = true;
+            this.CTileLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.CTileLabel.Location = new System.Drawing.Point(159, 273);
             this.CTileLabel.Name = "CTileLabel";
             this.CTileLabel.Size = new System.Drawing.Size(82, 17);
@@ -1723,27 +1805,15 @@
             this.CollisionPicBox.TabIndex = 0;
             this.CollisionPicBox.TabStop = false;
             // 
-            // CollisionList
-            // 
-            this.CollisionList.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.CollisionList.Dock = System.Windows.Forms.DockStyle.Right;
-            this.CollisionList.Location = new System.Drawing.Point(438, 0);
-            this.CollisionList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.CollisionList.Name = "CollisionList";
-            this.CollisionList.ScrollValue = 0;
-            this.CollisionList.SelectedIndex = -1;
-            this.CollisionList.Size = new System.Drawing.Size(196, 466);
-            this.CollisionList.TabIndex = 36;
-            this.CollisionList.SelectedIndexChanged += new System.EventHandler(this.CollisionList_SelectedIndexChanged);
-            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1294, 494);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

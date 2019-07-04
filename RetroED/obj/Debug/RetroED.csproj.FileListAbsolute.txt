@@ -152,7 +152,6 @@ C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.RetroSon
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.GameconfigEditors.RSDKv1GameconfigEditor.MainForm.resources
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.GameconfigEditors.RSDKv2GameconfigEditor.MainForm.resources
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.GameconfigEditors.RSDKvBGameconfigEditor.MainForm.resources
-C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.RSDKUnpacker.FileOptionsForm.resources
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.RSonicCollisionEditor.Mainform.resources
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.CollisionEditor.About_Form.resources
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.CollisionEditor.Mainform.resources
@@ -171,8 +170,6 @@ C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\Cyotek.Windows.Forms.C
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.PaletteEditor.MainForm.resources
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.PaletteEditor.ToolStripColorPickerDropDown.resources
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.PaletteEditor.ToolStripHostDemoForm.resources
-C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.RSDKUnpacker.MainForm.resources
-C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.ScriptEditor.MainForm.resources
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.StageconfigEditors.RSDKv1StageconfigEditor.MainForm.resources
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.StageconfigEditors.RSDKv2StageconfigEditor.MainForm.resources
 C:\Users\owner\Documents\GitHub\RetroED\RetroED\obj\Debug\RetroED.Tools.StageconfigEditors.RSDKvBStageconfigEditor.MainForm.resources
