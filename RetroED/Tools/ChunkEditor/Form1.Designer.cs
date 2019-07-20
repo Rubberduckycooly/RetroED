@@ -139,7 +139,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.TileListControl);
-            this.splitContainer1.Size = new System.Drawing.Size(981, 375);
+            this.splitContainer1.Size = new System.Drawing.Size(981, 349);
             this.splitContainer1.SplitterDistance = 734;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -157,7 +157,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.ChunkDisplay);
-            this.splitContainer2.Size = new System.Drawing.Size(734, 375);
+            this.splitContainer2.Size = new System.Drawing.Size(734, 349);
             this.splitContainer2.SplitterDistance = 305;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -177,7 +177,7 @@
             this.OptionsPanel.Location = new System.Drawing.Point(0, 0);
             this.OptionsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OptionsPanel.Name = "OptionsPanel";
-            this.OptionsPanel.Size = new System.Drawing.Size(305, 375);
+            this.OptionsPanel.Size = new System.Drawing.Size(305, 349);
             this.OptionsPanel.TabIndex = 0;
             // 
             // panel2
@@ -227,7 +227,7 @@
             this.CurChunkChangePanel.Controls.Add(this.PrevChunkButton);
             this.CurChunkChangePanel.Controls.Add(this.NextChunkButton);
             this.CurChunkChangePanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.CurChunkChangePanel.Location = new System.Drawing.Point(0, 322);
+            this.CurChunkChangePanel.Location = new System.Drawing.Point(0, 296);
             this.CurChunkChangePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CurChunkChangePanel.Name = "CurChunkChangePanel";
             this.CurChunkChangePanel.Size = new System.Drawing.Size(305, 53);
@@ -511,7 +511,7 @@
             this.ChunkDisplay.Location = new System.Drawing.Point(0, 0);
             this.ChunkDisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ChunkDisplay.Name = "ChunkDisplay";
-            this.ChunkDisplay.Size = new System.Drawing.Size(425, 375);
+            this.ChunkDisplay.Size = new System.Drawing.Size(425, 349);
             this.ChunkDisplay.TabIndex = 3;
             this.ChunkDisplay.Paint += new System.Windows.Forms.PaintEventHandler(this.ChunkDisplay_Paint);
             this.ChunkDisplay.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ChunkDisplay_MouseDown);
@@ -527,7 +527,7 @@
             this.TileListControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TileListControl.Name = "TileListControl";
             this.TileListControl.SelectedIndex = 0;
-            this.TileListControl.Size = new System.Drawing.Size(243, 375);
+            this.TileListControl.Size = new System.Drawing.Size(243, 349);
             this.TileListControl.TabIndex = 0;
             // 
             // tabPage1
@@ -537,7 +537,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(235, 346);
+            this.tabPage1.Size = new System.Drawing.Size(235, 320);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Tiles";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -556,8 +556,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.StageTilesList);
-            this.splitContainer3.Size = new System.Drawing.Size(229, 342);
-            this.splitContainer3.SplitterDistance = 171;
+            this.splitContainer3.Size = new System.Drawing.Size(229, 316);
+            this.splitContainer3.SplitterDistance = 158;
             this.splitContainer3.TabIndex = 0;
             // 
             // TileZoomBar
@@ -569,7 +569,7 @@
             this.TileZoomBar.Maximum = 5;
             this.TileZoomBar.Minimum = 1;
             this.TileZoomBar.Name = "TileZoomBar";
-            this.TileZoomBar.Size = new System.Drawing.Size(229, 171);
+            this.TileZoomBar.Size = new System.Drawing.Size(229, 158);
             this.TileZoomBar.TabIndex = 0;
             this.TileZoomBar.Value = 4;
             this.TileZoomBar.Scroll += new System.EventHandler(this.TileZoomBar_Scroll);
@@ -581,7 +581,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(235, 372);
+            this.tabPage2.Size = new System.Drawing.Size(235, 346);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Chunks";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -600,8 +600,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.StageChunksList);
-            this.splitContainer4.Size = new System.Drawing.Size(229, 368);
-            this.splitContainer4.SplitterDistance = 44;
+            this.splitContainer4.Size = new System.Drawing.Size(229, 342);
+            this.splitContainer4.SplitterDistance = 41;
             this.splitContainer4.TabIndex = 0;
             // 
             // ChunkZoomBar
@@ -823,7 +823,7 @@
             this.StageTilesList.Name = "StageTilesList";
             this.StageTilesList.ScrollValue = 0;
             this.StageTilesList.SelectedIndex = -1;
-            this.StageTilesList.Size = new System.Drawing.Size(229, 167);
+            this.StageTilesList.Size = new System.Drawing.Size(229, 154);
             this.StageTilesList.TabIndex = 3;
             this.StageTilesList.SelectedIndexChanged += new System.EventHandler(this.StageTilesList_SelectedIndexChanged);
             // 
@@ -839,7 +839,7 @@
             this.StageChunksList.Name = "StageChunksList";
             this.StageChunksList.ScrollValue = 0;
             this.StageChunksList.SelectedIndex = -1;
-            this.StageChunksList.Size = new System.Drawing.Size(229, 320);
+            this.StageChunksList.Size = new System.Drawing.Size(229, 297);
             this.StageChunksList.TabIndex = 3;
             this.StageChunksList.SelectedIndexChanged += new System.EventHandler(this.StageChunksList_SelectedIndexChanged);
             // 
@@ -848,7 +848,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(981, 375);
+            this.ClientSize = new System.Drawing.Size(981, 349);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
