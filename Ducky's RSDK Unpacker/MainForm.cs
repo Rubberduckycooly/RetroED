@@ -111,21 +111,31 @@ namespace RetroED.Tools.RSDKUnpacker
                             if (File.Exists("Data/DataFileUnpacker/RSDKv5Objects.txt"))
                             {
                                 StreamReader reader = new StreamReader(File.OpenRead("Data/DataFileUnpacker/RSDKv5Objects.txt"));
+                                StreamWriter writer = new StreamWriter(File.OpenWrite("StaticObjects.txt"));
                                 while (!reader.EndOfStream)
                                 {
-                                    string hash;
+                                    string rawhash;
+                                    string hash = "";
                                     string name = reader.ReadLine();
-                                    hash = GetMd5HashString(name);
+                                    rawhash = GetMd5HashString(name);
 
-                                    string path = "Data/Objects/Static/" + hash + ".bin";
-
-                                    if (name == "Player")
+                                    for (int c = 0; c < rawhash.Length; c += 2)
                                     {
-                                        Console.WriteLine("Player");
+                                        char c1 = ' ';
+                                        char c2 = ' ';
+                                        c1 = rawhash[c];
+                                        c2 = rawhash[c + 1];
+
+                                        hash += c2;
+                                        hash += c1;
                                     }
+
+                                    string path = "Data/Objects/Static/" + hash.ToUpper() + ".bin";
+                                    writer.WriteLine(name + " (" + hash.ToUpper() + ")");
 
                                     FileList.Add(path);
                                 }
+                                writer.Close();
                                 reader.Close();
                             }
                         }
@@ -738,6 +748,7 @@ namespace RetroED.Tools.RSDKUnpacker
                     {
                         FileSizeLabel.Text = "File Size = " + DatavRS.Files[FileListBox.SelectedIndex].fileSize + " Bytes";
                         FileNameLabel.Text = "File Name = " + DatavRS.Files[FileListBox.SelectedIndex].FileName;
+                        FNameHashLabel.Text = "RSDKvRS files don't have filename hashes";
                         FullFileNameLabel.Text = "Full File Name = " + DatavRS.Files[FileListBox.SelectedIndex].FullFileName;
                         FileOffsetLabel.Text = "RSDKvRS doesn't use file offsets!";
                         EncryptedCB.Checked = false;
@@ -749,6 +760,7 @@ namespace RetroED.Tools.RSDKUnpacker
                     {
                         FileSizeLabel.Text = "File Size = " + Datav1.Files[FileListBox.SelectedIndex].fileSize + " Bytes";
                         FileNameLabel.Text = "File Name = " + Datav1.Files[FileListBox.SelectedIndex].FileName;
+                        FNameHashLabel.Text = "RSDKv1 files don't have filename hashes";
                         FullFileNameLabel.Text = "Full File Name = " + Datav1.Files[FileListBox.SelectedIndex].FullFileName;
                         FileOffsetLabel.Text = "RSDKv1 doesn't use file offsets!";
                         EncryptedCB.Checked = Datav1.Files[FileListBox.SelectedIndex].encrypted;
@@ -759,6 +771,7 @@ namespace RetroED.Tools.RSDKUnpacker
                     {
                         FileSizeLabel.Text = "File Size = " + Datav2.Files[FileListBox.SelectedIndex].fileSize + " Bytes";
                         FileNameLabel.Text = "File Name = " + Datav2.Files[FileListBox.SelectedIndex].FileName;
+                        FNameHashLabel.Text = "RSDKv2 files don't have filename hashes";
                         FullFileNameLabel.Text = "Full File Name = " + Datav2.Files[FileListBox.SelectedIndex].FullFileName;
                         FileOffsetLabel.Text = "RSDKv2 doesn't use file offsets!";
                         EncryptedCB.Checked = true;
@@ -769,6 +782,7 @@ namespace RetroED.Tools.RSDKUnpacker
                     {
                         FileSizeLabel.Text = "File Size = " + DatavB.Files[FileListBox.SelectedIndex].FileSize + " Bytes";
                         FileNameLabel.Text = "File Name = " + Path.GetFileName(DatavB.Files[FileListBox.SelectedIndex].FileName);
+                        FNameHashLabel.Text = "Filename Hash = " + DatavB.Files[FileListBox.SelectedIndex].MD5FileName;
                         FullFileNameLabel.Text = "Full File Name = " + DatavB.Files[FileListBox.SelectedIndex].FileName;
                         FileOffsetLabel.Text = "File Offset = " + DatavB.Files[FileListBox.SelectedIndex].DataOffset + " Bytes";
                         EncryptedCB.Checked = DatavB.Files[FileListBox.SelectedIndex].Encrypted;
@@ -779,6 +793,7 @@ namespace RetroED.Tools.RSDKUnpacker
                     {
                         FileSizeLabel.Text = "File Size = " + Datav5.Files[FileListBox.SelectedIndex].FileSize + " Bytes";
                         FileNameLabel.Text = "File Name = " + Path.GetFileName(Datav5.Files[FileListBox.SelectedIndex].FileName);
+                        FNameHashLabel.Text = "Filename Hash = " + Datav5.Files[FileListBox.SelectedIndex].MD5FileName;
                         FullFileNameLabel.Text = "Full File Name = " + Datav5.Files[FileListBox.SelectedIndex].FileName;
                         FileOffsetLabel.Text = "File Offset = " + Datav5.Files[FileListBox.SelectedIndex].DataOffset + " Bytes";
                         EncryptedCB.Checked = Datav5.Files[FileListBox.SelectedIndex].Encrypted;

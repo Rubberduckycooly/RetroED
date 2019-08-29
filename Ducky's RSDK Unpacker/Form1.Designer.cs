@@ -36,6 +36,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.DirectoryListBox = new System.Windows.Forms.ListBox();
             this.FileInfoBox = new System.Windows.Forms.GroupBox();
+            this.FNameHashLabel = new System.Windows.Forms.Label();
             this.DirectoryList = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.FullFileNameLabel = new System.Windows.Forms.Label();
@@ -90,7 +91,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer1.Size = new System.Drawing.Size(695, 508);
-            this.splitContainer1.SplitterDistance = 184;
+            this.splitContainer1.SplitterDistance = 237;
             this.splitContainer1.TabIndex = 0;
             // 
             // tabControl1
@@ -101,16 +102,16 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(184, 508);
+            this.tabControl1.Size = new System.Drawing.Size(237, 508);
             this.tabControl1.TabIndex = 0;
             // 
             // FileListPage
             // 
             this.FileListPage.Controls.Add(this.FileListBox);
-            this.FileListPage.Location = new System.Drawing.Point(4, 25);
+            this.FileListPage.Location = new System.Drawing.Point(4, 22);
             this.FileListPage.Name = "FileListPage";
             this.FileListPage.Padding = new System.Windows.Forms.Padding(3);
-            this.FileListPage.Size = new System.Drawing.Size(176, 479);
+            this.FileListPage.Size = new System.Drawing.Size(229, 482);
             this.FileListPage.TabIndex = 1;
             this.FileListPage.Text = "FileList";
             this.FileListPage.UseVisualStyleBackColor = true;
@@ -121,10 +122,9 @@
             this.FileListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FileListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.FileListBox.FormattingEnabled = true;
-            this.FileListBox.ItemHeight = 16;
             this.FileListBox.Location = new System.Drawing.Point(3, 3);
             this.FileListBox.Name = "FileListBox";
-            this.FileListBox.Size = new System.Drawing.Size(170, 473);
+            this.FileListBox.Size = new System.Drawing.Size(223, 476);
             this.FileListBox.TabIndex = 0;
             this.FileListBox.SelectedIndexChanged += new System.EventHandler(this.FileListBox_SelectedIndexChanged);
             this.FileListBox.DoubleClick += new System.EventHandler(this.FileListBox_DoubleClick);
@@ -132,10 +132,10 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.DirectoryListBox);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(176, 479);
+            this.tabPage1.Size = new System.Drawing.Size(229, 482);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Directories";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -146,15 +146,15 @@
             this.DirectoryListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DirectoryListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.DirectoryListBox.FormattingEnabled = true;
-            this.DirectoryListBox.ItemHeight = 16;
             this.DirectoryListBox.Location = new System.Drawing.Point(3, 3);
             this.DirectoryListBox.Name = "DirectoryListBox";
-            this.DirectoryListBox.Size = new System.Drawing.Size(170, 473);
+            this.DirectoryListBox.Size = new System.Drawing.Size(223, 476);
             this.DirectoryListBox.TabIndex = 1;
             this.DirectoryListBox.SelectedIndexChanged += new System.EventHandler(this.DirectoryListBox_SelectedIndexChanged);
             // 
             // FileInfoBox
             // 
+            this.FileInfoBox.Controls.Add(this.FNameHashLabel);
             this.FileInfoBox.Controls.Add(this.DirectoryList);
             this.FileInfoBox.Controls.Add(this.label1);
             this.FileInfoBox.Controls.Add(this.FullFileNameLabel);
@@ -166,18 +166,28 @@
             this.FileInfoBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.FileInfoBox.Location = new System.Drawing.Point(0, 131);
             this.FileInfoBox.Name = "FileInfoBox";
-            this.FileInfoBox.Size = new System.Drawing.Size(507, 237);
+            this.FileInfoBox.Size = new System.Drawing.Size(454, 276);
             this.FileInfoBox.TabIndex = 23;
             this.FileInfoBox.TabStop = false;
             this.FileInfoBox.Text = "File Info";
+            // 
+            // FNameHashLabel
+            // 
+            this.FNameHashLabel.AutoSize = true;
+            this.FNameHashLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.FNameHashLabel.Location = new System.Drawing.Point(7, 148);
+            this.FNameHashLabel.Name = "FNameHashLabel";
+            this.FNameHashLabel.Size = new System.Drawing.Size(107, 13);
+            this.FNameHashLabel.TabIndex = 7;
+            this.FNameHashLabel.Text = "Filename Hash = Null";
             // 
             // DirectoryList
             // 
             this.DirectoryList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DirectoryList.FormattingEnabled = true;
-            this.DirectoryList.Location = new System.Drawing.Point(82, 190);
+            this.DirectoryList.Location = new System.Drawing.Point(82, 219);
             this.DirectoryList.Name = "DirectoryList";
-            this.DirectoryList.Size = new System.Drawing.Size(231, 24);
+            this.DirectoryList.Size = new System.Drawing.Size(231, 21);
             this.DirectoryList.TabIndex = 6;
             this.DirectoryList.SelectedIndexChanged += new System.EventHandler(this.DirectoryList_SelectedIndexChanged);
             // 
@@ -185,9 +195,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Location = new System.Drawing.Point(7, 193);
+            this.label1.Location = new System.Drawing.Point(7, 222);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 17);
+            this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Directory:";
             // 
@@ -195,9 +205,9 @@
             // 
             this.FullFileNameLabel.AutoSize = true;
             this.FullFileNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.FullFileNameLabel.Location = new System.Drawing.Point(7, 152);
+            this.FullFileNameLabel.Location = new System.Drawing.Point(6, 178);
             this.FullFileNameLabel.Name = "FullFileNameLabel";
-            this.FullFileNameLabel.Size = new System.Drawing.Size(137, 17);
+            this.FullFileNameLabel.Size = new System.Drawing.Size(103, 13);
             this.FullFileNameLabel.TabIndex = 4;
             this.FullFileNameLabel.Text = "Full File Name = Null";
             // 
@@ -207,7 +217,7 @@
             this.FileOffsetLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.FileOffsetLabel.Location = new System.Drawing.Point(7, 82);
             this.FileOffsetLabel.Name = "FileOffsetLabel";
-            this.FileOffsetLabel.Size = new System.Drawing.Size(131, 17);
+            this.FileOffsetLabel.Size = new System.Drawing.Size(98, 13);
             this.FileOffsetLabel.TabIndex = 3;
             this.FileOffsetLabel.Text = "FileOffset = 0 Bytes";
             // 
@@ -217,7 +227,7 @@
             this.EncryptedCB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.EncryptedCB.Location = new System.Drawing.Point(10, 117);
             this.EncryptedCB.Name = "EncryptedCB";
-            this.EncryptedCB.Size = new System.Drawing.Size(102, 21);
+            this.EncryptedCB.Size = new System.Drawing.Size(80, 17);
             this.EncryptedCB.TabIndex = 2;
             this.EncryptedCB.Text = "Encrypted?";
             this.EncryptedCB.UseVisualStyleBackColor = true;
@@ -229,7 +239,7 @@
             this.FileSizeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.FileSizeLabel.Location = new System.Drawing.Point(7, 50);
             this.FileSizeLabel.Name = "FileSizeLabel";
-            this.FileSizeLabel.Size = new System.Drawing.Size(124, 17);
+            this.FileSizeLabel.Size = new System.Drawing.Size(93, 13);
             this.FileSizeLabel.TabIndex = 1;
             this.FileSizeLabel.Text = "File Size = 0 Bytes";
             // 
@@ -239,7 +249,7 @@
             this.FileNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.FileNameLabel.Location = new System.Drawing.Point(7, 22);
             this.FileNameLabel.Name = "FileNameLabel";
-            this.FileNameLabel.Size = new System.Drawing.Size(111, 17);
+            this.FileNameLabel.Size = new System.Drawing.Size(84, 13);
             this.FileNameLabel.TabIndex = 0;
             this.FileNameLabel.Text = "File Name = Null";
             // 
@@ -253,7 +263,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(507, 131);
+            this.groupBox2.Size = new System.Drawing.Size(454, 131);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Extract Data File";
@@ -286,7 +296,7 @@
             this.DataFileLocation.Location = new System.Drawing.Point(164, 38);
             this.DataFileLocation.Name = "DataFileLocation";
             this.DataFileLocation.ReadOnly = true;
-            this.DataFileLocation.Size = new System.Drawing.Size(265, 22);
+            this.DataFileLocation.Size = new System.Drawing.Size(265, 19);
             this.DataFileLocation.TabIndex = 22;
             // 
             // SelDataFileButton
@@ -307,9 +317,9 @@
             this.groupBox1.Controls.Add(this.SelectFolderButton);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox1.Location = new System.Drawing.Point(0, 368);
+            this.groupBox1.Location = new System.Drawing.Point(0, 407);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(507, 140);
+            this.groupBox1.Size = new System.Drawing.Size(454, 101);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Compress Data File";
@@ -317,7 +327,7 @@
             // BuildDataButton
             // 
             this.BuildDataButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BuildDataButton.Location = new System.Drawing.Point(6, 81);
+            this.BuildDataButton.Location = new System.Drawing.Point(6, 57);
             this.BuildDataButton.Name = "BuildDataButton";
             this.BuildDataButton.Size = new System.Drawing.Size(152, 33);
             this.BuildDataButton.TabIndex = 21;
@@ -327,16 +337,16 @@
             // 
             // DataFolderLocation
             // 
-            this.DataFolderLocation.Location = new System.Drawing.Point(164, 47);
+            this.DataFolderLocation.Location = new System.Drawing.Point(164, 23);
             this.DataFolderLocation.Name = "DataFolderLocation";
             this.DataFolderLocation.ReadOnly = true;
-            this.DataFolderLocation.Size = new System.Drawing.Size(265, 22);
+            this.DataFolderLocation.Size = new System.Drawing.Size(265, 19);
             this.DataFolderLocation.TabIndex = 20;
             // 
             // SelectFolderButton
             // 
             this.SelectFolderButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.SelectFolderButton.Location = new System.Drawing.Point(6, 42);
+            this.SelectFolderButton.Location = new System.Drawing.Point(6, 18);
             this.SelectFolderButton.Name = "SelectFolderButton";
             this.SelectFolderButton.Size = new System.Drawing.Size(152, 33);
             this.SelectFolderButton.TabIndex = 19;
@@ -346,7 +356,7 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(695, 508);
@@ -398,6 +408,7 @@
         private System.Windows.Forms.ListBox DirectoryListBox;
         private System.Windows.Forms.ComboBox DirectoryList;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label FNameHashLabel;
     }
 }
 

@@ -1,0 +1,74 @@
+Rubberduckycooly's Static Object List
+Format:
+[ObjectName] -> [ObjectPath] -> [Functionality]
+
+AIZRockPile -> 		Data/Objects/Static/F6626BD9dd2ED205493601497475537B.bin - ???
+AIZSetup -> 		Data/Objects/Static/???.bin - AniTile Speeds
+AIZTornado -> 		Data/Objects/Static/837851AB76D9F726E97291E6F761921C.bin - ???
+AmoebaDroid -> 		Data/Objects/Static/3B3672B8B3DE043AA60690ECA5BED7A6.bin - Controls The broken boss pieces
+Animals -> 			Data/Objects/Static/33B8E672A1DEA5654AF81AEF98BDAA6F.bin - Animal Speeds
+BSS_Collectable -> 	Data/Objects/Static/1C0DAC922F5324EA54C3ECB4C0FACFFF.bin - Something to do with ring rendering
+BSS_Setup -> 		Data/Objects/Static/715D1A3BC7242C39198E6A8D8E5FC1D0.bin - BSS Perspective Table
+BallCannon -> 		Data/Objects/Static/EF87A07DA7300A6BDCE944BC9CCC2B64.bin - ???
+BigSqueeze -> 		Data/Objects/Static/71A77478202AF43D2D6F56A284F528D7.bin - ???
+BreakableWall -> 	Data/Objects/Static/09F50C61464BCFA45F26511A29FB1145.bin - ???
+CPZSetup -> 		Data/Objects/Static/4AFC943F1EF442684FB95BE660166A14.bin - AniTile Speeds
+ChaosEmerald -> 	Data/Objects/Static/CC5419FC91471F269C427BD306CED284.bin - Super Emerald Colours (?)
+ChemicalBall -> 	Data/Objects/Static/0344C9A8B5489E85401B4B309C608926.bin - ???
+ChemicalPool -> 	Data/Objects/Static/E7B6ABB18F0BC48156143BAFBA018B4E.bin - ??? (Colours?)
+ConveyorPlatform -> Data/Objects/Static/5337F3B0C92FF6ADF207C77B18D0ACAF.bin - ???
+CorkscrewPath -> 	Data/Objects/Static/575130A718E77F70E8BDE0B5822855C5.bin - Used for animating player when coming from right
+CrimsonEye -> 		Data/Objects/Static/D4DACA8531FB3A7EDBC71B9007838E43.bin - Amount of hits it takes?
+Cylinder -> 		Data/Objects/Static/E22C2C69C1C75E1A419D961C5F265A36.bin - ???
+DDWrecker -> 		Data/Objects/Static/CA2737FBD52AA1BEF679748AC30DBFAE.bin - Behaviour (such as ball distance)
+ERZGunner -> 		Data/Objects/Static/943231E16FCAA5DC4ACE31D92CF324E1.bin - ???
+FBZMissile -> 		Data/Objects/Static/351EA95CFD36A485418DA41642BA6118.bin - ???
+FBZStorm -> 		Data/Objects/Static/146FD7B05708988A7FADA048F874FEBB.bin - ??? (Angles Maybe?)
+GHZSetup -> 		Data/Objects/Static/0A95413EF896999B1B5DCAFD19F07F90.bin - AniTile Speeds
+Gachapandora -> 	Data/Objects/Static/0F3F7376DC1EE25093DB289D4839C0DC.bin - ???
+HCZSetup -> 		Data/Objects/Static/00D255DA3281F005F2465E60931C26E5.bin - AniTile Speeds
+HeavyKing -> 		Data/Objects/Static/52491E8E7B7FBF7493EC3EE04517EA51.bin - ???
+HotaruHiWatt -> 	Data/Objects/Static/88C6BE290459808C97145B6A2B5EF6BB.bin - ???
+KingAttack -> 		Data/Objects/Static/136110A366076846C968BECD9F4B66E3.bin - ???
+KleptoMobile -> 	Data/Objects/Static/B0657CE43050BD30AB8704FF5DA14B34.bin - ???
+LRZ1Setup -> 		Data/Objects/Static/004ABF46CAB3BDA5D129D0D7B498F591.bin - AniTile Speeds
+LRZSpiral -> 		Data/Objects/Static/E868B41AE507F5D3E0BE03437EAB8CEC.bin - ???
+LaundroMobile -> 	Data/Objects/Static/2DB772CB09C12AFB37E86CD46FB7D9BB.bin - ???
+LevelSelect -> 		Data/Objects/Static/BAC6691DAF43463B358FAD24315D5396.bin - Sonic/Mania Switch speed
+MMZSetup -> 		Data/Objects/Static/1DB444A10060783F9B1B16E3B42CA06F.bin - AniTile Speeds
+MSZCutsceneST -> 	Data/Objects/Static/310FD3E59E8C58BA09FB8DE6290F2031.bin - ???
+MSZSetup -> 		Data/Objects/Static/70BA0C565D600C945E2E0FFEF6A9256F.bin - AniTile Speeds
+MagnetSphere -> 	Data/Objects/Static/621330217AC74CC89913DEA666BC9FF3.bin - ???
+MechaBu -> 			Data/Objects/Static/84E00179988757CB56408205E78A1FB1.bin - ???
+MegaOctus -> 		Data/Objects/Static/133AFFEDB305BB473FAEF8E9C1F12CEB.bin - ???
+MeterDroid ->		Data/Objects/Static/AEAC38DA20219D86FAFBB6160AA9807A.bin - ???
+OOZSetup -> 		Data/Objects/Static/802E9898B64AC948F5D5AD68A3EA7EA0.bin - ???
+PKingAttack -> 		Data/Objects/Static/BDAE7DAB3C274B2303267EAA0537B68E.bin - ???
+PSZ1Setup -> 		Data/Objects/Static/5B0D0FAB588338D885220934A018173D.bin - AniTile Speeds
+PSZ2Setup -> 		Data/Objects/Static/391E5E934C51410C0240DA5E2450B07E.bin - AniTile Speeds
+PSZLauncher -> 		Data/Objects/Static/77C94437D5AA2882479D44EDDE535A69.bin - ???
+PetalPile -> 		Data/Objects/Static/F616C91F1678EDCF31391321516CFAC8.bin - ???
+PhantomEgg -> 		Data/Objects/Static/8384F8660903B07FC41E700C43D03993.bin - ???
+PhantomGunner -> 	Data/Objects/Static/98C225B734D79CBB525795C65DEFE95B.bin - ???
+PhantomHand -> 		Data/Objects/Static/40409B350D17BD7B989EEED055D03DE7.bin - ???
+Player -> 			Data/Objects/Static/36D61A3DE508B500AE0ECF8D33F32943.bin - Physics, Super Palettes, (Assumiingly) Rings to next 1up, continue lives, target score
+PullChain -> 		Data/Objects/Static/17710E51F9B6C877A8F4640441E48FC6.bin - ???
+PuyoAI -> 			Data/Objects/Static/7E443122AD19335046B4A94E529198EA.bin - ???
+PuyoBean -> 		Data/Objects/Static/CBDE41F38DF0EBA5B517E51B1A149582.bin - ???
+PuyoMatch -> 		Data/Objects/Static/40BF7B890248C84F61716E8C04627928.bin - ???
+RollSwitch -> 		Data/Objects/Static/BD7B0128A038883FE438A56FF8225BA8.bin - ???
+SDashWheel -> 		Data/Objects/Static/64C2BB97D5B8AAFAA0045B4693FCBC63.bin - ???
+SPZ2Setup -> 		Data/Objects/Static/FD48DFCA939A95DA828D88E0F3005887.bin - AniTile Speeds
+SPZSetup -> 		Data/Objects/Static/DE88C44102F952196553C77A58F4C880.bin - AniTile Speeds
+SSZSpotlight -> 	Data/Objects/Static/A7EF031B715DB5AFE192FD684FF86FCC.bin - ???
+SeeSaw -> 			Data/Objects/Static/10B90142394439F6FFC74E0F3EA69C6E.bin - ???
+SentryBug -> 		Data/Objects/Static/4F2957AEC1917FB3D930B9CFF99A591E.bin - ???
+Springboard -> 		Data/Objects/Static/8967DF5368482670BD769EB9B01F4EF6.bin - ???
+Summary -> 			Data/Objects/Static/9260219189163CD101631B584B6EB957.bin - ???
+TMZ2Outro -> 		Data/Objects/Static/67C0EAF88584272B55B6F6C363C5F9EC.bin - ??? (Likely for Encore outro)
+Tornado -> 			Data/Objects/Static/63BC4CC1C121F1C2865F77A611E80A72.bin - ???
+UFO_Sphere -> 		Data/Objects/Static/57E0DE3BE0D5327AC86D1EF644C82518.bin - ??? (Something to do with height maybe?)
+UIBackground -> 	Data/Objects/Static/BD3DF348C7BC63FF3F5529F2E33F9CFE.bin - BG Palettes
+UncurlPlant -> 		Data/Objects/Static/BDE6EDF00C055F5B5223AD5A0CD1EA26.bin - ??? (Possibly Angles?)
+Water -> 			Data/Objects/Static/7236F48F00B2217ED5890EC7DC00D581.bin - ??? (Possibly Bobbing Speeds?)
+WeatherMobile -> 	Data/Objects/Static/269AAD4034FE425BF886015F74F83FB0.bin - ???

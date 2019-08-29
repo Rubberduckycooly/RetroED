@@ -139,7 +139,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.TileListControl);
-            this.splitContainer1.Size = new System.Drawing.Size(981, 349);
+            this.splitContainer1.Size = new System.Drawing.Size(981, 286);
             this.splitContainer1.SplitterDistance = 734;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -157,7 +157,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.ChunkDisplay);
-            this.splitContainer2.Size = new System.Drawing.Size(734, 349);
+            this.splitContainer2.Size = new System.Drawing.Size(734, 286);
             this.splitContainer2.SplitterDistance = 305;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -177,7 +177,7 @@
             this.OptionsPanel.Location = new System.Drawing.Point(0, 0);
             this.OptionsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OptionsPanel.Name = "OptionsPanel";
-            this.OptionsPanel.Size = new System.Drawing.Size(305, 349);
+            this.OptionsPanel.Size = new System.Drawing.Size(305, 286);
             this.OptionsPanel.TabIndex = 0;
             // 
             // panel2
@@ -197,7 +197,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label7.Location = new System.Drawing.Point(4, 7);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(155, 17);
+            this.label7.Size = new System.Drawing.Size(116, 13);
             this.label7.TabIndex = 4;
             this.label7.Text = "Currently Selected Tile:";
             // 
@@ -213,7 +213,7 @@
             0,
             0});
             this.TileIDNUD.Name = "TileIDNUD";
-            this.TileIDNUD.Size = new System.Drawing.Size(105, 22);
+            this.TileIDNUD.Size = new System.Drawing.Size(105, 19);
             this.TileIDNUD.TabIndex = 6;
             this.TileIDNUD.ValueChanged += new System.EventHandler(this.TileIDNUD_ValueChanged);
             // 
@@ -227,7 +227,7 @@
             this.CurChunkChangePanel.Controls.Add(this.PrevChunkButton);
             this.CurChunkChangePanel.Controls.Add(this.NextChunkButton);
             this.CurChunkChangePanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.CurChunkChangePanel.Location = new System.Drawing.Point(0, 296);
+            this.CurChunkChangePanel.Location = new System.Drawing.Point(0, 233);
             this.CurChunkChangePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CurChunkChangePanel.Name = "CurChunkChangePanel";
             this.CurChunkChangePanel.Size = new System.Drawing.Size(305, 53);
@@ -271,7 +271,7 @@
             0,
             0});
             this.GoToChunkNUD.Name = "GoToChunkNUD";
-            this.GoToChunkNUD.Size = new System.Drawing.Size(53, 22);
+            this.GoToChunkNUD.Size = new System.Drawing.Size(53, 19);
             this.GoToChunkNUD.TabIndex = 4;
             this.GoToChunkNUD.ValueChanged += new System.EventHandler(this.GotoNUD_ValueChanged);
             // 
@@ -282,7 +282,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label5.Location = new System.Drawing.Point(155, 6);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 17);
+            this.label5.Size = new System.Drawing.Size(66, 13);
             this.label5.TabIndex = 3;
             this.label5.Text = "Go to chunk";
             // 
@@ -293,7 +293,7 @@
             this.ChunkNumberLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ChunkNumberLabel.Location = new System.Drawing.Point(4, 6);
             this.ChunkNumberLabel.Name = "ChunkNumberLabel";
-            this.ChunkNumberLabel.Size = new System.Drawing.Size(95, 17);
+            this.ChunkNumberLabel.Size = new System.Drawing.Size(73, 13);
             this.ChunkNumberLabel.TabIndex = 2;
             this.ChunkNumberLabel.Text = "Chunk 0 Of 0:";
             // 
@@ -342,7 +342,7 @@
             0,
             0});
             this.GotoNUD.Name = "GotoNUD";
-            this.GotoNUD.Size = new System.Drawing.Size(53, 22);
+            this.GotoNUD.Size = new System.Drawing.Size(53, 19);
             this.GotoNUD.TabIndex = 4;
             this.GotoNUD.ValueChanged += new System.EventHandler(this.GotoNUD_ValueChanged);
             // 
@@ -351,7 +351,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(155, 6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 17);
+            this.label4.Size = new System.Drawing.Size(66, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Go to chunk";
             // 
@@ -360,7 +360,7 @@
             this.ChunkNoLabel.AutoSize = true;
             this.ChunkNoLabel.Location = new System.Drawing.Point(4, 6);
             this.ChunkNoLabel.Name = "ChunkNoLabel";
-            this.ChunkNoLabel.Size = new System.Drawing.Size(95, 17);
+            this.ChunkNoLabel.Size = new System.Drawing.Size(73, 13);
             this.ChunkNoLabel.TabIndex = 2;
             this.ChunkNoLabel.Text = "Chunk 0 Of 0:";
             // 
@@ -402,7 +402,7 @@
             this.CollisionBBox.Location = new System.Drawing.Point(16, 223);
             this.CollisionBBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CollisionBBox.Name = "CollisionBBox";
-            this.CollisionBBox.Size = new System.Drawing.Size(171, 24);
+            this.CollisionBBox.Size = new System.Drawing.Size(171, 21);
             this.CollisionBBox.TabIndex = 7;
             this.CollisionBBox.SelectedIndexChanged += new System.EventHandler(this.CollisionBBox_SelectedIndexChanged);
             this.CollisionBBox.Click += new System.EventHandler(this.CollisionBBox_SelectedIndexChanged);
@@ -414,7 +414,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label3.Location = new System.Drawing.Point(13, 202);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(192, 17);
+            this.label3.Size = new System.Drawing.Size(141, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Collision Properties (Plane B)";
             // 
@@ -432,7 +432,7 @@
             this.CollisionABox.Location = new System.Drawing.Point(16, 159);
             this.CollisionABox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CollisionABox.Name = "CollisionABox";
-            this.CollisionABox.Size = new System.Drawing.Size(171, 24);
+            this.CollisionABox.Size = new System.Drawing.Size(171, 21);
             this.CollisionABox.TabIndex = 5;
             this.CollisionABox.SelectedIndexChanged += new System.EventHandler(this.CollisionABox_SelectedIndexChanged);
             this.CollisionABox.Click += new System.EventHandler(this.CollisionABox_SelectedIndexChanged);
@@ -444,7 +444,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label2.Location = new System.Drawing.Point(13, 138);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 17);
+            this.label2.Size = new System.Drawing.Size(141, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Collision Properties (Plane A)";
             // 
@@ -459,7 +459,7 @@
             this.VisualBox.Location = new System.Drawing.Point(16, 98);
             this.VisualBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VisualBox.Name = "VisualBox";
-            this.VisualBox.Size = new System.Drawing.Size(171, 24);
+            this.VisualBox.Size = new System.Drawing.Size(171, 21);
             this.VisualBox.TabIndex = 3;
             this.VisualBox.SelectedIndexChanged += new System.EventHandler(this.VisualBox_SelectedIndexChanged);
             this.VisualBox.Click += new System.EventHandler(this.VisualBox_SelectedIndexChanged);
@@ -471,7 +471,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Location = new System.Drawing.Point(13, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 17);
+            this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Visual Plane";
             // 
@@ -488,7 +488,7 @@
             this.OrientationBox.Location = new System.Drawing.Point(16, 30);
             this.OrientationBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OrientationBox.Name = "OrientationBox";
-            this.OrientationBox.Size = new System.Drawing.Size(171, 24);
+            this.OrientationBox.Size = new System.Drawing.Size(171, 21);
             this.OrientationBox.TabIndex = 1;
             this.OrientationBox.SelectedIndexChanged += new System.EventHandler(this.OrientationBox_SelectedIndexChanged);
             this.OrientationBox.Click += new System.EventHandler(this.OrientationBox_SelectedIndexChanged);
@@ -500,7 +500,7 @@
             this.OrientationLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.OrientationLabel.Location = new System.Drawing.Point(13, 9);
             this.OrientationLabel.Name = "OrientationLabel";
-            this.OrientationLabel.Size = new System.Drawing.Size(78, 17);
+            this.OrientationLabel.Size = new System.Drawing.Size(58, 13);
             this.OrientationLabel.TabIndex = 0;
             this.OrientationLabel.Text = "Orientation";
             // 
@@ -511,7 +511,7 @@
             this.ChunkDisplay.Location = new System.Drawing.Point(0, 0);
             this.ChunkDisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ChunkDisplay.Name = "ChunkDisplay";
-            this.ChunkDisplay.Size = new System.Drawing.Size(425, 349);
+            this.ChunkDisplay.Size = new System.Drawing.Size(425, 286);
             this.ChunkDisplay.TabIndex = 3;
             this.ChunkDisplay.Paint += new System.Windows.Forms.PaintEventHandler(this.ChunkDisplay_Paint);
             this.ChunkDisplay.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ChunkDisplay_MouseDown);
@@ -527,17 +527,17 @@
             this.TileListControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TileListControl.Name = "TileListControl";
             this.TileListControl.SelectedIndex = 0;
-            this.TileListControl.Size = new System.Drawing.Size(243, 349);
+            this.TileListControl.Size = new System.Drawing.Size(243, 286);
             this.TileListControl.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.splitContainer3);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(235, 320);
+            this.tabPage1.Size = new System.Drawing.Size(235, 260);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Tiles";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -556,8 +556,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.StageTilesList);
-            this.splitContainer3.Size = new System.Drawing.Size(229, 316);
-            this.splitContainer3.SplitterDistance = 158;
+            this.splitContainer3.Size = new System.Drawing.Size(229, 256);
+            this.splitContainer3.SplitterDistance = 128;
             this.splitContainer3.TabIndex = 0;
             // 
             // TileZoomBar
@@ -569,7 +569,7 @@
             this.TileZoomBar.Maximum = 5;
             this.TileZoomBar.Minimum = 1;
             this.TileZoomBar.Name = "TileZoomBar";
-            this.TileZoomBar.Size = new System.Drawing.Size(229, 158);
+            this.TileZoomBar.Size = new System.Drawing.Size(229, 128);
             this.TileZoomBar.TabIndex = 0;
             this.TileZoomBar.Value = 4;
             this.TileZoomBar.Scroll += new System.EventHandler(this.TileZoomBar_Scroll);
@@ -577,11 +577,11 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.splitContainer4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(235, 346);
+            this.tabPage2.Size = new System.Drawing.Size(235, 281);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Chunks";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -600,8 +600,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.StageChunksList);
-            this.splitContainer4.Size = new System.Drawing.Size(229, 342);
-            this.splitContainer4.SplitterDistance = 41;
+            this.splitContainer4.Size = new System.Drawing.Size(229, 277);
+            this.splitContainer4.SplitterDistance = 33;
             this.splitContainer4.TabIndex = 0;
             // 
             // ChunkZoomBar
@@ -613,7 +613,7 @@
             this.ChunkZoomBar.Maximum = 4;
             this.ChunkZoomBar.Minimum = 1;
             this.ChunkZoomBar.Name = "ChunkZoomBar";
-            this.ChunkZoomBar.Size = new System.Drawing.Size(229, 56);
+            this.ChunkZoomBar.Size = new System.Drawing.Size(229, 45);
             this.ChunkZoomBar.TabIndex = 1;
             this.ChunkZoomBar.Value = 2;
             this.ChunkZoomBar.Scroll += new System.EventHandler(this.ChunkZoomBar_Scroll);
@@ -823,7 +823,7 @@
             this.StageTilesList.Name = "StageTilesList";
             this.StageTilesList.ScrollValue = 0;
             this.StageTilesList.SelectedIndex = -1;
-            this.StageTilesList.Size = new System.Drawing.Size(229, 154);
+            this.StageTilesList.Size = new System.Drawing.Size(229, 124);
             this.StageTilesList.TabIndex = 3;
             this.StageTilesList.SelectedIndexChanged += new System.EventHandler(this.StageTilesList_SelectedIndexChanged);
             // 
@@ -839,16 +839,16 @@
             this.StageChunksList.Name = "StageChunksList";
             this.StageChunksList.ScrollValue = 0;
             this.StageChunksList.SelectedIndex = -1;
-            this.StageChunksList.Size = new System.Drawing.Size(229, 297);
+            this.StageChunksList.Size = new System.Drawing.Size(229, 240);
             this.StageChunksList.TabIndex = 3;
             this.StageChunksList.SelectedIndexChanged += new System.EventHandler(this.StageChunksList_SelectedIndexChanged);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(981, 349);
+            this.ClientSize = new System.Drawing.Size(981, 286);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
