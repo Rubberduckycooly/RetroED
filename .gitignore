@@ -26,8 +26,6 @@ bin/
 # Data folder
 build/*
 !build/data/
-build/data/*
-!build/data/DataFileUnpacker/
 
 # Visual Studio 2015 cache/options directory
 .vs/
