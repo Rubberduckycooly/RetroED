@@ -18,6 +18,7 @@ namespace RetroED.Tools.RSDKUnpacker
         Retro_Formats.EngineType engineType;
 
         List<string> FileList = new List<string>();
+        Dictionary<string, string> KeyList = new Dictionary<string, string>();
 
         RSDKvRS.DataFile DatavRS;
         RSDKv1.DataFile Datav1;
@@ -35,7 +36,7 @@ namespace RetroED.Tools.RSDKUnpacker
         private void SelectDataFileButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
-            dlg.Filter = "RSDKvRS Data files|Data*.bin|RSDKv1 Data files|Data*.bin|RSDKv2 Data files|*.rsdk|RSDKvB Data files|*.rsdk|RSDKv5 Data files|*.rsdk";
+            dlg.Filter = "RSDKvRS Data files|Data*.bin|RSDKv1 Data files|Data*.bin|RSDKv2 Data files|Data*.rsdk|RSDKvB Data files|Data*.rsdk|RSDKv5 Data files|*.rsdk";
 
             if (dlg.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
             {
@@ -104,10 +105,16 @@ namespace RetroED.Tools.RSDKUnpacker
                                 StreamReader reader = new StreamReader(File.OpenRead("Data/DataFileUnpacker/RSDKv5FileList.txt"));
                                 while (!reader.EndOfStream)
                                 {
-                                    FileList.Add(reader.ReadLine());
+                                    string[] info = reader.ReadLine().Split(',');
+                                    FileList.Add(info[0]);
+                                    if (info.Length > 2)
+                                    {
+                                        KeyList.Add(info[1].ToUpper(), info[2].ToUpper());
+                                    }
                                 }
                                 reader.Close();
                             }
+                            //Scan Object list and create hashes
                             if (File.Exists("Data/DataFileUnpacker/RSDKv5Objects.txt"))
                             {
                                 StreamReader reader = new StreamReader(File.OpenRead("Data/DataFileUnpacker/RSDKv5Objects.txt"));
@@ -141,7 +148,7 @@ namespace RetroED.Tools.RSDKUnpacker
                         }
                         if (FileList != null && FileList.Count > 0)
                         {
-                            Datav5 = new RSDKv5.DataFile(filename, FileList);
+                            Datav5 = new RSDKv5.DataFile(filename, FileList, KeyList);
                             SetFileListv5();
                         }
                         break;
@@ -258,7 +265,7 @@ namespace RetroED.Tools.RSDKUnpacker
         private void BuildDataButton_Click(object sender, EventArgs e)
         {
             SaveFileDialog dlg = new SaveFileDialog();
-            dlg.Filter = "RSDKvRS Data files|Data*.bin|RSDKv1 Data files|Data*.bin|RSDKv2 Data files|Data*.rsdk|RSDKvB Data files|Data*.rsdk|RSDKv5 Data files|Data*.rsdk";
+            dlg.Filter = "RSDKvRS Data files|Data*.bin|RSDKv1 Data files|Data*.bin|RSDKv2 Data files|Data*.rsdk|RSDKvB Data files|Data*.rsdk|RSDKv5 Data files|*.rsdk";
 
             if (dlg.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
             {

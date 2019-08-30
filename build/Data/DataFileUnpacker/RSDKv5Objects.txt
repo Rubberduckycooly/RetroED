@@ -407,6 +407,7 @@ RingField
 RisingLava
 RockDrill
 RockemSockem
+RollSwitch
 RollerMKII
 RotatingSpikes
 RotatingStair
@@ -414,6 +415,7 @@ RubyPortal
 SDashWheel
 SP500
 SP500MkII
+SPZSetup
 SPZ1Intro
 SPZ1Setup
 SPZ2Outro

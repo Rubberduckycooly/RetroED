@@ -135,10 +135,6 @@ Data/Music/TitleScreen.ogg
 Data/Music/TrueEnd.ogg
 Data/Music/TryAgain.ogg
 Data/Music/UFOSpecial.ogg
-//RollSwitch - Not in gameconfig/stageconfig
-Data/Objects/Static/BD7B0128A038883FE438A56FF8225BA8.bin
-//Not in gameconfig/stageconfig
-Data/Objects/Static/DE88C44102F952196553C77A58F4C880.bin
 Data/Palettes/EncoreCPZ.act
 Data/Palettes/EncoreCPZw.act
 Data/Palettes/EncoreFBZ.act
@@ -370,7 +366,7 @@ Data/SoundFX/MSZ/MysticTransform.wav
 Data/SoundFX/MSZ/MysticTwinkle.wav
 Data/SoundFX/MSZ/Piano00C2.wav
 Data/SoundFX/MSZ/Pinata.wav
-Data/SoundFX/MSZ/?.wav
+Data/SoundFX/MSZ/?.wav,3465D2CF44EB0A1C10CC0CFEDC98278C,C74C654DDB022F2EFC88DC3B53F1F235
 Data/SoundFX/MSZ/SandFall.wav
 Data/SoundFX/MSZ/SandSwim.wav
 Data/SoundFX/MSZ/Spray.wav
