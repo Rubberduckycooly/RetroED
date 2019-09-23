@@ -1449,9 +1449,9 @@ namespace Retro_Formats
             public class SceneInfo
             {
                 /// <summary>
-                /// not entirely sure
+                /// Scene Mode
                 /// </summary>
-                public byte Unknown;
+                public byte SceneMode;
                 /// <summary>
                 /// the folder of the scene
                 /// </summary>
@@ -1470,7 +1470,7 @@ namespace Retro_Formats
                     SceneFolder = "Folder";
                     ActID = "1";
                     Name = "Stage";
-                    Unknown = 0;
+                    SceneMode = 0;
                 }
             }
 
@@ -1620,7 +1620,7 @@ namespace Retro_Formats
                             Categories[c].Scenes[s].ActID = GameconfigvB.Categories[c].Scenes[s].ActID;
                             Categories[c].Scenes[s].Name = GameconfigvB.Categories[c].Scenes[s].Name;
                             Categories[c].Scenes[s].SceneFolder = GameconfigvB.Categories[c].Scenes[s].SceneFolder;
-                            Categories[c].Scenes[s].Unknown = GameconfigvB.Categories[c].Scenes[s].Unknown;
+                            Categories[c].Scenes[s].SceneMode = GameconfigvB.Categories[c].Scenes[s].SceneMode;
                         }
                     }
                     for (int i = 0; i < 2; i++)
@@ -1663,7 +1663,7 @@ namespace Retro_Formats
                             Categories[c].Scenes[s].ActID = Gameconfigv2.Categories[c].Scenes[s].ActID;
                             Categories[c].Scenes[s].Name = Gameconfigv2.Categories[c].Scenes[s].Name;
                             Categories[c].Scenes[s].SceneFolder = Gameconfigv2.Categories[c].Scenes[s].SceneFolder;
-                            Categories[c].Scenes[s].Unknown = Gameconfigv2.Categories[c].Scenes[s].Unknown;
+                            Categories[c].Scenes[s].SceneMode = Gameconfigv2.Categories[c].Scenes[s].SceneMode;
                         }
                     }
                     break;
@@ -1700,7 +1700,7 @@ namespace Retro_Formats
                             Categories[c].Scenes[s].ActID = Gameconfigv1.Categories[c].Scenes[s].ActID;
                             Categories[c].Scenes[s].Name = Gameconfigv1.Categories[c].Scenes[s].Name;
                             Categories[c].Scenes[s].SceneFolder = Gameconfigv1.Categories[c].Scenes[s].SceneFolder;
-                            Categories[c].Scenes[s].Unknown = Gameconfigv1.Categories[c].Scenes[s].Unknown;
+                            Categories[c].Scenes[s].SceneMode = Gameconfigv1.Categories[c].Scenes[s].SceneMode;
                         }
                     }
                     break;
@@ -1744,7 +1744,7 @@ namespace Retro_Formats
                             GameconfigvB.Categories[c].Scenes[s].ActID = GameconfigvB.Categories[c].Scenes[s].ActID;
                             GameconfigvB.Categories[c].Scenes[s].Name = GameconfigvB.Categories[c].Scenes[s].Name;
                             GameconfigvB.Categories[c].Scenes[s].SceneFolder = GameconfigvB.Categories[c].Scenes[s].SceneFolder;
-                            GameconfigvB.Categories[c].Scenes[s].Unknown = GameconfigvB.Categories[c].Scenes[s].Unknown;
+                            GameconfigvB.Categories[c].Scenes[s].SceneMode = GameconfigvB.Categories[c].Scenes[s].SceneMode;
                         }
                     }
                     int colour = 0;
@@ -1790,7 +1790,7 @@ namespace Retro_Formats
                             Gameconfigv2.Categories[c].Scenes[s].ActID = Gameconfigv2.Categories[c].Scenes[s].ActID;
                             Gameconfigv2.Categories[c].Scenes[s].Name = Gameconfigv2.Categories[c].Scenes[s].Name;
                             Gameconfigv2.Categories[c].Scenes[s].SceneFolder = Gameconfigv2.Categories[c].Scenes[s].SceneFolder;
-                            Gameconfigv2.Categories[c].Scenes[s].Unknown = Gameconfigv2.Categories[c].Scenes[s].Unknown;
+                            Gameconfigv2.Categories[c].Scenes[s].SceneMode = Gameconfigv2.Categories[c].Scenes[s].SceneMode;
                         }
                     }
                     Gameconfigv2.Write(filepath);
@@ -1826,7 +1826,7 @@ namespace Retro_Formats
                             Gameconfigv1.Categories[c].Scenes[s].ActID = Gameconfigv1.Categories[c].Scenes[s].ActID;
                             Gameconfigv1.Categories[c].Scenes[s].Name = Gameconfigv1.Categories[c].Scenes[s].Name;
                             Gameconfigv1.Categories[c].Scenes[s].SceneFolder = Gameconfigv1.Categories[c].Scenes[s].SceneFolder;
-                            Gameconfigv1.Categories[c].Scenes[s].Unknown = Gameconfigv1.Categories[c].Scenes[s].Unknown;
+                            Gameconfigv1.Categories[c].Scenes[s].SceneMode = Gameconfigv1.Categories[c].Scenes[s].SceneMode;
                         }
                     }
                     Gameconfigv1.Write(filepath);

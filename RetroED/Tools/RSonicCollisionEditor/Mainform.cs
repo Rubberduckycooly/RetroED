@@ -109,7 +109,7 @@ namespace RetroED.Tools.RSonicCollisionEditor
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.Title = "Open";
             dlg.DefaultExt = ".tcf";
-            dlg.Filter = "Retro-Sonic (2007 PC Demo) Tileconfig Files (Zone.tcf)|Zone.tcf|Retro-Sonic (2006 Dreamcast Demo) Tileconfig Files (Zone.tcf)|Zone.tcf";
+            dlg.Filter = "Retro-Sonic (2007 PC Demo) Tileconfig Files|Zone.tcf|Retro-Sonic (2006 Dreamcast Demo) Tileconfig Files|Zone.tcf";
 
             if (dlg.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
             {
@@ -148,11 +148,14 @@ namespace RetroED.Tools.RSonicCollisionEditor
                 }
                 CollisionList.SelectedIndex = curColisionMask - 1;
                 CollisionList.Refresh();
-
-                Parent.rp.state = "RetroED - " + this.Text;
-                Parent.rp.details = "Editing: " + Path.GetFileName(dlg.FileName);
-                SharpPresence.Discord.RunCallbacks();
-                SharpPresence.Discord.UpdatePresence(Parent.rp);
+                
+                if (Parent != null)
+                {
+                    Parent.rp.state = "RetroED - " + this.Text;
+                    Parent.rp.details = "Editing: " + Path.GetFileName(dlg.FileName);
+                    SharpPresence.Discord.RunCallbacks();
+                    SharpPresence.Discord.UpdatePresence(Parent.rp);
+                }
 
                 RefreshUI(); //update the UI
             }

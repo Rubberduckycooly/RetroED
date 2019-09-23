@@ -238,6 +238,7 @@ namespace RetroED.Tools.StageconfigEditors.RSDKv1StageconfigEditor
             if (ObjListBox.SelectedIndex >= 0)
             {
                 CurObj = ObjListBox.SelectedIndex;
+                ObjIDLabel.Text = "Object ID: " + ObjListBox.SelectedIndex;
                 RefreshUI();
             }
         }
@@ -282,6 +283,7 @@ namespace RetroED.Tools.StageconfigEditors.RSDKv1StageconfigEditor
             if (SoundFXListBox.SelectedIndex >= 0)
             {
                 CurSfx = SoundFXListBox.SelectedIndex;
+                SFXIDLabel.Text = "SFX ID: " + SoundFXListBox.SelectedIndex;
                 RefreshUI();
             }
         }

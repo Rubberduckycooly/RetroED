@@ -268,6 +268,7 @@ namespace RetroED.Tools.StageconfigEditors.RSDKvRSStageconfigEditor
             if (ObjListBox.SelectedIndex >= 0)
             {
                 CurObj = ObjListBox.SelectedIndex;
+                ObjIDLabel.Text = "Object ID: " + ObjListBox.SelectedIndex;
                 RefreshUI();
             }
         }
@@ -322,6 +323,7 @@ namespace RetroED.Tools.StageconfigEditors.RSDKvRSStageconfigEditor
             if (SoundFXListBox.SelectedIndex >= 0)
             {
                 CurSfx = SoundFXListBox.SelectedIndex;
+                SFXIDLabel.Text = "SFX ID: " + SoundFXListBox.SelectedIndex;
                 RefreshUI();
             }
         }
@@ -356,6 +358,7 @@ namespace RetroED.Tools.StageconfigEditors.RSDKvRSStageconfigEditor
             if (MusicListBox.SelectedIndex >= 0)
             {
                 CurMus = MusicListBox.SelectedIndex;
+                MusicIDLabel.Text = "Music ID " + MusicListBox.SelectedIndex;
                 RefreshUI();
             }
         }
@@ -390,6 +393,7 @@ namespace RetroED.Tools.StageconfigEditors.RSDKvRSStageconfigEditor
             if (SheetListbox.SelectedIndex >= 0)
             {
                 CurSht = SheetListbox.SelectedIndex;
+                SheetIDLabel.Text = "Sheet ID: " + SheetListbox.SelectedIndex;
                 RefreshUI();
             }
         }

@@ -15,7 +15,7 @@ BreakableWall -> 	Data/Objects/Static/09F50C61464BCFA45F26511A29FB1145.bin - ???
 CPZSetup -> 		Data/Objects/Static/4AFC943F1EF442684FB95BE660166A14.bin - AniTile Speeds
 ChaosEmerald -> 	Data/Objects/Static/CC5419FC91471F269C427BD306CED284.bin - Super Emerald Colours (?)
 ChemicalBall -> 	Data/Objects/Static/0344C9A8B5489E85401B4B309C608926.bin - ???
-ChemicalPool -> 	Data/Objects/Static/E7B6ABB18F0BC48156143BAFBA018B4E.bin - ??? (Colours?)
+ChemicalPool -> 	Data/Objects/Static/E7B6ABB18F0BC48156143BAFBA018B4E.bin - ??? (Colours for ???)
 ConveyorPlatform -> Data/Objects/Static/5337F3B0C92FF6ADF207C77B18D0ACAF.bin - ???
 CorkscrewPath -> 	Data/Objects/Static/575130A718E77F70E8BDE0B5822855C5.bin - Used for animating player when coming from right
 CrimsonEye -> 		Data/Objects/Static/D4DACA8531FB3A7EDBC71B9007838E43.bin - Amount of hits it takes?

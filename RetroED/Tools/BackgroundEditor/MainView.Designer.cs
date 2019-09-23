@@ -268,7 +268,7 @@
             this.newToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton.Image")));
             this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton.Name = "newToolStripButton";
-            this.newToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.newToolStripButton.Size = new System.Drawing.Size(24, 24);
             this.newToolStripButton.Text = "&New";
             // 
             // openToolStripButton
@@ -277,7 +277,7 @@
             this.openToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripButton.Image")));
             this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripButton.Name = "openToolStripButton";
-            this.openToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.openToolStripButton.Size = new System.Drawing.Size(24, 24);
             this.openToolStripButton.Text = "&Open";
             this.openToolStripButton.Click += new System.EventHandler(this.tsmiFileOpen_Click);
             // 
@@ -287,7 +287,7 @@
             this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
             this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton.Name = "saveToolStripButton";
-            this.saveToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.saveToolStripButton.Size = new System.Drawing.Size(24, 24);
             this.saveToolStripButton.Text = "&Save";
             this.saveToolStripButton.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -302,7 +302,7 @@
             this.cutToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripButton.Image")));
             this.cutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cutToolStripButton.Name = "cutToolStripButton";
-            this.cutToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.cutToolStripButton.Size = new System.Drawing.Size(24, 24);
             this.cutToolStripButton.Text = "C&ut";
             // 
             // copyToolStripButton
@@ -311,7 +311,7 @@
             this.copyToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripButton.Image")));
             this.copyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copyToolStripButton.Name = "copyToolStripButton";
-            this.copyToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.copyToolStripButton.Size = new System.Drawing.Size(24, 24);
             this.copyToolStripButton.Text = "&Copy";
             // 
             // pasteToolStripButton
@@ -320,7 +320,7 @@
             this.pasteToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripButton.Image")));
             this.pasteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pasteToolStripButton.Name = "pasteToolStripButton";
-            this.pasteToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.pasteToolStripButton.Size = new System.Drawing.Size(24, 24);
             this.pasteToolStripButton.Text = "&Paste";
             // 
             // toolStripSeparator3
@@ -336,7 +336,7 @@
             this.PlaceTileButton.Image = ((System.Drawing.Image)(resources.GetObject("PlaceTileButton.Image")));
             this.PlaceTileButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.PlaceTileButton.Name = "PlaceTileButton";
-            this.PlaceTileButton.Size = new System.Drawing.Size(29, 24);
+            this.PlaceTileButton.Size = new System.Drawing.Size(24, 24);
             this.PlaceTileButton.Text = "PlaceTile";
             this.PlaceTileButton.Click += new System.EventHandler(this.PlaceTileButton_Click);
             // 
@@ -418,7 +418,7 @@
             // 
             // MainView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(651, 420);

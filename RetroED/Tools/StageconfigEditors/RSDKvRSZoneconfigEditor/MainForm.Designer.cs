@@ -66,6 +66,10 @@
             this.MenuItem_Open = new System.Windows.Forms.MenuItem();
             this.MenuItem_Save = new System.Windows.Forms.MenuItem();
             this.MenuItem_SaveAs = new System.Windows.Forms.MenuItem();
+            this.SFXIDLabel = new System.Windows.Forms.Label();
+            this.ObjIDLabel = new System.Windows.Forms.Label();
+            this.SheetIDLabel = new System.Windows.Forms.Label();
+            this.MusicIDLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.ObjectsPage.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -94,10 +98,10 @@
             // ObjectsPage
             // 
             this.ObjectsPage.Controls.Add(this.groupBox7);
-            this.ObjectsPage.Location = new System.Drawing.Point(4, 25);
+            this.ObjectsPage.Location = new System.Drawing.Point(4, 22);
             this.ObjectsPage.Name = "ObjectsPage";
             this.ObjectsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ObjectsPage.Size = new System.Drawing.Size(704, 530);
+            this.ObjectsPage.Size = new System.Drawing.Size(704, 533);
             this.ObjectsPage.TabIndex = 1;
             this.ObjectsPage.Text = "Objects";
             this.ObjectsPage.UseVisualStyleBackColor = true;
@@ -105,6 +109,7 @@
             // groupBox7
             // 
             this.groupBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.groupBox7.Controls.Add(this.ObjIDLabel);
             this.groupBox7.Controls.Add(this.SheetIDNUD);
             this.groupBox7.Controls.Add(this.label12);
             this.groupBox7.Controls.Add(this.label14);
@@ -113,9 +118,10 @@
             this.groupBox7.Controls.Add(this.ObjListBox);
             this.groupBox7.Controls.Add(this.AddObjButton);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox7.Location = new System.Drawing.Point(3, 3);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(698, 524);
+            this.groupBox7.Size = new System.Drawing.Size(698, 527);
             this.groupBox7.TabIndex = 47;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Object List";
@@ -132,7 +138,7 @@
             0,
             0});
             this.SheetIDNUD.Name = "SheetIDNUD";
-            this.SheetIDNUD.Size = new System.Drawing.Size(102, 22);
+            this.SheetIDNUD.Size = new System.Drawing.Size(102, 19);
             this.SheetIDNUD.TabIndex = 71;
             this.SheetIDNUD.ValueChanged += new System.EventHandler(this.SheetIDNUD_ValueChanged);
             // 
@@ -143,7 +149,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label12.Location = new System.Drawing.Point(405, 66);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(107, 17);
+            this.label12.Size = new System.Drawing.Size(83, 13);
             this.label12.TabIndex = 70;
             this.label12.Text = "Object Sheet ID";
             // 
@@ -154,7 +160,7 @@
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label14.Location = new System.Drawing.Point(404, 19);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(77, 17);
+            this.label14.Size = new System.Drawing.Size(59, 13);
             this.label14.TabIndex = 68;
             this.label14.Text = "Script Path";
             // 
@@ -166,13 +172,14 @@
             this.ObjPathHashBox.Location = new System.Drawing.Point(407, 40);
             this.ObjPathHashBox.Margin = new System.Windows.Forms.Padding(4);
             this.ObjPathHashBox.Name = "ObjPathHashBox";
-            this.ObjPathHashBox.Size = new System.Drawing.Size(284, 22);
+            this.ObjPathHashBox.Size = new System.Drawing.Size(284, 19);
             this.ObjPathHashBox.TabIndex = 67;
             this.ObjPathHashBox.TextChanged += new System.EventHandler(this.ObjPathBox_TextChanged);
             // 
             // DelObjButton
             // 
             this.DelObjButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DelObjButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.DelObjButton.Location = new System.Drawing.Point(408, 160);
             this.DelObjButton.Name = "DelObjButton";
             this.DelObjButton.Size = new System.Drawing.Size(284, 33);
@@ -187,17 +194,17 @@
             this.ObjListBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.ObjListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ObjListBox.FormattingEnabled = true;
-            this.ObjListBox.ItemHeight = 16;
-            this.ObjListBox.Location = new System.Drawing.Point(3, 18);
+            this.ObjListBox.Location = new System.Drawing.Point(3, 15);
             this.ObjListBox.Margin = new System.Windows.Forms.Padding(4);
             this.ObjListBox.Name = "ObjListBox";
-            this.ObjListBox.Size = new System.Drawing.Size(399, 503);
+            this.ObjListBox.Size = new System.Drawing.Size(399, 509);
             this.ObjListBox.TabIndex = 1;
             this.ObjListBox.SelectedIndexChanged += new System.EventHandler(this.ObjListBox_SelectedIndexChanged);
             // 
             // AddObjButton
             // 
             this.AddObjButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddObjButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AddObjButton.Location = new System.Drawing.Point(408, 116);
             this.AddObjButton.Name = "AddObjButton";
             this.AddObjButton.Size = new System.Drawing.Size(284, 33);
@@ -210,25 +217,27 @@
             // 
             this.SoundFXPage.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.SoundFXPage.Controls.Add(this.groupBox2);
-            this.SoundFXPage.Location = new System.Drawing.Point(4, 25);
+            this.SoundFXPage.Location = new System.Drawing.Point(4, 22);
             this.SoundFXPage.Name = "SoundFXPage";
             this.SoundFXPage.Padding = new System.Windows.Forms.Padding(3);
-            this.SoundFXPage.Size = new System.Drawing.Size(704, 530);
+            this.SoundFXPage.Size = new System.Drawing.Size(704, 533);
             this.SoundFXPage.TabIndex = 2;
             this.SoundFXPage.Text = "SoundFX";
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.groupBox2.Controls.Add(this.SFXIDLabel);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.SFXPathBox);
             this.groupBox2.Controls.Add(this.RemoveSFXButton);
             this.groupBox2.Controls.Add(this.SoundFXListBox);
             this.groupBox2.Controls.Add(this.AddSFXButton);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(698, 524);
+            this.groupBox2.Size = new System.Drawing.Size(698, 527);
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "SoundFX List";
@@ -240,7 +249,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label2.Location = new System.Drawing.Point(404, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 17);
+            this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 68;
             this.label2.Text = "SFX Path";
             // 
@@ -252,13 +261,14 @@
             this.SFXPathBox.Location = new System.Drawing.Point(407, 39);
             this.SFXPathBox.Margin = new System.Windows.Forms.Padding(4);
             this.SFXPathBox.Name = "SFXPathBox";
-            this.SFXPathBox.Size = new System.Drawing.Size(284, 22);
+            this.SFXPathBox.Size = new System.Drawing.Size(284, 19);
             this.SFXPathBox.TabIndex = 67;
             this.SFXPathBox.TextChanged += new System.EventHandler(this.SFXPathBox_TextChanged);
             // 
             // RemoveSFXButton
             // 
             this.RemoveSFXButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RemoveSFXButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.RemoveSFXButton.Location = new System.Drawing.Point(406, 165);
             this.RemoveSFXButton.Name = "RemoveSFXButton";
             this.RemoveSFXButton.Size = new System.Drawing.Size(283, 33);
@@ -273,17 +283,17 @@
             this.SoundFXListBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.SoundFXListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.SoundFXListBox.FormattingEnabled = true;
-            this.SoundFXListBox.ItemHeight = 16;
-            this.SoundFXListBox.Location = new System.Drawing.Point(3, 18);
+            this.SoundFXListBox.Location = new System.Drawing.Point(3, 15);
             this.SoundFXListBox.Margin = new System.Windows.Forms.Padding(4);
             this.SoundFXListBox.Name = "SoundFXListBox";
-            this.SoundFXListBox.Size = new System.Drawing.Size(399, 503);
+            this.SoundFXListBox.Size = new System.Drawing.Size(399, 509);
             this.SoundFXListBox.TabIndex = 1;
             this.SoundFXListBox.SelectedIndexChanged += new System.EventHandler(this.SoundFXListBox_SelectedIndexChanged);
             // 
             // AddSFXButton
             // 
             this.AddSFXButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddSFXButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AddSFXButton.Location = new System.Drawing.Point(406, 126);
             this.AddSFXButton.Name = "AddSFXButton";
             this.AddSFXButton.Size = new System.Drawing.Size(285, 33);
@@ -295,9 +305,9 @@
             // MusicPage
             // 
             this.MusicPage.Controls.Add(this.groupBox1);
-            this.MusicPage.Location = new System.Drawing.Point(4, 25);
+            this.MusicPage.Location = new System.Drawing.Point(4, 22);
             this.MusicPage.Name = "MusicPage";
-            this.MusicPage.Size = new System.Drawing.Size(704, 530);
+            this.MusicPage.Size = new System.Drawing.Size(704, 533);
             this.MusicPage.TabIndex = 3;
             this.MusicPage.Text = "Music";
             this.MusicPage.UseVisualStyleBackColor = true;
@@ -305,15 +315,17 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.groupBox1.Controls.Add(this.MusicIDLabel);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.MusicBox);
             this.groupBox1.Controls.Add(this.DelMusButton);
             this.groupBox1.Controls.Add(this.MusicListBox);
             this.groupBox1.Controls.Add(this.AddMusButton);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(704, 530);
+            this.groupBox1.Size = new System.Drawing.Size(704, 533);
             this.groupBox1.TabIndex = 48;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Music List";
@@ -325,7 +337,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label3.Location = new System.Drawing.Point(410, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 17);
+            this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 68;
             this.label3.Text = "Music Path";
             // 
@@ -337,13 +349,14 @@
             this.MusicBox.Location = new System.Drawing.Point(413, 40);
             this.MusicBox.Margin = new System.Windows.Forms.Padding(4);
             this.MusicBox.Name = "MusicBox";
-            this.MusicBox.Size = new System.Drawing.Size(284, 22);
+            this.MusicBox.Size = new System.Drawing.Size(284, 19);
             this.MusicBox.TabIndex = 67;
             this.MusicBox.TextChanged += new System.EventHandler(this.MusicBox_TextChanged);
             // 
             // DelMusButton
             // 
             this.DelMusButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DelMusButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.DelMusButton.Location = new System.Drawing.Point(414, 160);
             this.DelMusButton.Name = "DelMusButton";
             this.DelMusButton.Size = new System.Drawing.Size(284, 33);
@@ -358,17 +371,17 @@
             this.MusicListBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.MusicListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.MusicListBox.FormattingEnabled = true;
-            this.MusicListBox.ItemHeight = 16;
-            this.MusicListBox.Location = new System.Drawing.Point(3, 18);
+            this.MusicListBox.Location = new System.Drawing.Point(3, 15);
             this.MusicListBox.Margin = new System.Windows.Forms.Padding(4);
             this.MusicListBox.Name = "MusicListBox";
-            this.MusicListBox.Size = new System.Drawing.Size(399, 509);
+            this.MusicListBox.Size = new System.Drawing.Size(399, 515);
             this.MusicListBox.TabIndex = 1;
             this.MusicListBox.SelectedIndexChanged += new System.EventHandler(this.MusicListBox_SelectedIndexChanged);
             // 
             // AddMusButton
             // 
             this.AddMusButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddMusButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AddMusButton.Location = new System.Drawing.Point(414, 116);
             this.AddMusButton.Name = "AddMusButton";
             this.AddMusButton.Size = new System.Drawing.Size(284, 33);
@@ -380,9 +393,9 @@
             // SheetPage
             // 
             this.SheetPage.Controls.Add(this.groupBox3);
-            this.SheetPage.Location = new System.Drawing.Point(4, 25);
+            this.SheetPage.Location = new System.Drawing.Point(4, 22);
             this.SheetPage.Name = "SheetPage";
-            this.SheetPage.Size = new System.Drawing.Size(704, 530);
+            this.SheetPage.Size = new System.Drawing.Size(704, 533);
             this.SheetPage.TabIndex = 4;
             this.SheetPage.Text = "Spritesheets";
             this.SheetPage.UseVisualStyleBackColor = true;
@@ -390,15 +403,17 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.groupBox3.Controls.Add(this.SheetIDLabel);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.SheetPathBox);
             this.groupBox3.Controls.Add(this.DelSheetButton);
             this.groupBox3.Controls.Add(this.SheetListbox);
             this.groupBox3.Controls.Add(this.AddSheetButton);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(704, 530);
+            this.groupBox3.Size = new System.Drawing.Size(704, 533);
             this.groupBox3.TabIndex = 49;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Sheet List";
@@ -410,7 +425,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Location = new System.Drawing.Point(410, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 17);
+            this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 68;
             this.label1.Text = "Sheet Path";
             // 
@@ -422,13 +437,14 @@
             this.SheetPathBox.Location = new System.Drawing.Point(413, 40);
             this.SheetPathBox.Margin = new System.Windows.Forms.Padding(4);
             this.SheetPathBox.Name = "SheetPathBox";
-            this.SheetPathBox.Size = new System.Drawing.Size(284, 22);
+            this.SheetPathBox.Size = new System.Drawing.Size(284, 19);
             this.SheetPathBox.TabIndex = 67;
             this.SheetPathBox.TextChanged += new System.EventHandler(this.SheetPathBox_TextChanged);
             // 
             // DelSheetButton
             // 
             this.DelSheetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DelSheetButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.DelSheetButton.Location = new System.Drawing.Point(414, 160);
             this.DelSheetButton.Name = "DelSheetButton";
             this.DelSheetButton.Size = new System.Drawing.Size(284, 33);
@@ -443,17 +459,17 @@
             this.SheetListbox.Dock = System.Windows.Forms.DockStyle.Left;
             this.SheetListbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.SheetListbox.FormattingEnabled = true;
-            this.SheetListbox.ItemHeight = 16;
-            this.SheetListbox.Location = new System.Drawing.Point(3, 18);
+            this.SheetListbox.Location = new System.Drawing.Point(3, 15);
             this.SheetListbox.Margin = new System.Windows.Forms.Padding(4);
             this.SheetListbox.Name = "SheetListbox";
-            this.SheetListbox.Size = new System.Drawing.Size(399, 509);
+            this.SheetListbox.Size = new System.Drawing.Size(399, 515);
             this.SheetListbox.TabIndex = 1;
             this.SheetListbox.SelectedIndexChanged += new System.EventHandler(this.SheetListbox_SelectedIndexChanged);
             // 
             // AddSheetButton
             // 
             this.AddSheetButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddSheetButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AddSheetButton.Location = new System.Drawing.Point(414, 116);
             this.AddSheetButton.Name = "AddSheetButton";
             this.AddSheetButton.Size = new System.Drawing.Size(284, 33);
@@ -504,13 +520,50 @@
             this.MenuItem_SaveAs.Text = "Save &As";
             this.MenuItem_SaveAs.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
+            // SFXIDLabel
+            // 
+            this.SFXIDLabel.AutoSize = true;
+            this.SFXIDLabel.Location = new System.Drawing.Point(404, 201);
+            this.SFXIDLabel.Name = "SFXIDLabel";
+            this.SFXIDLabel.Size = new System.Drawing.Size(53, 13);
+            this.SFXIDLabel.TabIndex = 70;
+            this.SFXIDLabel.Text = "SFX ID: 0";
+            // 
+            // ObjIDLabel
+            // 
+            this.ObjIDLabel.AutoSize = true;
+            this.ObjIDLabel.Location = new System.Drawing.Point(405, 196);
+            this.ObjIDLabel.Name = "ObjIDLabel";
+            this.ObjIDLabel.Size = new System.Drawing.Size(64, 13);
+            this.ObjIDLabel.TabIndex = 72;
+            this.ObjIDLabel.Text = "Object ID: 0";
+            // 
+            // SheetIDLabel
+            // 
+            this.SheetIDLabel.AutoSize = true;
+            this.SheetIDLabel.Location = new System.Drawing.Point(411, 196);
+            this.SheetIDLabel.Name = "SheetIDLabel";
+            this.SheetIDLabel.Size = new System.Drawing.Size(61, 13);
+            this.SheetIDLabel.TabIndex = 71;
+            this.SheetIDLabel.Text = "Sheet ID: 0";
+            // 
+            // MusicIDLabel
+            // 
+            this.MusicIDLabel.AutoSize = true;
+            this.MusicIDLabel.Location = new System.Drawing.Point(411, 196);
+            this.MusicIDLabel.Name = "MusicIDLabel";
+            this.MusicIDLabel.Size = new System.Drawing.Size(61, 13);
+            this.MusicIDLabel.TabIndex = 72;
+            this.MusicIDLabel.Text = "Music ID: 0";
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(712, 559);
             this.Controls.Add(this.tabControl1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Menu = this.mainMenu1;
             this.Name = "MainForm";
@@ -572,6 +625,10 @@
         private System.Windows.Forms.MenuItem MenuItem_Open;
         private System.Windows.Forms.MenuItem MenuItem_Save;
         private System.Windows.Forms.MenuItem MenuItem_SaveAs;
+        private System.Windows.Forms.Label SFXIDLabel;
+        private System.Windows.Forms.Label ObjIDLabel;
+        private System.Windows.Forms.Label SheetIDLabel;
+        private System.Windows.Forms.Label MusicIDLabel;
     }
 }
 

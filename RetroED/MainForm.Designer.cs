@@ -82,7 +82,9 @@
             this.menuItem5 = new System.Windows.Forms.MenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.StatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.dpMain = new WeifenLuo.WinFormsUI.Docking.DockPanel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -343,10 +345,12 @@
             this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 647);
+            this.toolStripStatusLabel1,
+            this.StatusLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 525);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1261, 26);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(946, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -354,8 +358,14 @@
             // 
             this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(108, 20);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(84, 17);
             this.toolStripStatusLabel1.Text = "RetroED Status";
+            // 
+            // StatusLabel
+            // 
+            this.StatusLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StatusLabel.Name = "StatusLabel";
+            this.StatusLabel.Size = new System.Drawing.Size(0, 17);
             // 
             // dpMain
             // 
@@ -363,9 +373,8 @@
             this.dpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dpMain.DocumentStyle = WeifenLuo.WinFormsUI.Docking.DocumentStyle.DockingWindow;
             this.dpMain.Location = new System.Drawing.Point(0, 0);
-            this.dpMain.Margin = new System.Windows.Forms.Padding(4);
             this.dpMain.Name = "dpMain";
-            this.dpMain.Size = new System.Drawing.Size(1261, 647);
+            this.dpMain.Size = new System.Drawing.Size(946, 525);
             dockPanelGradient1.EndColor = System.Drawing.SystemColors.ControlLight;
             dockPanelGradient1.StartColor = System.Drawing.SystemColors.ControlLight;
             autoHideStripSkin1.DockStripGradient = dockPanelGradient1;
@@ -420,14 +429,14 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1261, 673);
+            this.ClientSize = new System.Drawing.Size(946, 547);
             this.Controls.Add(this.dpMain);
             this.Controls.Add(this.statusStrip1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Menu = this.mainMenu1;
             this.Name = "MainForm";
             this.Text = "RetroED";
@@ -479,6 +488,8 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private WeifenLuo.WinFormsUI.Docking.DockPanel dpMain;
         private System.Windows.Forms.MenuItem menuItem8;
+        private System.Windows.Forms.ToolStripStatusLabel StatusLabel;
+        private System.Windows.Forms.Timer timer;
     }
 }
 

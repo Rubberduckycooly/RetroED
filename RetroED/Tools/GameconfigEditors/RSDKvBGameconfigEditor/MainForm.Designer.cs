@@ -38,6 +38,11 @@
             this.ScenePage = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.StageDetailsBox = new System.Windows.Forms.GroupBox();
+            this.StgUnknownNUD = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ClearStgButton = new System.Windows.Forms.Button();
+            this.DelStgButton = new System.Windows.Forms.Button();
+            this.AddStgButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.StgIDBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,6 +54,8 @@
             this.StageBox = new System.Windows.Forms.ListBox();
             this.VarsPage = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.VariableValueNUD = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.VariableNameBox = new System.Windows.Forms.TextBox();
             this.RemoveVarButton = new System.Windows.Forms.Button();
@@ -85,11 +92,8 @@
             this.MenuItem_Open = new System.Windows.Forms.MenuItem();
             this.MenuItem_Save = new System.Windows.Forms.MenuItem();
             this.MenuItem_SaveAs = new System.Windows.Forms.MenuItem();
-            this.StgUnknownNUD = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.ClearStgButton = new System.Windows.Forms.Button();
-            this.DelStgButton = new System.Windows.Forms.Button();
-            this.AddStgButton = new System.Windows.Forms.Button();
+            this.SFXIDLabel = new System.Windows.Forms.Label();
+            this.ObjIDLabel = new System.Windows.Forms.Label();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -97,15 +101,16 @@
             this.ScenePage.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.StageDetailsBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StgUnknownNUD)).BeginInit();
             this.VarsPage.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VariableValueNUD)).BeginInit();
             this.ObjectsPage.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.SoundFXPage.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.Players.SuspendLayout();
             this.PlayersBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StgUnknownNUD)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox8
@@ -142,9 +147,9 @@
             this.AboutBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.AboutBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AboutBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AboutBox.Location = new System.Drawing.Point(4, 19);
+            this.AboutBox.Location = new System.Drawing.Point(4, 16);
             this.AboutBox.Name = "AboutBox";
-            this.AboutBox.Size = new System.Drawing.Size(459, 407);
+            this.AboutBox.Size = new System.Drawing.Size(459, 410);
             this.AboutBox.TabIndex = 0;
             this.AboutBox.Text = "Powered by the Retro Engine!";
             this.AboutBox.TextChanged += new System.EventHandler(this.AboutBox_TextChanged);
@@ -169,7 +174,7 @@
             this.GameNameTxt.Location = new System.Drawing.Point(9, 25);
             this.GameNameTxt.Margin = new System.Windows.Forms.Padding(4);
             this.GameNameTxt.Name = "GameNameTxt";
-            this.GameNameTxt.Size = new System.Drawing.Size(430, 22);
+            this.GameNameTxt.Size = new System.Drawing.Size(430, 19);
             this.GameNameTxt.TabIndex = 0;
             this.GameNameTxt.Text = "RSDKvB Game";
             this.GameNameTxt.TextChanged += new System.EventHandler(this.GameNameTxt_TextChanged);
@@ -191,10 +196,10 @@
             // ScenePage
             // 
             this.ScenePage.Controls.Add(this.groupBox5);
-            this.ScenePage.Location = new System.Drawing.Point(4, 25);
+            this.ScenePage.Location = new System.Drawing.Point(4, 22);
             this.ScenePage.Name = "ScenePage";
             this.ScenePage.Padding = new System.Windows.Forms.Padding(3);
-            this.ScenePage.Size = new System.Drawing.Size(709, 530);
+            this.ScenePage.Size = new System.Drawing.Size(709, 533);
             this.ScenePage.TabIndex = 0;
             this.ScenePage.Text = "Scenes";
             this.ScenePage.UseVisualStyleBackColor = true;
@@ -208,11 +213,12 @@
             this.groupBox5.Controls.Add(this.CategoryListBox);
             this.groupBox5.Controls.Add(this.StageBox);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox5.Location = new System.Drawing.Point(3, 3);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(703, 524);
+            this.groupBox5.Size = new System.Drawing.Size(703, 527);
             this.groupBox5.TabIndex = 47;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Category Details";
@@ -233,12 +239,67 @@
             this.StageDetailsBox.Controls.Add(this.StgFolderBox);
             this.StageDetailsBox.Controls.Add(this.label3);
             this.StageDetailsBox.Controls.Add(this.StgNameBox);
+            this.StageDetailsBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.StageDetailsBox.Location = new System.Drawing.Point(414, 75);
             this.StageDetailsBox.Name = "StageDetailsBox";
-            this.StageDetailsBox.Size = new System.Drawing.Size(284, 437);
+            this.StageDetailsBox.Size = new System.Drawing.Size(284, 440);
             this.StageDetailsBox.TabIndex = 52;
             this.StageDetailsBox.TabStop = false;
             this.StageDetailsBox.Text = "Stage Details";
+            // 
+            // StgUnknownNUD
+            // 
+            this.StgUnknownNUD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.StgUnknownNUD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.StgUnknownNUD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.StgUnknownNUD.Location = new System.Drawing.Point(10, 181);
+            this.StgUnknownNUD.Name = "StgUnknownNUD";
+            this.StgUnknownNUD.Size = new System.Drawing.Size(263, 19);
+            this.StgUnknownNUD.TabIndex = 64;
+            this.StgUnknownNUD.ValueChanged += new System.EventHandler(this.StgUnknownNUD_ValueChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label8.Location = new System.Drawing.Point(7, 159);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 13);
+            this.label8.TabIndex = 63;
+            this.label8.Text = "Scene Mode";
+            // 
+            // ClearStgButton
+            // 
+            this.ClearStgButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ClearStgButton.Location = new System.Drawing.Point(158, 209);
+            this.ClearStgButton.Name = "ClearStgButton";
+            this.ClearStgButton.Size = new System.Drawing.Size(68, 33);
+            this.ClearStgButton.TabIndex = 62;
+            this.ClearStgButton.Text = "Clear";
+            this.ClearStgButton.UseVisualStyleBackColor = true;
+            this.ClearStgButton.Click += new System.EventHandler(this.ClearStgButton_Click);
+            // 
+            // DelStgButton
+            // 
+            this.DelStgButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DelStgButton.Location = new System.Drawing.Point(84, 209);
+            this.DelStgButton.Name = "DelStgButton";
+            this.DelStgButton.Size = new System.Drawing.Size(68, 33);
+            this.DelStgButton.TabIndex = 61;
+            this.DelStgButton.Text = "Del";
+            this.DelStgButton.UseVisualStyleBackColor = true;
+            // 
+            // AddStgButton
+            // 
+            this.AddStgButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.AddStgButton.Location = new System.Drawing.Point(10, 209);
+            this.AddStgButton.Name = "AddStgButton";
+            this.AddStgButton.Size = new System.Drawing.Size(68, 33);
+            this.AddStgButton.TabIndex = 60;
+            this.AddStgButton.Text = "Add";
+            this.AddStgButton.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -247,7 +308,7 @@
             this.label6.Location = new System.Drawing.Point(7, 112);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 17);
+            this.label6.Size = new System.Drawing.Size(46, 13);
             this.label6.TabIndex = 53;
             this.label6.Text = "StageID";
             // 
@@ -260,7 +321,7 @@
             this.StgIDBox.Location = new System.Drawing.Point(10, 133);
             this.StgIDBox.Margin = new System.Windows.Forms.Padding(4);
             this.StgIDBox.Name = "StgIDBox";
-            this.StgIDBox.Size = new System.Drawing.Size(263, 22);
+            this.StgIDBox.Size = new System.Drawing.Size(263, 19);
             this.StgIDBox.TabIndex = 52;
             this.StgIDBox.TextChanged += new System.EventHandler(this.StgIDBox_TextChanged);
             // 
@@ -271,7 +332,7 @@
             this.label4.Location = new System.Drawing.Point(7, 65);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 17);
+            this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 51;
             this.label4.Text = "Stage Folder";
             // 
@@ -284,7 +345,7 @@
             this.StgFolderBox.Location = new System.Drawing.Point(10, 86);
             this.StgFolderBox.Margin = new System.Windows.Forms.Padding(4);
             this.StgFolderBox.Name = "StgFolderBox";
-            this.StgFolderBox.Size = new System.Drawing.Size(263, 22);
+            this.StgFolderBox.Size = new System.Drawing.Size(263, 19);
             this.StgFolderBox.TabIndex = 50;
             this.StgFolderBox.TextChanged += new System.EventHandler(this.StgFolderBox_TextChanged);
             // 
@@ -295,7 +356,7 @@
             this.label3.Location = new System.Drawing.Point(7, 18);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 17);
+            this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 49;
             this.label3.Text = "Stage Name";
             // 
@@ -309,7 +370,7 @@
             this.StgNameBox.Location = new System.Drawing.Point(10, 39);
             this.StgNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.StgNameBox.Name = "StgNameBox";
-            this.StgNameBox.Size = new System.Drawing.Size(263, 22);
+            this.StgNameBox.Size = new System.Drawing.Size(263, 19);
             this.StgNameBox.TabIndex = 48;
             this.StgNameBox.TextChanged += new System.EventHandler(this.StgNameBox_TextChanged);
             // 
@@ -321,7 +382,7 @@
             this.label11.Location = new System.Drawing.Point(411, 19);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(124, 17);
+            this.label11.Size = new System.Drawing.Size(94, 13);
             this.label11.TabIndex = 50;
             this.label11.Text = "Selected Category";
             // 
@@ -329,6 +390,7 @@
             // 
             this.CategoryListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CategoryListBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CategoryListBox.ForeColor = System.Drawing.SystemColors.ControlText;
             this.CategoryListBox.FormattingEnabled = true;
             this.CategoryListBox.Items.AddRange(new object[] {
             "Presentation Stages",
@@ -337,7 +399,7 @@
             "Bonus Stages"});
             this.CategoryListBox.Location = new System.Drawing.Point(414, 45);
             this.CategoryListBox.Name = "CategoryListBox";
-            this.CategoryListBox.Size = new System.Drawing.Size(284, 24);
+            this.CategoryListBox.Size = new System.Drawing.Size(284, 21);
             this.CategoryListBox.TabIndex = 49;
             this.CategoryListBox.SelectedIndexChanged += new System.EventHandler(this.CategoryListBox_SelectedIndexChanged);
             // 
@@ -347,11 +409,10 @@
             this.StageBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.StageBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.StageBox.FormattingEnabled = true;
-            this.StageBox.ItemHeight = 16;
-            this.StageBox.Location = new System.Drawing.Point(4, 19);
+            this.StageBox.Location = new System.Drawing.Point(4, 16);
             this.StageBox.Margin = new System.Windows.Forms.Padding(4);
             this.StageBox.Name = "StageBox";
-            this.StageBox.Size = new System.Drawing.Size(399, 501);
+            this.StageBox.Size = new System.Drawing.Size(399, 507);
             this.StageBox.TabIndex = 0;
             this.StageBox.SelectedIndexChanged += new System.EventHandler(this.StageBox_SelectedIndexChanged);
             // 
@@ -359,27 +420,63 @@
             // 
             this.VarsPage.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.VarsPage.Controls.Add(this.groupBox3);
-            this.VarsPage.Location = new System.Drawing.Point(4, 25);
+            this.VarsPage.Location = new System.Drawing.Point(4, 22);
             this.VarsPage.Name = "VarsPage";
-            this.VarsPage.Size = new System.Drawing.Size(709, 530);
+            this.VarsPage.Size = new System.Drawing.Size(709, 533);
             this.VarsPage.TabIndex = 4;
             this.VarsPage.Text = "Global Variables";
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.groupBox3.Controls.Add(this.VariableValueNUD);
+            this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.VariableNameBox);
             this.groupBox3.Controls.Add(this.RemoveVarButton);
             this.groupBox3.Controls.Add(this.VariableListBox);
             this.groupBox3.Controls.Add(this.AddVarButton);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(709, 530);
+            this.groupBox3.Size = new System.Drawing.Size(709, 533);
             this.groupBox3.TabIndex = 49;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Variable List";
+            this.groupBox3.Enter += new System.EventHandler(this.GroupBox3_Enter);
+            // 
+            // VariableValueNUD
+            // 
+            this.VariableValueNUD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.VariableValueNUD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.VariableValueNUD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.VariableValueNUD.Location = new System.Drawing.Point(419, 90);
+            this.VariableValueNUD.Maximum = new decimal(new int[] {
+            276447231,
+            23283,
+            0,
+            0});
+            this.VariableValueNUD.Minimum = new decimal(new int[] {
+            -727379969,
+            232,
+            0,
+            -2147483648});
+            this.VariableValueNUD.Name = "VariableValueNUD";
+            this.VariableValueNUD.Size = new System.Drawing.Size(283, 19);
+            this.VariableValueNUD.TabIndex = 72;
+            this.VariableValueNUD.ValueChanged += new System.EventHandler(this.VariableValueNUD_ValueChanged);
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label9.Location = new System.Drawing.Point(416, 69);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 13);
+            this.label9.TabIndex = 71;
+            this.label9.Text = "Variable Value";
             // 
             // label5
             // 
@@ -388,7 +485,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label5.Location = new System.Drawing.Point(415, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 17);
+            this.label5.Size = new System.Drawing.Size(76, 13);
             this.label5.TabIndex = 68;
             this.label5.Text = "Variable Name";
             // 
@@ -400,14 +497,15 @@
             this.VariableNameBox.Location = new System.Drawing.Point(418, 43);
             this.VariableNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.VariableNameBox.Name = "VariableNameBox";
-            this.VariableNameBox.Size = new System.Drawing.Size(284, 22);
+            this.VariableNameBox.Size = new System.Drawing.Size(284, 19);
             this.VariableNameBox.TabIndex = 67;
             this.VariableNameBox.TextChanged += new System.EventHandler(this.VariableNameBox_TextChanged);
             // 
             // RemoveVarButton
             // 
             this.RemoveVarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.RemoveVarButton.Location = new System.Drawing.Point(418, 111);
+            this.RemoveVarButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.RemoveVarButton.Location = new System.Drawing.Point(417, 157);
             this.RemoveVarButton.Name = "RemoveVarButton";
             this.RemoveVarButton.Size = new System.Drawing.Size(284, 33);
             this.RemoveVarButton.TabIndex = 55;
@@ -421,18 +519,18 @@
             this.VariableListBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.VariableListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.VariableListBox.FormattingEnabled = true;
-            this.VariableListBox.ItemHeight = 16;
-            this.VariableListBox.Location = new System.Drawing.Point(3, 18);
+            this.VariableListBox.Location = new System.Drawing.Point(3, 15);
             this.VariableListBox.Margin = new System.Windows.Forms.Padding(4);
             this.VariableListBox.Name = "VariableListBox";
-            this.VariableListBox.Size = new System.Drawing.Size(399, 509);
+            this.VariableListBox.Size = new System.Drawing.Size(399, 515);
             this.VariableListBox.TabIndex = 1;
             this.VariableListBox.SelectedIndexChanged += new System.EventHandler(this.VariableListBox_SelectedIndexChanged);
             // 
             // AddVarButton
             // 
             this.AddVarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddVarButton.Location = new System.Drawing.Point(418, 72);
+            this.AddVarButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.AddVarButton.Location = new System.Drawing.Point(417, 118);
             this.AddVarButton.Name = "AddVarButton";
             this.AddVarButton.Size = new System.Drawing.Size(284, 33);
             this.AddVarButton.TabIndex = 54;
@@ -443,10 +541,10 @@
             // ObjectsPage
             // 
             this.ObjectsPage.Controls.Add(this.groupBox7);
-            this.ObjectsPage.Location = new System.Drawing.Point(4, 25);
+            this.ObjectsPage.Location = new System.Drawing.Point(4, 22);
             this.ObjectsPage.Name = "ObjectsPage";
             this.ObjectsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ObjectsPage.Size = new System.Drawing.Size(709, 530);
+            this.ObjectsPage.Size = new System.Drawing.Size(709, 533);
             this.ObjectsPage.TabIndex = 1;
             this.ObjectsPage.Text = "Objects";
             this.ObjectsPage.UseVisualStyleBackColor = true;
@@ -454,6 +552,7 @@
             // groupBox7
             // 
             this.groupBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.groupBox7.Controls.Add(this.ObjIDLabel);
             this.groupBox7.Controls.Add(this.label12);
             this.groupBox7.Controls.Add(this.ObjCFGBox);
             this.groupBox7.Controls.Add(this.label14);
@@ -462,9 +561,10 @@
             this.groupBox7.Controls.Add(this.ObjListBox);
             this.groupBox7.Controls.Add(this.AddObjButton);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox7.Location = new System.Drawing.Point(3, 3);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(703, 524);
+            this.groupBox7.Size = new System.Drawing.Size(703, 527);
             this.groupBox7.TabIndex = 47;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Object List";
@@ -476,7 +576,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label12.Location = new System.Drawing.Point(410, 66);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(90, 17);
+            this.label12.Size = new System.Drawing.Size(69, 13);
             this.label12.TabIndex = 70;
             this.label12.Text = "Object Name";
             // 
@@ -488,7 +588,7 @@
             this.ObjCFGBox.Location = new System.Drawing.Point(413, 87);
             this.ObjCFGBox.Margin = new System.Windows.Forms.Padding(4);
             this.ObjCFGBox.Name = "ObjCFGBox";
-            this.ObjCFGBox.Size = new System.Drawing.Size(283, 22);
+            this.ObjCFGBox.Size = new System.Drawing.Size(283, 19);
             this.ObjCFGBox.TabIndex = 69;
             this.ObjCFGBox.TextChanged += new System.EventHandler(this.ObjCFGBox_TextChanged);
             // 
@@ -499,7 +599,7 @@
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label14.Location = new System.Drawing.Point(409, 19);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(77, 17);
+            this.label14.Size = new System.Drawing.Size(59, 13);
             this.label14.TabIndex = 68;
             this.label14.Text = "Script Path";
             // 
@@ -511,13 +611,14 @@
             this.ObjPathHashBox.Location = new System.Drawing.Point(412, 40);
             this.ObjPathHashBox.Margin = new System.Windows.Forms.Padding(4);
             this.ObjPathHashBox.Name = "ObjPathHashBox";
-            this.ObjPathHashBox.Size = new System.Drawing.Size(284, 22);
+            this.ObjPathHashBox.Size = new System.Drawing.Size(284, 19);
             this.ObjPathHashBox.TabIndex = 67;
             this.ObjPathHashBox.TextChanged += new System.EventHandler(this.ObjPathBox_TextChanged);
             // 
             // DelObjButton
             // 
             this.DelObjButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DelObjButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.DelObjButton.Location = new System.Drawing.Point(413, 160);
             this.DelObjButton.Name = "DelObjButton";
             this.DelObjButton.Size = new System.Drawing.Size(284, 33);
@@ -533,17 +634,17 @@
             this.ObjListBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.ObjListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ObjListBox.FormattingEnabled = true;
-            this.ObjListBox.ItemHeight = 16;
-            this.ObjListBox.Location = new System.Drawing.Point(3, 18);
+            this.ObjListBox.Location = new System.Drawing.Point(3, 15);
             this.ObjListBox.Margin = new System.Windows.Forms.Padding(4);
             this.ObjListBox.Name = "ObjListBox";
-            this.ObjListBox.Size = new System.Drawing.Size(399, 503);
+            this.ObjListBox.Size = new System.Drawing.Size(399, 509);
             this.ObjListBox.TabIndex = 1;
             this.ObjListBox.SelectedIndexChanged += new System.EventHandler(this.ObjListBox_SelectedIndexChanged);
             // 
             // AddObjButton
             // 
             this.AddObjButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddObjButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AddObjButton.Location = new System.Drawing.Point(413, 116);
             this.AddObjButton.Name = "AddObjButton";
             this.AddObjButton.Size = new System.Drawing.Size(284, 33);
@@ -557,16 +658,17 @@
             // 
             this.SoundFXPage.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.SoundFXPage.Controls.Add(this.groupBox2);
-            this.SoundFXPage.Location = new System.Drawing.Point(4, 25);
+            this.SoundFXPage.Location = new System.Drawing.Point(4, 22);
             this.SoundFXPage.Name = "SoundFXPage";
             this.SoundFXPage.Padding = new System.Windows.Forms.Padding(3);
-            this.SoundFXPage.Size = new System.Drawing.Size(709, 530);
+            this.SoundFXPage.Size = new System.Drawing.Size(709, 533);
             this.SoundFXPage.TabIndex = 2;
             this.SoundFXPage.Text = "SoundFX";
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.groupBox2.Controls.Add(this.SFXIDLabel);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.SFXNameBox);
             this.groupBox2.Controls.Add(this.label2);
@@ -575,9 +677,10 @@
             this.groupBox2.Controls.Add(this.SoundFXListBox);
             this.groupBox2.Controls.Add(this.AddSFXButton);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(703, 524);
+            this.groupBox2.Size = new System.Drawing.Size(703, 527);
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "SoundFX List";
@@ -589,7 +692,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Location = new System.Drawing.Point(410, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 17);
+            this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 70;
             this.label1.Text = "SFX Name";
             // 
@@ -601,7 +704,7 @@
             this.SFXNameBox.Location = new System.Drawing.Point(413, 86);
             this.SFXNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.SFXNameBox.Name = "SFXNameBox";
-            this.SFXNameBox.Size = new System.Drawing.Size(283, 22);
+            this.SFXNameBox.Size = new System.Drawing.Size(283, 19);
             this.SFXNameBox.TabIndex = 69;
             this.SFXNameBox.TextChanged += new System.EventHandler(this.SFXNameBox_TextChanged);
             // 
@@ -612,7 +715,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label2.Location = new System.Drawing.Point(409, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 17);
+            this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 68;
             this.label2.Text = "SFX Path";
             // 
@@ -624,13 +727,14 @@
             this.SFXPathBox.Location = new System.Drawing.Point(412, 39);
             this.SFXPathBox.Margin = new System.Windows.Forms.Padding(4);
             this.SFXPathBox.Name = "SFXPathBox";
-            this.SFXPathBox.Size = new System.Drawing.Size(284, 22);
+            this.SFXPathBox.Size = new System.Drawing.Size(284, 19);
             this.SFXPathBox.TabIndex = 67;
             this.SFXPathBox.TextChanged += new System.EventHandler(this.SFXPathBox_TextChanged);
             // 
             // RemoveSFXButton
             // 
             this.RemoveSFXButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RemoveSFXButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.RemoveSFXButton.Location = new System.Drawing.Point(411, 165);
             this.RemoveSFXButton.Name = "RemoveSFXButton";
             this.RemoveSFXButton.Size = new System.Drawing.Size(283, 33);
@@ -645,17 +749,17 @@
             this.SoundFXListBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.SoundFXListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.SoundFXListBox.FormattingEnabled = true;
-            this.SoundFXListBox.ItemHeight = 16;
-            this.SoundFXListBox.Location = new System.Drawing.Point(3, 18);
+            this.SoundFXListBox.Location = new System.Drawing.Point(3, 15);
             this.SoundFXListBox.Margin = new System.Windows.Forms.Padding(4);
             this.SoundFXListBox.Name = "SoundFXListBox";
-            this.SoundFXListBox.Size = new System.Drawing.Size(399, 503);
+            this.SoundFXListBox.Size = new System.Drawing.Size(399, 509);
             this.SoundFXListBox.TabIndex = 1;
             this.SoundFXListBox.SelectedIndexChanged += new System.EventHandler(this.SoundFXListBox_SelectedIndexChanged);
             // 
             // AddSFXButton
             // 
             this.AddSFXButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddSFXButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AddSFXButton.Location = new System.Drawing.Point(411, 126);
             this.AddSFXButton.Name = "AddSFXButton";
             this.AddSFXButton.Size = new System.Drawing.Size(285, 33);
@@ -668,10 +772,10 @@
             // 
             this.Players.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Players.Controls.Add(this.PlayersBox);
-            this.Players.Location = new System.Drawing.Point(4, 25);
+            this.Players.Location = new System.Drawing.Point(4, 22);
             this.Players.Name = "Players";
             this.Players.Padding = new System.Windows.Forms.Padding(3);
-            this.Players.Size = new System.Drawing.Size(709, 530);
+            this.Players.Size = new System.Drawing.Size(709, 533);
             this.Players.TabIndex = 3;
             this.Players.Text = "Players";
             // 
@@ -684,9 +788,10 @@
             this.PlayersBox.Controls.Add(this.PlayersListBox);
             this.PlayersBox.Controls.Add(this.AddPlrButton);
             this.PlayersBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PlayersBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.PlayersBox.Location = new System.Drawing.Point(3, 3);
             this.PlayersBox.Name = "PlayersBox";
-            this.PlayersBox.Size = new System.Drawing.Size(703, 524);
+            this.PlayersBox.Size = new System.Drawing.Size(703, 527);
             this.PlayersBox.TabIndex = 48;
             this.PlayersBox.TabStop = false;
             this.PlayersBox.Text = "Player List";
@@ -698,7 +803,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label7.Location = new System.Drawing.Point(409, 22);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 17);
+            this.label7.Size = new System.Drawing.Size(67, 13);
             this.label7.TabIndex = 68;
             this.label7.Text = "Player Name";
             // 
@@ -711,13 +816,14 @@
             this.PlayerNameBox.Location = new System.Drawing.Point(412, 43);
             this.PlayerNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.PlayerNameBox.Name = "PlayerNameBox";
-            this.PlayerNameBox.Size = new System.Drawing.Size(284, 22);
+            this.PlayerNameBox.Size = new System.Drawing.Size(284, 19);
             this.PlayerNameBox.TabIndex = 67;
             this.PlayerNameBox.TextChanged += new System.EventHandler(this.PlayerNameBox_TextChanged);
             // 
             // RemovePlrButton
             // 
             this.RemovePlrButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.RemovePlrButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.RemovePlrButton.Location = new System.Drawing.Point(412, 111);
             this.RemovePlrButton.Name = "RemovePlrButton";
             this.RemovePlrButton.Size = new System.Drawing.Size(284, 33);
@@ -732,17 +838,17 @@
             this.PlayersListBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.PlayersListBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.PlayersListBox.FormattingEnabled = true;
-            this.PlayersListBox.ItemHeight = 16;
-            this.PlayersListBox.Location = new System.Drawing.Point(3, 18);
+            this.PlayersListBox.Location = new System.Drawing.Point(3, 15);
             this.PlayersListBox.Margin = new System.Windows.Forms.Padding(4);
             this.PlayersListBox.Name = "PlayersListBox";
-            this.PlayersListBox.Size = new System.Drawing.Size(399, 503);
+            this.PlayersListBox.Size = new System.Drawing.Size(399, 509);
             this.PlayersListBox.TabIndex = 1;
             this.PlayersListBox.SelectedIndexChanged += new System.EventHandler(this.PlayersListBox_SelectedIndexChanged);
             // 
             // AddPlrButton
             // 
             this.AddPlrButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddPlrButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.AddPlrButton.Location = new System.Drawing.Point(412, 72);
             this.AddPlrButton.Name = "AddPlrButton";
             this.AddPlrButton.Size = new System.Drawing.Size(284, 33);
@@ -793,65 +899,33 @@
             this.MenuItem_SaveAs.Text = "Save &As";
             this.MenuItem_SaveAs.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
-            // StgUnknownNUD
+            // SFXIDLabel
             // 
-            this.StgUnknownNUD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.StgUnknownNUD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.StgUnknownNUD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.StgUnknownNUD.Location = new System.Drawing.Point(10, 181);
-            this.StgUnknownNUD.Name = "StgUnknownNUD";
-            this.StgUnknownNUD.Size = new System.Drawing.Size(263, 22);
-            this.StgUnknownNUD.TabIndex = 64;
-            this.StgUnknownNUD.ValueChanged += new System.EventHandler(this.StgUnknownNUD_ValueChanged);
+            this.SFXIDLabel.AutoSize = true;
+            this.SFXIDLabel.Location = new System.Drawing.Point(410, 201);
+            this.SFXIDLabel.Name = "SFXIDLabel";
+            this.SFXIDLabel.Size = new System.Drawing.Size(53, 13);
+            this.SFXIDLabel.TabIndex = 71;
+            this.SFXIDLabel.Text = "SFX ID: 0";
             // 
-            // label8
+            // ObjIDLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label8.Location = new System.Drawing.Point(7, 159);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 17);
-            this.label8.TabIndex = 63;
-            this.label8.Text = "Unknown";
-            // 
-            // ClearStgButton
-            // 
-            this.ClearStgButton.Location = new System.Drawing.Point(158, 209);
-            this.ClearStgButton.Name = "ClearStgButton";
-            this.ClearStgButton.Size = new System.Drawing.Size(68, 33);
-            this.ClearStgButton.TabIndex = 62;
-            this.ClearStgButton.Text = "Clear";
-            this.ClearStgButton.UseVisualStyleBackColor = true;
-            this.ClearStgButton.Click += new System.EventHandler(this.ClearStgButton_Click);
-            // 
-            // DelStgButton
-            // 
-            this.DelStgButton.Location = new System.Drawing.Point(84, 209);
-            this.DelStgButton.Name = "DelStgButton";
-            this.DelStgButton.Size = new System.Drawing.Size(68, 33);
-            this.DelStgButton.TabIndex = 61;
-            this.DelStgButton.Text = "Del";
-            this.DelStgButton.UseVisualStyleBackColor = true;
-            // 
-            // AddStgButton
-            // 
-            this.AddStgButton.Location = new System.Drawing.Point(10, 209);
-            this.AddStgButton.Name = "AddStgButton";
-            this.AddStgButton.Size = new System.Drawing.Size(68, 33);
-            this.AddStgButton.TabIndex = 60;
-            this.AddStgButton.Text = "Add";
-            this.AddStgButton.UseVisualStyleBackColor = true;
+            this.ObjIDLabel.AutoSize = true;
+            this.ObjIDLabel.Location = new System.Drawing.Point(415, 196);
+            this.ObjIDLabel.Name = "ObjIDLabel";
+            this.ObjIDLabel.Size = new System.Drawing.Size(64, 13);
+            this.ObjIDLabel.TabIndex = 72;
+            this.ObjIDLabel.Text = "Object ID: 0";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1196, 559);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox8);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Menu = this.mainMenu1;
             this.Name = "MainForm";
@@ -868,9 +942,11 @@
             this.groupBox5.PerformLayout();
             this.StageDetailsBox.ResumeLayout(false);
             this.StageDetailsBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StgUnknownNUD)).EndInit();
             this.VarsPage.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VariableValueNUD)).EndInit();
             this.ObjectsPage.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
@@ -880,7 +956,6 @@
             this.Players.ResumeLayout(false);
             this.PlayersBox.ResumeLayout(false);
             this.PlayersBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StgUnknownNUD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -947,6 +1022,10 @@
         private System.Windows.Forms.Button ClearStgButton;
         private System.Windows.Forms.Button DelStgButton;
         private System.Windows.Forms.Button AddStgButton;
+        private System.Windows.Forms.NumericUpDown VariableValueNUD;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label SFXIDLabel;
+        private System.Windows.Forms.Label ObjIDLabel;
     }
 }
 

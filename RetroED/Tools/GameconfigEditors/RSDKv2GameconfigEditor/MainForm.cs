@@ -218,7 +218,7 @@ namespace RetroED.Tools.GameconfigEditors.RSDKv2GameconfigEditor
                 StgNameBox.Text = gameconfig.Categories[CurCategory].Scenes[CurStage].Name;
                 StgFolderBox.Text = gameconfig.Categories[CurCategory].Scenes[CurStage].SceneFolder;
                 StgIDBox.Text = gameconfig.Categories[CurCategory].Scenes[CurStage].ActID;
-                StgUnknownNUD.Value = gameconfig.Categories[CurCategory].Scenes[CurStage].Unknown;
+                StgUnknownNUD.Value = gameconfig.Categories[CurCategory].Scenes[CurStage].SceneMode;
             }
 
             if (gameconfig.ScriptPaths.Count > 0)
@@ -240,6 +240,7 @@ namespace RetroED.Tools.GameconfigEditors.RSDKv2GameconfigEditor
             if (gameconfig.GlobalVariables.Count > 0)
             {
                 VariableNameBox.Text = gameconfig.GlobalVariables[CurVar].Name;
+                VariableValueNUD.Value = gameconfig.GlobalVariables[CurVar].Value;
             }
 
         }
@@ -249,7 +250,7 @@ namespace RetroED.Tools.GameconfigEditors.RSDKv2GameconfigEditor
             StageBox.Items.Clear();
             for (int i = 0; i < gameconfig.Categories[CurCategory].Scenes.Count; i++)
             {
-                StageBox.Items.Add(gameconfig.Categories[CurCategory].Scenes[i].Name + ", " + gameconfig.Categories[CurCategory].Scenes[i].SceneFolder + ", " + gameconfig.Categories[CurCategory].Scenes[i].ActID + ", " + gameconfig.Categories[CurCategory].Scenes[i].Unknown);
+                StageBox.Items.Add(gameconfig.Categories[CurCategory].Scenes[i].Name + ", " + gameconfig.Categories[CurCategory].Scenes[i].SceneFolder + ", " + gameconfig.Categories[CurCategory].Scenes[i].ActID + ", " + gameconfig.Categories[CurCategory].Scenes[i].SceneMode);
             }
         }
 
@@ -311,7 +312,7 @@ namespace RetroED.Tools.GameconfigEditors.RSDKv2GameconfigEditor
             gameconfig.Categories[CurCategory].Scenes[CurStage].Name = StgNameBox.Text;
             if (StageBox.Items.Count > 0)
             {
-                StageBox.Items[CurStage] = StageBox.Items[CurStage] = gameconfig.Categories[CurCategory].Scenes[CurStage].Name + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].SceneFolder + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].ActID + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].Unknown;
+                StageBox.Items[CurStage] = StageBox.Items[CurStage] = gameconfig.Categories[CurCategory].Scenes[CurStage].Name + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].SceneFolder + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].ActID + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].SceneMode;
             }
         }
 
@@ -320,7 +321,7 @@ namespace RetroED.Tools.GameconfigEditors.RSDKv2GameconfigEditor
             gameconfig.Categories[CurCategory].Scenes[CurStage].SceneFolder = StgFolderBox.Text;
             if (StageBox.Items.Count > 0)
             {
-                StageBox.Items[CurStage] = StageBox.Items[CurStage] = gameconfig.Categories[CurCategory].Scenes[CurStage].Name + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].SceneFolder + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].ActID + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].Unknown;
+                StageBox.Items[CurStage] = StageBox.Items[CurStage] = gameconfig.Categories[CurCategory].Scenes[CurStage].Name + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].SceneFolder + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].ActID + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].SceneMode;
             }
         }
 
@@ -329,16 +330,16 @@ namespace RetroED.Tools.GameconfigEditors.RSDKv2GameconfigEditor
             gameconfig.Categories[CurCategory].Scenes[CurStage].ActID = StgIDBox.Text;
             if (StageBox.Items.Count > 0)
             {
-                StageBox.Items[CurStage] = StageBox.Items[CurStage] = gameconfig.Categories[CurCategory].Scenes[CurStage].Name + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].SceneFolder + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].ActID + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].Unknown;
+                StageBox.Items[CurStage] = StageBox.Items[CurStage] = gameconfig.Categories[CurCategory].Scenes[CurStage].Name + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].SceneFolder + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].ActID + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].SceneMode;
             }
         }
 
         private void StgUnknownNUD_ValueChanged(object sender, EventArgs e)
         {
-            gameconfig.Categories[CurCategory].Scenes[CurStage].Unknown = (byte)StgUnknownNUD.Value;
+            gameconfig.Categories[CurCategory].Scenes[CurStage].SceneMode = (byte)StgUnknownNUD.Value;
             if (StageBox.Items.Count > 0)
             {
-                StageBox.Items[CurStage] = gameconfig.Categories[CurCategory].Scenes[CurStage].Name + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].SceneFolder + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].ActID + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].Unknown;
+                StageBox.Items[CurStage] = gameconfig.Categories[CurCategory].Scenes[CurStage].Name + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].SceneFolder + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].ActID + ", " + gameconfig.Categories[CurCategory].Scenes[CurStage].SceneMode;
             }
         }
 
@@ -383,6 +384,7 @@ namespace RetroED.Tools.GameconfigEditors.RSDKv2GameconfigEditor
             if (ObjListBox.SelectedIndex >= 0)
             {
                 CurObj = ObjListBox.SelectedIndex;
+                ObjIDLabel.Text = "Object ID: " + (ObjListBox.SelectedIndex + 1);
                 RefreshUI();
             }
         }
@@ -443,6 +445,7 @@ namespace RetroED.Tools.GameconfigEditors.RSDKv2GameconfigEditor
             if (SoundFXListBox.SelectedIndex >= 0)
             {
                 CurSfx = SoundFXListBox.SelectedIndex;
+                SFXIDLabel.Text = "SFX ID: " + SoundFXListBox.SelectedIndex;
                 RefreshUI();
             }
         }
@@ -522,6 +525,14 @@ namespace RetroED.Tools.GameconfigEditors.RSDKv2GameconfigEditor
             {
                 gameconfig.GlobalVariables[CurVar].Name = VariableNameBox.Text;
                 VariableListBox.Items[CurVar] = VariableNameBox.Text;
+            }
+        }
+
+        private void VariableValueNUD_ValueChanged(object sender, EventArgs e)
+        {
+            if (VariableListBox.Items.Count > 0)
+            {
+                gameconfig.GlobalVariables[CurVar].Value = (int)VariableValueNUD.Value;
             }
         }
 

@@ -130,9 +130,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label3.Location = new System.Drawing.Point(9, 153);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.Size = new System.Drawing.Size(87, 17);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Unknown";
+            this.label3.Text = "Scene Mode";
             // 
             // UnknownBox
             // 
@@ -145,6 +145,7 @@
             this.UnknownBox.Name = "UnknownBox";
             this.UnknownBox.Size = new System.Drawing.Size(192, 22);
             this.UnknownBox.TabIndex = 6;
+            this.UnknownBox.Text = "0";
             this.UnknownBox.TextChanged += new System.EventHandler(this.UnknownBox_TextChanged);
             // 
             // label4
@@ -153,9 +154,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label4.Location = new System.Drawing.Point(9, 108);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 17);
+            this.label4.Size = new System.Drawing.Size(65, 17);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Act ID";
+            this.label4.Text = "Scene ID";
             // 
             // ActIDBox
             // 
@@ -168,6 +169,7 @@
             this.ActIDBox.Name = "ActIDBox";
             this.ActIDBox.Size = new System.Drawing.Size(192, 22);
             this.ActIDBox.TabIndex = 4;
+            this.ActIDBox.Text = "1";
             this.ActIDBox.TextChanged += new System.EventHandler(this.ActIDBox_TextChanged);
             // 
             // label2
@@ -176,9 +178,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label2.Location = new System.Drawing.Point(9, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 17);
+            this.label2.Size = new System.Drawing.Size(92, 17);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Stage Folder";
+            this.label2.Text = "Scene Folder";
             // 
             // StgFolderBox
             // 
@@ -191,6 +193,7 @@
             this.StgFolderBox.Name = "StgFolderBox";
             this.StgFolderBox.Size = new System.Drawing.Size(192, 22);
             this.StgFolderBox.TabIndex = 2;
+            this.StgFolderBox.Text = "EGZ";
             this.StgFolderBox.TextChanged += new System.EventHandler(this.StgFolderBox_TextChanged);
             // 
             // label1
@@ -199,9 +202,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Location = new System.Drawing.Point(9, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 17);
+            this.label1.Size = new System.Drawing.Size(89, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Stage Name";
+            this.label1.Text = "Scene Name";
             // 
             // StgNameBox
             // 
@@ -214,6 +217,7 @@
             this.StgNameBox.Name = "StgNameBox";
             this.StgNameBox.Size = new System.Drawing.Size(192, 22);
             this.StgNameBox.TabIndex = 0;
+            this.StgNameBox.Text = "EGG GARDEN";
             this.StgNameBox.TextChanged += new System.EventHandler(this.StgNameBox_TextChanged);
             // 
             // mainMenu1
@@ -265,6 +269,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(374, 345);
             this.Controls.Add(this.splitContainer1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu = this.mainMenu1;
             this.Name = "MainForm";
             this.Text = "Retro-Sonic Stage List Editor";

@@ -20,6 +20,9 @@ namespace RetroED
 
         public static MainForm Instance;
 
+        // Don't ask
+        public static float Wallet = 1.00f;
+
         public string WindowName
         {
             get
@@ -75,8 +78,8 @@ namespace RetroED
         {
             SharpPresence.Discord.Initialize("477031085788626947", eh);
 
+            rp.details = string.Format("Wallet: {0}", Wallet);
             rp.state = "RetroED";
-            rp.details = "Chillin' out without any tools open";
 
             rp.largeImageKey = "retroed-big";
             rp.largeImageText = "RetroED";
@@ -100,7 +103,7 @@ namespace RetroED
             }
             else
             {
-                rp.details = "Chillin' out without any tools open";
+                rp.details = string.Format("Wallet: {0}", Wallet);
             }
             SharpPresence.Discord.UpdatePresence(rp);
         }
@@ -549,7 +552,7 @@ namespace RetroED
                     UnlinkMenubar();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine("Error: " + ex.Message);
             }
